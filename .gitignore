@@ -1,0 +1,8 @@
+node_modules/
+uploads/*.json
+*.log
+.env
+ENV.txt
+listD.json
+words_compact.json
+words_inline.json
