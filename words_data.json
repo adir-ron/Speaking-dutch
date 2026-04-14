@@ -1,0 +1,4604 @@
+{
+  "listA": [
+    {
+      "en": "addition",
+      "pos": "noun",
+      "he": "הוספה , חיבור , תוספת",
+      "meaning": "sum, the act or process of adding"
+    },
+    {
+      "en": "additional",
+      "pos": "adjective",
+      "he": "נוסף",
+      "meaning": "another, more, further"
+    },
+    {
+      "en": "advance",
+      "pos": "noun",
+      "he": "התקדמות",
+      "meaning": "progress, movement forward"
+    },
+    {
+      "en": "advanced",
+      "pos": "adjective",
+      "he": "מתקדם",
+      "meaning": "modern, high-level, well-developed"
+    },
+    {
+      "en": "advertising",
+      "pos": "noun",
+      "he": "פירסום , פירסומת , מודעה",
+      "meaning": "ways of attracting people to buy something"
+    },
+    {
+      "en": "among other things",
+      "pos": "including other things",
+      "he": "בין שאר הדברים",
+      "meaning": ""
+    },
+    {
+      "en": "analysis",
+      "pos": "noun",
+      "he": "ניתוח נתונים",
+      "meaning": "examination"
+    },
+    {
+      "en": "analyst",
+      "pos": "noun",
+      "he": "אנליסט , ( בן אדם ) מנתח נתונים",
+      "meaning": "examiner"
+    },
+    {
+      "en": "analyze",
+      "pos": "verb",
+      "he": "לנתח",
+      "meaning": "to examine"
+    },
+    {
+      "en": "appear",
+      "pos": "verb",
+      "he": "להופיע , להראות",
+      "meaning": "to seem"
+    },
+    {
+      "en": "appearance",
+      "pos": "noun",
+      "he": "מראה",
+      "meaning": "the way something looks"
+    },
+    {
+      "en": "approach",
+      "pos": "verb",
+      "he": "להתקרב , לגשת , להתמודד",
+      "meaning": "(1) to get to, to get near, (2) to deal with"
+    },
+    {
+      "en": "approach",
+      "pos": "noun",
+      "he": "גישה , התקרבות",
+      "meaning": "(1) getting near to (2) method"
+    },
+    {
+      "en": "as",
+      "pos": "conjunction",
+      "he": "כאשר",
+      "meaning": "(1) like (2) when, while"
+    },
+    {
+      "en": "at",
+      "pos": "least",
+      "he": "לפחות",
+      "meaning": "not less than, at minimum"
+    },
+    {
+      "en": "average",
+      "pos": "adjective",
+      "he": "ממוצע",
+      "meaning": "ordinary, usual"
+    },
+    {
+      "en": "be",
+      "pos": "responsible",
+      "he": "להיות אחראי על",
+      "meaning": "for verb to be in charge of"
+    },
+    {
+      "en": "before",
+      "pos": "preposition",
+      "he": "לפני",
+      "meaning": "earlier"
+    },
+    {
+      "en": "besides",
+      "pos": "preposition",
+      "he": "חוץ מ - , בנוסף לזה",
+      "meaning": "except for, in addition"
+    },
+    {
+      "en": "can",
+      "pos": "modal",
+      "he": "יכול",
+      "meaning": "verb be able to"
+    },
+    {
+      "en": "challenge",
+      "pos": "noun",
+      "he": "אתגר",
+      "meaning": "obstacle, difficulty"
+    },
+    {
+      "en": "chance",
+      "pos": "noun",
+      "he": "סיכוי",
+      "meaning": "opportunity"
+    },
+    {
+      "en": "change",
+      "pos": "verb",
+      "he": "לשנות , להשתנות",
+      "meaning": "to make or become different"
+    },
+    {
+      "en": "characteristic",
+      "pos": "noun",
+      "he": "מאפיין של אדם , מקום או דבר",
+      "meaning": "feature"
+    },
+    {
+      "en": "characterize",
+      "pos": "verb",
+      "he": "לאפיין",
+      "meaning": "to have a special quality"
+    },
+    {
+      "en": "claim",
+      "pos": "verb",
+      "he": "לטעון , להתוכח",
+      "meaning": "to state, to argue"
+    },
+    {
+      "en": "come",
+      "pos": "after ,",
+      "he": "לעקוב אחרי , להתחיל",
+      "meaning": "come first follow, begin"
+    },
+    {
+      "en": "common",
+      "pos": "adjective",
+      "he": "נפוץ",
+      "meaning": "shared, popular, usual"
+    },
+    {
+      "en": "complicated",
+      "pos": "adjective",
+      "he": "מסובך",
+      "meaning": "not simple, hard to understand, complex"
+    },
+    {
+      "en": "complicate",
+      "pos": "verb",
+      "he": "לסבך",
+      "meaning": "cause problems"
+    },
+    {
+      "en": "concern",
+      "pos": "verb",
+      "he": "לדאוג , להתייחס",
+      "meaning": "relate to"
+    },
+    {
+      "en": "concerned",
+      "pos": "adjective",
+      "he": "מודאג מ -",
+      "meaning": "worried about"
+    },
+    {
+      "en": "concerned",
+      "pos": "with",
+      "he": "מעוניין ב",
+      "meaning": "prep interested in, worrited about"
+    },
+    {
+      "en": "conditions",
+      "pos": "noun",
+      "he": "תנאים",
+      "meaning": "situation"
+    },
+    {
+      "en": "conduct",
+      "pos": "verb",
+      "he": "לבצע , לערוך",
+      "meaning": "carry out, lead, guide, escort"
+    },
+    {
+      "en": "consequence",
+      "pos": "noun",
+      "he": "השלכה , תוצאה",
+      "meaning": "result"
+    },
+    {
+      "en": "consequently",
+      "pos": "adverb",
+      "he": "לכן , כתוצאה מכך",
+      "meaning": "as a result"
+    },
+    {
+      "en": "considerable",
+      "pos": "adjective",
+      "he": "ניכר , בולט , חשוב",
+      "meaning": "large in number or amount, important"
+    },
+    {
+      "en": "cope",
+      "pos": "with",
+      "he": "להתמודד",
+      "meaning": "verb deal with"
+    },
+    {
+      "en": "critic",
+      "pos": "noun",
+      "he": "בן אדם שמעביר ביקורת",
+      "meaning": "someone who reviews or opposes"
+    },
+    {
+      "en": "criticism",
+      "pos": "noun",
+      "he": "ביקורת",
+      "meaning": "negative comments"
+    },
+    {
+      "en": "criticize",
+      "pos": "verb",
+      "he": "להעביר ביקורת",
+      "meaning": "to not approve, to comment on negatively"
+    },
+    {
+      "en": "current",
+      "pos": "adjective",
+      "he": "נוכחי",
+      "meaning": "present, most recent, up to date"
+    },
+    {
+      "en": "currently",
+      "pos": "adverb",
+      "he": "עכשיו",
+      "meaning": "recently, now"
+    },
+    {
+      "en": "decrease",
+      "pos": "verb",
+      "he": "להפחית , להוריד",
+      "meaning": "to reduce, to become or make less"
+    },
+    {
+      "en": "decrease",
+      "pos": "noun",
+      "he": "הפחתה , הורדה",
+      "meaning": "reduction"
+    },
+    {
+      "en": "delayed",
+      "pos": "adjective",
+      "he": "מעוכב , דחוי",
+      "meaning": "made late, put off"
+    },
+    {
+      "en": "deliberate",
+      "pos": "adjective",
+      "he": "מכוון , מחושב",
+      "meaning": "on purpose"
+    },
+    {
+      "en": "deliberately",
+      "pos": "adverb",
+      "he": "בכוונה",
+      "meaning": "on purpose, intentionally"
+    },
+    {
+      "en": "demonstrate",
+      "pos": "verb",
+      "he": "להראות , להדגים",
+      "meaning": "to show"
+    },
+    {
+      "en": "demonstration",
+      "pos": "noun",
+      "he": "הפגנה , הדגמה",
+      "meaning": "an act of protest by a group of people"
+    },
+    {
+      "en": "design",
+      "pos": "noun",
+      "he": "עיצוב",
+      "meaning": "the underlying scheme or pattern"
+    },
+    {
+      "en": "designer",
+      "pos": "noun",
+      "he": "מעצב",
+      "meaning": "someone who plans how something looks"
+    },
+    {
+      "en": "destruction",
+      "pos": "noun",
+      "he": "הרס",
+      "meaning": "great damage or ruin"
+    },
+    {
+      "en": "developing",
+      "pos": "adjective",
+      "he": "מתפתח",
+      "meaning": "not yet at a high level"
+    },
+    {
+      "en": "developed",
+      "pos": "adjective",
+      "he": "מפותח",
+      "meaning": "advanced"
+    },
+    {
+      "en": "development",
+      "pos": "noun",
+      "he": "התפתחות",
+      "meaning": "progress, the process of improving"
+    },
+    {
+      "en": "disagreement",
+      "pos": "noun",
+      "he": "אי הסכמה",
+      "meaning": "argument"
+    },
+    {
+      "en": "disaster",
+      "pos": "noun",
+      "he": "אסון",
+      "meaning": "terrible event"
+    },
+    {
+      "en": "discovery",
+      "pos": "noun",
+      "he": "תגלית",
+      "meaning": "finding out something important"
+    },
+    {
+      "en": "dislike",
+      "pos": "verb",
+      "he": "לא אוהב",
+      "meaning": "to not prefer"
+    },
+    {
+      "en": "do",
+      "pos": "auxiliary",
+      "he": "פועל עזר - להדגשה - אני כן לומד למבחנים",
+      "meaning": "verb for emphasis; Example: I do study for tests!"
+    },
+    {
+      "en": "doubt",
+      "pos": "verb",
+      "he": "להטיל ספק",
+      "meaning": "not believe"
+    },
+    {
+      "en": "drop",
+      "pos": "verb",
+      "he": "להפיל",
+      "meaning": "make fall"
+    },
+    {
+      "en": "drop",
+      "pos": "noun",
+      "he": "ירידה",
+      "meaning": "decrease"
+    },
+    {
+      "en": "educate",
+      "pos": "verb",
+      "he": "לחנך",
+      "meaning": "teach"
+    },
+    {
+      "en": "educated",
+      "pos": "adjective",
+      "he": "מלומד , מחונך",
+      "meaning": "learned a lot"
+    },
+    {
+      "en": "educator",
+      "pos": "noun",
+      "he": "מחנך , מורה",
+      "meaning": "teacher"
+    },
+    {
+      "en": "efficient",
+      "pos": "adjective",
+      "he": "יעיל",
+      "meaning": "effective"
+    },
+    {
+      "en": "efficiently",
+      "pos": "adverb",
+      "he": "ביעילות",
+      "meaning": "effectively"
+    },
+    {
+      "en": "emphasis",
+      "pos": "noun",
+      "he": "דגש",
+      "meaning": "stress, special importance or significance"
+    },
+    {
+      "en": "emphasize",
+      "pos": "verb",
+      "he": "להדגיש , להבליט",
+      "meaning": "to stress, to give a special attention to smth"
+    },
+    {
+      "en": "enjoyable",
+      "pos": "adjective",
+      "he": "מהנה",
+      "meaning": "fun"
+    },
+    {
+      "en": "enjoyment",
+      "pos": "noun",
+      "he": "תענוג",
+      "meaning": "fun"
+    },
+    {
+      "en": "essay",
+      "pos": "noun",
+      "he": "חיבור",
+      "meaning": "writing, composition"
+    },
+    {
+      "en": "essentially",
+      "pos": "adverb",
+      "he": "במקור , בעיקרו של דבר , ביסודו , במהותו",
+      "meaning": "basically, originally, by nature"
+    },
+    {
+      "en": "even",
+      "pos": "if",
+      "he": "אפילו ש -",
+      "meaning": "even though"
+    },
+    {
+      "en": "even",
+      "pos": "though",
+      "he": "למרות ש -",
+      "meaning": "although"
+    },
+    {
+      "en": "event",
+      "pos": "noun",
+      "he": "אירוע",
+      "meaning": "happening"
+    },
+    {
+      "en": "exactly",
+      "pos": "adverb",
+      "he": "בדיוק",
+      "meaning": "precisely"
+    },
+    {
+      "en": "except",
+      "pos": "that",
+      "he": "מלבד זה",
+      "meaning": "aside from, not including"
+    },
+    {
+      "en": "exist",
+      "pos": "verb",
+      "he": "להתקיים",
+      "meaning": "to be real"
+    },
+    {
+      "en": "existing",
+      "pos": "adjective",
+      "he": "קיים , נוכחי",
+      "meaning": "real, current"
+    },
+    {
+      "en": "existence",
+      "pos": "noun",
+      "he": "קיום",
+      "meaning": "reality"
+    },
+    {
+      "en": "extraordinary",
+      "pos": "adjective",
+      "he": "יוצא דופן",
+      "meaning": "very unusual, remarkable"
+    },
+    {
+      "en": "feature",
+      "pos": "noun",
+      "he": "תכונה , מאפיין",
+      "meaning": "characteristic, important part of something"
+    },
+    {
+      "en": "feedback",
+      "pos": "noun",
+      "he": "תגובה , חיזוק חוזר",
+      "meaning": "reaction"
+    },
+    {
+      "en": "figure",
+      "pos": "noun",
+      "he": "צורה",
+      "meaning": "shape"
+    },
+    {
+      "en": "figure",
+      "pos": "out",
+      "he": "להבין , למצוא תשובה",
+      "meaning": "verb understand, find the answer"
+    },
+    {
+      "en": "financial",
+      "pos": "adjective",
+      "he": "כספי , פיננסי , שקשור לכסף",
+      "meaning": "related to money"
+    },
+    {
+      "en": "finance",
+      "pos": "verb",
+      "he": "לממן",
+      "meaning": "pay for"
+    },
+    {
+      "en": "finance",
+      "pos": "noun",
+      "he": "מימון , כספים",
+      "meaning": "money, management of money"
+    },
+    {
+      "en": "finding / findings",
+      "pos": "noun",
+      "he": "ממצאים",
+      "meaning": "discoveries; results of a study"
+    },
+    {
+      "en": "flexibility",
+      "pos": "noun",
+      "he": "גמישות",
+      "meaning": "willingness to change"
+    },
+    {
+      "en": "flexible",
+      "pos": "adjective",
+      "he": "דמיש",
+      "meaning": "adjusts easily"
+    },
+    {
+      "en": "flood",
+      "pos": "noun",
+      "he": "הצפה",
+      "meaning": "a lot of water"
+    },
+    {
+      "en": "flood",
+      "pos": "verb",
+      "he": "להציף",
+      "meaning": "to cover with too much water"
+    },
+    {
+      "en": "flu",
+      "pos": "noun",
+      "he": "שפעת",
+      "meaning": "type of sickness"
+    },
+    {
+      "en": "focus",
+      "pos": "on / upon",
+      "he": "להתמקד ב - , להתרכז ב -",
+      "meaning": "verb pay attention to, concentrate on"
+    },
+    {
+      "en": "frequency",
+      "pos": "noun",
+      "he": "תדירות",
+      "meaning": "how often somrthing happens"
+    },
+    {
+      "en": "frequent",
+      "pos": "adjective",
+      "he": "תדיר , שקורה לעיתים קרובות",
+      "meaning": "very often"
+    },
+    {
+      "en": "fresh",
+      "pos": "adjective",
+      "he": "טרי",
+      "meaning": "new"
+    },
+    {
+      "en": "frighten",
+      "pos": "verb",
+      "he": "להפחיד",
+      "meaning": "scare"
+    },
+    {
+      "en": "from",
+      "pos": "preposition",
+      "he": "מ -",
+      "meaning": "position, starting point"
+    },
+    {
+      "en": "gain",
+      "pos": "verb",
+      "he": "להרוויח , לזכות במשהו , להשיג",
+      "meaning": "make an increase, profit, earn"
+    },
+    {
+      "en": "gain",
+      "pos": "noun",
+      "he": "רווח , הישג",
+      "meaning": "profit, amount earned"
+    },
+    {
+      "en": "generate",
+      "pos": "verb",
+      "he": "לייצר",
+      "meaning": "create, make, produce"
+    },
+    {
+      "en": "guidance",
+      "pos": "noun",
+      "he": "הדרכה , הנחייה , הנהגה",
+      "meaning": "help, advice, leadership or direction"
+    },
+    {
+      "en": "hopeful",
+      "pos": "adjective",
+      "he": "מלא תקווה",
+      "meaning": "optimistic, having a positive outlook"
+    },
+    {
+      "en": "hopefully",
+      "pos": "adjective",
+      "he": "בתקוה",
+      "meaning": "with luck"
+    },
+    {
+      "en": "ideal",
+      "pos": "adjective",
+      "he": "אידאלי",
+      "meaning": "best, most preferable"
+    },
+    {
+      "en": "illness",
+      "pos": "noun",
+      "he": "מחלה",
+      "meaning": "sickness, disease"
+    },
+    {
+      "en": "illustrate",
+      "pos": "verb",
+      "he": "להראות , להדגים , להמחיש , לאייר",
+      "meaning": "draw pictures, show,make clear by pictures"
+    },
+    {
+      "en": "illustration",
+      "pos": "noun",
+      "he": "תמונה , איור , הדגמה , המחשה",
+      "meaning": "picture, image"
+    },
+    {
+      "en": "image",
+      "pos": "noun",
+      "he": "דמות , תמונה , תדמית",
+      "meaning": "picture, especially on film or television"
+    },
+    {
+      "en": "in",
+      "pos": "preposition",
+      "he": "בתוך",
+      "meaning": "within, inside, into"
+    },
+    {
+      "en": "in",
+      "pos": "terms of",
+      "he": "מבחינת ה - , ביחס ל -",
+      "meaning": "regarding , with respect to"
+    },
+    {
+      "en": "in",
+      "pos": "actual",
+      "he": "למעשה , בעצם",
+      "meaning": "fact in truth"
+    },
+    {
+      "en": "in",
+      "pos": "connection",
+      "he": "בקשר ל - , בנוגע ל -",
+      "meaning": "with about, relating to, concerning"
+    },
+    {
+      "en": "in",
+      "pos": "that",
+      "he": "במקרה הזה , אם זה נכון , אז ....",
+      "meaning": "case if that is true"
+    },
+    {
+      "en": "in",
+      "pos": "the",
+      "he": "בינתיים",
+      "meaning": "meantime while, during"
+    },
+    {
+      "en": "initial",
+      "pos": "adjective",
+      "he": "מקורי , ראשוני , התחלתי",
+      "meaning": "first"
+    },
+    {
+      "en": "initially",
+      "pos": "adverb",
+      "he": "במקור , בהתחלה",
+      "meaning": "at first"
+    },
+    {
+      "en": "instruction",
+      "pos": "noun",
+      "he": "הנחייה , הדרכה , הוראה",
+      "meaning": "teaching, order, how to do something"
+    },
+    {
+      "en": "intelligence",
+      "pos": "noun",
+      "he": "אניטליגנציה , פקחות , תבונה , חייל מודיעין",
+      "meaning": "smartness"
+    },
+    {
+      "en": "intelligent",
+      "pos": "adjective",
+      "he": "חכם",
+      "meaning": "smart"
+    },
+    {
+      "en": "interest",
+      "pos": "noun",
+      "he": "עניין",
+      "meaning": "attraction"
+    },
+    {
+      "en": "interest",
+      "pos": "verb",
+      "he": "לעניין",
+      "meaning": "to attract"
+    },
+    {
+      "en": "introduce",
+      "pos": "verb",
+      "he": "להציג",
+      "meaning": "to show something new, present something"
+    },
+    {
+      "en": "invest",
+      "pos": "verb",
+      "he": "להשקיע ( כסף )",
+      "meaning": "to put money into something in order to earn"
+    },
+    {
+      "en": "investor",
+      "pos": "noun",
+      "he": "משקיע",
+      "meaning": "one who puts money into something in order to earn"
+    },
+    {
+      "en": "investment",
+      "pos": "noun",
+      "he": "השקעה",
+      "meaning": "putting money into something in order to earn"
+    },
+    {
+      "en": "investigate",
+      "pos": "verb",
+      "he": "לחקור",
+      "meaning": "research, study in great detail"
+    },
+    {
+      "en": "investigation",
+      "pos": "noun",
+      "he": "חקירה",
+      "meaning": "study"
+    },
+    {
+      "en": "investigator",
+      "pos": "noun",
+      "he": "חוקר",
+      "meaning": "detective"
+    },
+    {
+      "en": "just",
+      "pos": "about",
+      "he": "בדיוק עמדתי ל -",
+      "meaning": "almost"
+    },
+    {
+      "en": "keep",
+      "pos": "on",
+      "he": "להמשיך לעשות משהו",
+      "meaning": "doing verb continue"
+    },
+    {
+      "en": "kind",
+      "pos": "of",
+      "he": "סוג של",
+      "meaning": "type of"
+    },
+    {
+      "en": "knowledge",
+      "pos": "noun",
+      "he": "ידע",
+      "meaning": "awareness, skills, experience"
+    },
+    {
+      "en": "lack",
+      "pos": "verb",
+      "he": "חסר",
+      "meaning": "not having, missing"
+    },
+    {
+      "en": "landscape",
+      "pos": "noun",
+      "he": "נוף",
+      "meaning": "the view of the land"
+    },
+    {
+      "en": "likely",
+      "pos": "adjective",
+      "he": "סביר , קרוב לודאי",
+      "meaning": ", adverb probably"
+    },
+    {
+      "en": "limited",
+      "pos": "adjective",
+      "he": "מוגבל",
+      "meaning": "restricted"
+    },
+    {
+      "en": "limitation",
+      "pos": "noun",
+      "he": "הגבלה",
+      "meaning": "restriction"
+    },
+    {
+      "en": "little",
+      "pos": "adjective",
+      "he": "קטן , מעט",
+      "meaning": "small, not a lot"
+    },
+    {
+      "en": "look",
+      "pos": "at smth",
+      "he": "להתבונן , להסתכל על משהו",
+      "meaning": "verb observe"
+    },
+    {
+      "en": "low",
+      "pos": "adverb",
+      "he": "נמוך",
+      "meaning": "to a small amount or level"
+    },
+    {
+      "en": "material",
+      "pos": "noun",
+      "he": "חומר , מסמכים",
+      "meaning": "documents, information"
+    },
+    {
+      "en": "meaning",
+      "pos": "noun",
+      "he": "משמעות , חשיבות",
+      "meaning": "significance, translation"
+    },
+    {
+      "en": "mean",
+      "pos": "verb",
+      "he": "להתכוון",
+      "meaning": "to have significance or purpose"
+    },
+    {
+      "en": "means",
+      "pos": "noun",
+      "he": "אמצעי",
+      "meaning": "by the use of"
+    },
+    {
+      "en": "measure",
+      "pos": "noun",
+      "he": "מידה , צעד",
+      "meaning": "step, a value for a quantity"
+    },
+    {
+      "en": "mention",
+      "pos": "verb",
+      "he": "להזכיר",
+      "meaning": "to say, point out"
+    },
+    {
+      "en": "miss",
+      "pos": "verb",
+      "he": "להתגעגע , לפספס",
+      "meaning": "(1) fail to catch (2) wishing to see somebody"
+    },
+    {
+      "en": "misunderstand",
+      "pos": "verb",
+      "he": "להבין לא נכון",
+      "meaning": "understand incorrectly"
+    },
+    {
+      "en": "more",
+      "pos": "or",
+      "he": "פחות או יותר",
+      "meaning": "less approximately, somewhat, to a varying degree"
+    },
+    {
+      "en": "must",
+      "pos": "modal",
+      "he": "חייב",
+      "meaning": "verb have to"
+    },
+    {
+      "en": "naturally",
+      "pos": "adverb",
+      "he": "כמובן , בודאי , בצורה טבעית",
+      "meaning": "as expected, normally"
+    },
+    {
+      "en": "nature",
+      "pos": "noun",
+      "he": "טבע , אופי",
+      "meaning": "(1) open air (2) character"
+    },
+    {
+      "en": "necessarily",
+      "pos": "adverb",
+      "he": "בהכרח",
+      "meaning": "has to be so, in such a manner as could not be otherwise"
+    },
+    {
+      "en": "nevertheless",
+      "pos": "adverb",
+      "he": "למרות הכל",
+      "meaning": "but , however"
+    },
+    {
+      "en": "not",
+      "pos": "at",
+      "he": "בכלל לא",
+      "meaning": "all entirely not"
+    },
+    {
+      "en": "not",
+      "pos": "only",
+      "he": "לא רק",
+      "meaning": "something more than"
+    },
+    {
+      "en": "notice",
+      "pos": "noun",
+      "he": "הודעה , התראה",
+      "meaning": "advertisement, warning"
+    },
+    {
+      "en": "objective",
+      "pos": "noun",
+      "he": "מטרה",
+      "meaning": "aim, purpose"
+    },
+    {
+      "en": "occasional",
+      "pos": "adjective",
+      "he": "מקרי",
+      "meaning": "from time to time"
+    },
+    {
+      "en": "occasionally",
+      "pos": "adverb",
+      "he": "מדי פעם , לפעמים",
+      "meaning": "sometimes"
+    },
+    {
+      "en": "official",
+      "pos": "adjective",
+      "he": "רשמי",
+      "meaning": "relating to authority"
+    },
+    {
+      "en": "on",
+      "pos": "the",
+      "he": "מצד אחד",
+      "meaning": "one hand from one point of view"
+    },
+    {
+      "en": "once",
+      "pos": "conjunction",
+      "he": "ברגע ש -",
+      "meaning": "as soon as"
+    },
+    {
+      "en": "others",
+      "pos": "noun",
+      "he": "האחרים",
+      "meaning": "people in general"
+    },
+    {
+      "en": "otherwise",
+      "pos": "adverb",
+      "he": "אחרת",
+      "meaning": ", conj if not, under other circumstances"
+    },
+    {
+      "en": "out",
+      "pos": "of",
+      "he": "מיושן",
+      "meaning": "date adjective old fashioned"
+    },
+    {
+      "en": "participant",
+      "pos": "noun",
+      "he": "משתתף",
+      "meaning": "one who takes part in something"
+    },
+    {
+      "en": "participate",
+      "pos": "verb",
+      "he": "להשתתף",
+      "meaning": "take part in something"
+    },
+    {
+      "en": "participation",
+      "pos": "noun",
+      "he": "השתתפות",
+      "meaning": "the act of taking part in something"
+    },
+    {
+      "en": "particular",
+      "pos": "adjective",
+      "he": "מיוחד",
+      "meaning": "specific"
+    },
+    {
+      "en": "particularly",
+      "pos": "adverb",
+      "he": "במיוחד , בפרט",
+      "meaning": "specifically"
+    },
+    {
+      "en": "past",
+      "pos": "adjective",
+      "he": "לשעבר , קודם",
+      "meaning": "before now"
+    },
+    {
+      "en": "perform",
+      "pos": "verb",
+      "he": "לבצע , להופיע",
+      "meaning": "(1) to carry out an action (2) to act in a show or film"
+    },
+    {
+      "en": "performance",
+      "pos": "noun",
+      "he": "הופעה , ביצוע",
+      "meaning": "acting"
+    },
+    {
+      "en": "personality",
+      "pos": "noun",
+      "he": "אישיות",
+      "meaning": "what makes a person special"
+    },
+    {
+      "en": "personally",
+      "pos": "adverb",
+      "he": "באופן אישי",
+      "meaning": "in one’s own opinion"
+    },
+    {
+      "en": "planet",
+      "pos": "noun",
+      "he": "כוכב לכת",
+      "meaning": "a body in space"
+    },
+    {
+      "en": "planning",
+      "pos": "noun",
+      "he": "תיכנון",
+      "meaning": "preparation"
+    },
+    {
+      "en": "planned",
+      "pos": "adjective",
+      "he": "תמתוכנן",
+      "meaning": "decided"
+    },
+    {
+      "en": "plant",
+      "pos": "verb",
+      "he": "לשתול",
+      "meaning": "to put something in the ground to grow"
+    },
+    {
+      "en": "point",
+      "pos": "of",
+      "he": "נקודת מבט",
+      "meaning": "view noun perspective"
+    },
+    {
+      "en": "policy",
+      "pos": "noun",
+      "he": "מדיניות",
+      "meaning": "rule, law"
+    },
+    {
+      "en": "pollute",
+      "pos": "verb",
+      "he": "לזהם",
+      "meaning": "to release harmful materials into the environment"
+    },
+    {
+      "en": "pollution",
+      "pos": "noun",
+      "he": "זיהום",
+      "meaning": "releasing harmful materials into the environment"
+    },
+    {
+      "en": "popular",
+      "pos": "adjective",
+      "he": "מפורסם , נפוץ",
+      "meaning": "loved by many, widespread"
+    },
+    {
+      "en": "population",
+      "pos": "noun",
+      "he": "אוכלוסייה",
+      "meaning": "group of people in a country"
+    },
+    {
+      "en": "prevent",
+      "pos": "verb",
+      "he": "למנוע",
+      "meaning": "to stop from happening"
+    },
+    {
+      "en": "prevention",
+      "pos": "noun",
+      "he": "מניעה , עיכוב",
+      "meaning": "stopping from happening"
+    },
+    {
+      "en": "priority",
+      "pos": "noun",
+      "he": "עדיפות",
+      "meaning": "something important"
+    },
+    {
+      "en": "private",
+      "pos": "adjective",
+      "he": "פרטי , אישי",
+      "meaning": "personal, not public"
+    },
+    {
+      "en": "probable",
+      "pos": "adjective",
+      "he": "סביר , הגיוני",
+      "meaning": "likely to happen"
+    },
+    {
+      "en": "produce",
+      "pos": "verb",
+      "he": "לייצר , להפיק",
+      "meaning": "to make"
+    },
+    {
+      "en": "producer",
+      "pos": "noun",
+      "he": "מפיק",
+      "meaning": "someone who makes a movie"
+    },
+    {
+      "en": "profession",
+      "pos": "noun",
+      "he": "מקצוע",
+      "meaning": "a job that needs special education and a training"
+    },
+    {
+      "en": "professional",
+      "pos": "adjective",
+      "he": "מקצועי",
+      "meaning": "skilled"
+    },
+    {
+      "en": "professor",
+      "pos": "noun",
+      "he": "פרופסור",
+      "meaning": "university teacher"
+    },
+    {
+      "en": "proof",
+      "pos": "noun",
+      "he": "הוכחה",
+      "meaning": "evidence"
+    },
+    {
+      "en": "proposed",
+      "pos": "adjective",
+      "he": "מוצע , שהציעו אותו",
+      "meaning": "suggested"
+    },
+    {
+      "en": "protest",
+      "pos": "noun",
+      "he": "הפגנה",
+      "meaning": "demonstration, opposition"
+    },
+    {
+      "en": "protest",
+      "pos": "verb",
+      "he": "להפגין נגד",
+      "meaning": "to demonstrate against something"
+    },
+    {
+      "en": "provided",
+      "pos": "that",
+      "he": "כל עוד ש -",
+      "meaning": "as long as, if"
+    },
+    {
+      "en": "psychological",
+      "pos": "adjective",
+      "he": "פסיכולוגי",
+      "meaning": "mental"
+    },
+    {
+      "en": "psychologist",
+      "pos": "noun",
+      "he": "פסיכולוגי",
+      "meaning": "therapist"
+    },
+    {
+      "en": "psychology",
+      "pos": "noun",
+      "he": "פסיכולוגיה",
+      "meaning": "the study of the mind"
+    },
+    {
+      "en": "public",
+      "pos": "adjective",
+      "he": "ציבורי",
+      "meaning": "belonging to government, available to all"
+    },
+    {
+      "en": "publicly",
+      "pos": "adverb",
+      "he": "באופן ציבורי , בפומבי",
+      "meaning": "in a way that everyone knows about"
+    },
+    {
+      "en": "purpose",
+      "pos": "noun",
+      "he": "מטרה",
+      "meaning": "intention, goal, aim, target"
+    },
+    {
+      "en": "quality",
+      "pos": "noun",
+      "he": "איכות",
+      "meaning": "characteristic, how good or bad something is"
+    },
+    {
+      "en": "question",
+      "pos": "verb",
+      "he": "לשאול , לתשאל",
+      "meaning": "ask, doubt, interrogate"
+    },
+    {
+      "en": "question",
+      "pos": "noun",
+      "he": "בעייה , סוגייה",
+      "meaning": "problem, issue"
+    },
+    {
+      "en": "questionnaire",
+      "pos": "noun",
+      "he": "שאלון",
+      "meaning": "survey"
+    },
+    {
+      "en": "react",
+      "pos": "verb",
+      "he": "להגיב",
+      "meaning": "respond"
+    },
+    {
+      "en": "reaction",
+      "pos": "noun",
+      "he": "תגובה , חיזוק חוזר",
+      "meaning": "response"
+    },
+    {
+      "en": "reasonable",
+      "pos": "adjective",
+      "he": "הגיוני",
+      "meaning": "logical, fair, sensible"
+    },
+    {
+      "en": "reasonably",
+      "pos": "adverb",
+      "he": "בצורה הגיונית , בהגיון",
+      "meaning": "logically"
+    },
+    {
+      "en": "recommend",
+      "pos": "verb",
+      "he": "להמליץ",
+      "meaning": "give advice, suggest"
+    },
+    {
+      "en": "recommendation",
+      "pos": "noun",
+      "he": "המלצה , הצעה",
+      "meaning": "suggestion"
+    },
+    {
+      "en": "recycle",
+      "pos": "verb",
+      "he": "למחזר",
+      "meaning": "change into usable materials"
+    },
+    {
+      "en": "regard",
+      "pos": "verb",
+      "he": "להתייחס",
+      "meaning": "to consider or treat"
+    },
+    {
+      "en": "regard",
+      "pos": "noun",
+      "he": "להתחשב , להתייחס",
+      "meaning": "respect"
+    },
+    {
+      "en": "regarding",
+      "pos": "preposition",
+      "he": "בקשר ל - , בנוגע ל -",
+      "meaning": "about"
+    },
+    {
+      "en": "regardless",
+      "pos": "adverb",
+      "he": "בלי להתייחס לנאמר",
+      "meaning": "anyway, without paying attention to"
+    },
+    {
+      "en": "region",
+      "pos": "noun",
+      "he": "איזור",
+      "meaning": "area"
+    },
+    {
+      "en": "regional",
+      "pos": "adjective",
+      "he": "איזורי",
+      "meaning": "related to one area"
+    },
+    {
+      "en": "regular",
+      "pos": "adjective",
+      "he": "רגיל",
+      "meaning": "normal"
+    },
+    {
+      "en": "relevance",
+      "pos": "noun",
+      "he": "רלוונטיות",
+      "meaning": "connection"
+    },
+    {
+      "en": "relevant",
+      "pos": "adjective",
+      "he": "רלוונטי , קשור , שייך",
+      "meaning": "connected, important"
+    },
+    {
+      "en": "reliable",
+      "pos": "adjective",
+      "he": "ראוי לאמון , שאפשר לסמוך עליו",
+      "meaning": "trustworthy"
+    },
+    {
+      "en": "rely",
+      "pos": "on / upon",
+      "he": "להסתמך על , להיות תלוי ב -",
+      "meaning": "verb to trust, depend on"
+    },
+    {
+      "en": "request",
+      "pos": "verb",
+      "he": "לבקש",
+      "meaning": "to ask for something"
+    },
+    {
+      "en": "request",
+      "pos": "noun",
+      "he": "בקשה",
+      "meaning": "something asked for"
+    },
+    {
+      "en": "research",
+      "pos": "verb",
+      "he": "לחקור",
+      "meaning": "to study or investigate"
+    },
+    {
+      "en": "research",
+      "pos": "noun",
+      "he": "מחקר",
+      "meaning": "a scientific investigation or study"
+    },
+    {
+      "en": "researcher",
+      "pos": "noun",
+      "he": "חוקר",
+      "meaning": "scientist"
+    },
+    {
+      "en": "result",
+      "pos": "noun",
+      "he": "תוצאה",
+      "meaning": "what happens in the end"
+    },
+    {
+      "en": "resulting",
+      "pos": "adjective",
+      "he": "נבע , נגרם מ - , היה תוצאה של",
+      "meaning": "cause"
+    },
+    {
+      "en": "review",
+      "pos": "noun",
+      "he": "סקירה , ביקורת",
+      "meaning": "opinion"
+    },
+    {
+      "en": "review",
+      "pos": "verb",
+      "he": "לסקור , לבחון , לשקול מחדש",
+      "meaning": "to go over something and give an opinion"
+    },
+    {
+      "en": "revise",
+      "pos": "verb",
+      "he": "לשפר , לתקן",
+      "meaning": "to go over carefully in order to correct or improve"
+    },
+    {
+      "en": "revision",
+      "pos": "noun",
+      "he": "בדיקה מחדש , תיקון , הגהה , נוסח מתוקן",
+      "meaning": "review"
+    },
+    {
+      "en": "risk",
+      "pos": "noun",
+      "he": "סכנה",
+      "meaning": "danger, chance"
+    },
+    {
+      "en": "risk",
+      "pos": "verb",
+      "he": "לסכן",
+      "meaning": "to put in danger"
+    },
+    {
+      "en": "run",
+      "pos": "out",
+      "he": "להיגמר",
+      "meaning": "of verb finish, to have nothing left"
+    },
+    {
+      "en": "rural",
+      "pos": "adjective",
+      "he": "כפרי",
+      "meaning": "out of the city"
+    },
+    {
+      "en": "salary",
+      "pos": "noun",
+      "he": "משכורת",
+      "meaning": "money earned from work"
+    },
+    {
+      "en": "sample",
+      "pos": "noun",
+      "he": "דוגמית",
+      "meaning": "a small part, example"
+    },
+    {
+      "en": "seldom",
+      "pos": "adverb",
+      "he": "ליעיתים רחוקות",
+      "meaning": "not often, infrequently"
+    },
+    {
+      "en": "sense",
+      "pos": "noun",
+      "he": "חוש , הגיון , דעת",
+      "meaning": "reason, good judgment"
+    },
+    {
+      "en": "sensible",
+      "pos": "adjective",
+      "he": "הגיוני",
+      "meaning": "logical, smart, reasonable"
+    },
+    {
+      "en": "set",
+      "pos": "up smth",
+      "he": "לייסד",
+      "meaning": "verb to start a business, an organization, to establish"
+    },
+    {
+      "en": "set",
+      "pos": "out",
+      "he": "לצאת לדרך , לתאר , להציג",
+      "meaning": "verb (1) to begin a journey (2) to present"
+    },
+    {
+      "en": "significant",
+      "pos": "adjective",
+      "he": "חשוב , משמעותי",
+      "meaning": "important, meaningful"
+    },
+    {
+      "en": "significantly",
+      "pos": "adverb",
+      "he": "בצורה משמעותית",
+      "meaning": "in an important or meaningful way"
+    },
+    {
+      "en": "significance",
+      "pos": "noun",
+      "he": "חשובות , משמעות",
+      "meaning": "meaning, importance"
+    },
+    {
+      "en": "skilled",
+      "pos": "adjective",
+      "he": "מיומן , מנוסה , מקצועי",
+      "meaning": "having the ability to do something well"
+    },
+    {
+      "en": "skillful",
+      "pos": "adjective",
+      "he": "מיומן , מומחה",
+      "meaning": "having an impressive ability, proficient"
+    },
+    {
+      "en": "slight",
+      "pos": "adjective",
+      "he": "מועט , קטן , עדין",
+      "meaning": "a small amount"
+    },
+    {
+      "en": "slightly",
+      "pos": "adverb",
+      "he": "קצת",
+      "meaning": "a little bit"
+    },
+    {
+      "en": "specialist",
+      "pos": "noun",
+      "he": "מומחה",
+      "meaning": "someone with specific skills"
+    },
+    {
+      "en": "specialize",
+      "pos": "verb",
+      "he": "להתמחות",
+      "meaning": "to study something specific"
+    },
+    {
+      "en": "specific",
+      "pos": "adjective",
+      "he": "מיוחד",
+      "meaning": "certain, exact"
+    },
+    {
+      "en": "specifically",
+      "pos": "adverb",
+      "he": "במיוחד , בפרט",
+      "meaning": "especially"
+    },
+    {
+      "en": "specify",
+      "pos": "verb",
+      "he": "לפרט",
+      "meaning": "to say exactly, in detail"
+    },
+    {
+      "en": "still",
+      "pos": "adverb",
+      "he": "עדיין , למרות הכל",
+      "meaning": "despite everything"
+    },
+    {
+      "en": "structure",
+      "pos": "noun",
+      "he": "מבנה",
+      "meaning": "shape, design"
+    },
+    {
+      "en": "study",
+      "pos": "verb",
+      "he": "ללמוד",
+      "meaning": "to examine, learn"
+    },
+    {
+      "en": "study",
+      "pos": "noun",
+      "he": "מחקר",
+      "meaning": "research"
+    },
+    {
+      "en": "supposed",
+      "pos": "to",
+      "he": "אמור ל -",
+      "meaning": "should"
+    },
+    {
+      "en": "surface",
+      "pos": "noun",
+      "he": "פני שטח",
+      "meaning": "top or outer layer"
+    },
+    {
+      "en": "take",
+      "pos": "advantage",
+      "he": "לנצל",
+      "meaning": "of verb to make use of something"
+    },
+    {
+      "en": "thanks to",
+      "pos": "because of",
+      "he": "הודות ל - , בזכות",
+      "meaning": ""
+    },
+    {
+      "en": "theoretical",
+      "pos": "adjective",
+      "he": "תיאורטי",
+      "meaning": "relating to the idea of something"
+    },
+    {
+      "en": "theory",
+      "pos": "noun",
+      "he": "תאוריה",
+      "meaning": "an idea"
+    },
+    {
+      "en": "throw",
+      "pos": "away / out",
+      "he": "לזרוק",
+      "meaning": "verb to put in the garbage, to dispose of"
+    },
+    {
+      "en": "transport",
+      "pos": "verb",
+      "he": "להוביל , להסיע , להעביר",
+      "meaning": "to move from place to place"
+    },
+    {
+      "en": "transportation",
+      "pos": "noun",
+      "he": "העברה",
+      "meaning": "a way of taking something or someone from place to place"
+    },
+    {
+      "en": "trash",
+      "pos": "noun",
+      "he": "זבל",
+      "meaning": "garbage, refuse, waste, rubbish"
+    },
+    {
+      "en": "treatment",
+      "pos": "noun",
+      "he": "יחס , טיפול רפאוי",
+      "meaning": "medical care"
+    },
+    {
+      "en": "unfortunate",
+      "pos": "adjective",
+      "he": "חסר מזל",
+      "meaning": "unlucky"
+    },
+    {
+      "en": "unfortunately",
+      "pos": "adverb",
+      "he": "לצערי",
+      "meaning": "sadly"
+    },
+    {
+      "en": "unhealthy",
+      "pos": "adjective",
+      "he": "לא בריא",
+      "meaning": "not healthy"
+    },
+    {
+      "en": "unique",
+      "pos": "adjective",
+      "he": "ייחודי",
+      "meaning": "pecial, one of a kind"
+    },
+    {
+      "en": "united",
+      "pos": "adjective",
+      "he": "מאוחד",
+      "meaning": "together, as one"
+    },
+    {
+      "en": "unite",
+      "pos": "verb",
+      "he": "לאחד",
+      "meaning": "to combine, to bring together"
+    },
+    {
+      "en": "unity",
+      "pos": "noun",
+      "he": "איחוד",
+      "meaning": "being together as one"
+    },
+    {
+      "en": "universal",
+      "pos": "adjective",
+      "he": "כלל עולמי",
+      "meaning": "true all over the world"
+    },
+    {
+      "en": "universe",
+      "pos": "noun",
+      "he": "עולם , יקום",
+      "meaning": "all of space and everything that exists"
+    },
+    {
+      "en": "unknown",
+      "pos": "adjective",
+      "he": "לא ידוע",
+      "meaning": "not known"
+    },
+    {
+      "en": "unlike",
+      "pos": "different from",
+      "he": "לא כמו , שונה מ -",
+      "meaning": ""
+    },
+    {
+      "en": "unlikely",
+      "pos": "adjective",
+      "he": "לא סביר",
+      "meaning": "improbably, not expected to happen"
+    },
+    {
+      "en": "urban",
+      "pos": "adjective",
+      "he": "עירוני",
+      "meaning": "related to a city"
+    },
+    {
+      "en": "variation",
+      "pos": "noun",
+      "he": "וריאציה , שינוי , גיוון",
+      "meaning": "difference"
+    },
+    {
+      "en": "vary",
+      "pos": "verb",
+      "he": "לשנות , לגוון",
+      "meaning": "to change"
+    },
+    {
+      "en": "view",
+      "pos": "noun",
+      "he": "נוף",
+      "meaning": "a scene you can see"
+    },
+    {
+      "en": "viewer",
+      "pos": "noun",
+      "he": "מתבונן , צופה",
+      "meaning": "one who watches"
+    },
+    {
+      "en": "visible",
+      "pos": "adjective",
+      "he": "ראוי לעין",
+      "meaning": "can be seen"
+    },
+    {
+      "en": "vision",
+      "pos": "noun",
+      "he": "ראיה , חזון , חלום",
+      "meaning": "(1) dream, hope, idea (2) sight"
+    },
+    {
+      "en": "volume",
+      "pos": "noun",
+      "he": "כמות",
+      "meaning": "amount"
+    },
+    {
+      "en": "whom",
+      "pos": "pronoun",
+      "he": "שאותו , שאותה",
+      "meaning": "used instead of who as the object of a verb"
+    },
+    {
+      "en": "wildlife",
+      "pos": "noun",
+      "he": "חיי בר",
+      "meaning": "wild animals"
+    },
+    {
+      "en": "within",
+      "pos": "adverb",
+      "he": "בתוך",
+      "meaning": "a limit of time or distance"
+    },
+    {
+      "en": "worthwhile",
+      "pos": "adjective",
+      "he": "שווה",
+      "meaning": "valuable, worth spending time or money on"
+    },
+    {
+      "en": "would",
+      "pos": "modal",
+      "he": "פועל מודלי , מתייחס לעתיד , שימושי במשפט תנאי 2",
+      "meaning": "verb used as past form of will to talk about what someone said or thought"
+    }
+  ],
+  "listC": [
+    {
+      "en": "absorb",
+      "pos": "v",
+      "he": "לקלוט, לספוג",
+      "meaning": "take in"
+    },
+    {
+      "en": "access",
+      "pos": "n, v",
+      "he": "לגשת, גישה",
+      "meaning": "ability to enter , an approach, to approach"
+    },
+    {
+      "en": "(all) on your own",
+      "pos": "",
+      "he": "בעצמך",
+      "meaning": "by yourself"
+    },
+    {
+      "en": "ambition",
+      "pos": "n",
+      "he": "שאיפה",
+      "meaning": "strong desire to achieve a particular goal"
+    },
+    {
+      "en": "annoy",
+      "pos": "v",
+      "he": "להרגיז, לעצבן",
+      "meaning": "upset"
+    },
+    {
+      "en": "argue",
+      "pos": "v",
+      "he": "נימוקים, להביא, להתווכח",
+      "meaning": "persuade, give reasons"
+    },
+    {
+      "en": "as a matter of fact",
+      "pos": "",
+      "he": "האמת, למען, למעשה",
+      "meaning": "indeed, in reality, actually"
+    },
+    {
+      "en": "ashamed",
+      "pos": "adj",
+      "he": "מבויש",
+      "meaning": "feeling guilty or sorry"
+    },
+    {
+      "en": "aside",
+      "pos": "adv",
+      "he": "מלבד, הצידה",
+      "meaning": "to one side"
+    },
+    {
+      "en": "assure",
+      "pos": "v",
+      "he": "להבטיח, לוודא",
+      "meaning": "to say that something is true"
+    },
+    {
+      "en": "(at) any minute; any minute now",
+      "pos": "",
+      "he": "רגע, בכל",
+      "meaning": "very soon"
+    },
+    {
+      "en": "at his/its, etc. best",
+      "pos": "",
+      "he": "שלו, טוב, הכי, במצב",
+      "meaning": "as good as he/it can be"
+    },
+    {
+      "en": "attraction",
+      "pos": "n",
+      "he": "אטרקציה, ה (תחושה, משיכ, (מקום)",
+      "meaning": "something that makes people want to go to a place or do a particular thing , a feeling , an appeal, fascination"
+    },
+    {
+      "en": "awareness",
+      "pos": "n",
+      "he": "מודעות",
+      "meaning": "knowledge or understanding of a situation or something"
+    },
+    {
+      "en": "barely",
+      "pos": "adv",
+      "he": "ולא, כמעט, בקושי",
+      "meaning": "almost not, hardly"
+    },
+    {
+      "en": "barrier",
+      "pos": "n",
+      "he": "מחסום",
+      "meaning": "something that prevents the ability to move forward"
+    },
+    {
+      "en": "be (just) about to do sth",
+      "pos": "",
+      "he": "משהו, לעשות, עומד",
+      "meaning": "be going to (do something)"
+    },
+    {
+      "en": "(be) in your twenties / 20s /thirties/30s, etc.",
+      "pos": "",
+      "he": "וכו, ה, בשנות, להיות",
+      "meaning": "between 20 and 30 years old '"
+    },
+    {
+      "en": "be out of sth",
+      "pos": "",
+      "he": "נגמר, אזל, משהו",
+      "meaning": "run out of, completely used up"
+    },
+    {
+      "en": "beat",
+      "pos": "n",
+      "he": "מקצב, קצב",
+      "meaning": "rhythm"
+    },
+    {
+      "en": "bend",
+      "pos": "v, n",
+      "he": "עיקול, לכופף, להתכופף",
+      "meaning": "move something so that it's not straight, foreclosure"
+    },
+    {
+      "en": "biology",
+      "pos": "n",
+      "he": "ביולוגיה",
+      "meaning": "the study of living things"
+    },
+    {
+      "en": "bitter",
+      "pos": "adj",
+      "he": "מר",
+      "meaning": "the opposite of sweet"
+    },
+    {
+      "en": "bold",
+      "pos": "adj",
+      "he": "מודגש, נועז",
+      "meaning": "eye - catching, strong , emphasized"
+    },
+    {
+      "en": "bother",
+      "pos": "v",
+      "he": "להפריע, להטריד, לטרוח,",
+      "meaning": "make the effort to do something, annoy, disturb, irritate 1"
+    },
+    {
+      "en": "bottom",
+      "pos": "adj",
+      "he": "תחתון",
+      "meaning": "lowest in a range of levels, in position"
+    },
+    {
+      "en": "breeze",
+      "pos": "n",
+      "he": "רוח, משב",
+      "meaning": "a gentle wind"
+    },
+    {
+      "en": "brilliant",
+      "pos": "adj",
+      "he": ", חכם, מבריק",
+      "meaning": "full of light and color, smart"
+    },
+    {
+      "en": "can tell",
+      "pos": "",
+      "he": "להבין, לזהות",
+      "meaning": "know, recognize"
+    },
+    {
+      "en": "capacity",
+      "pos": "n",
+      "he": "קיבולת, יכולת",
+      "meaning": "ability, capability, the total amount that can be contained or produced"
+    },
+    {
+      "en": "capture",
+      "pos": "v",
+      "he": "לתפוש, ללכוד",
+      "meaning": "to catch"
+    },
+    {
+      "en": "cash",
+      "pos": "v",
+      "he": "מזומן, לכסף, להחליף",
+      "meaning": "to exchange a check for money"
+    },
+    {
+      "en": "casual",
+      "pos": "adj",
+      "he": ", לא פורמאלי, מקרי",
+      "meaning": "random, accidental, not formal"
+    },
+    {
+      "en": "ceremony",
+      "pos": "n",
+      "he": "טקס",
+      "meaning": "a formal event with special traditions"
+    },
+    {
+      "en": "chairperson",
+      "pos": "n",
+      "he": "ראש, ת, יושב",
+      "meaning": "a person who leads an organization"
+    },
+    {
+      "en": "chase",
+      "pos": "v, n",
+      "he": ", מרדף, מצוד, אחרי, לרדוף",
+      "meaning": "to follow someone or something quickly in order to catch them the act of going after someone or something very quickly in order to catch"
+    },
+    {
+      "en": "cheat",
+      "pos": "v, n",
+      "he": ", רמאי, לבגוד, לרמות",
+      "meaning": "to gain something dishonestly a person who behaves in a dishonest way"
+    },
+    {
+      "en": "classic",
+      "pos": "adj",
+      "he": "טיפוסי, קלאסי",
+      "meaning": "typical"
+    },
+    {
+      "en": "clinic",
+      "pos": "n",
+      "he": "מרפאה, קליניקה",
+      "meaning": "place where people can receive treatment"
+    },
+    {
+      "en": "coach",
+      "pos": "n, v",
+      "he": "לאמן, מאמן",
+      "meaning": "trainer , to train"
+    },
+    {
+      "en": "collector",
+      "pos": "n",
+      "he": "אספן",
+      "meaning": "someone who gathers certain things"
+    },
+    {
+      "en": "correspond",
+      "pos": "v",
+      "he": "להתכתב, תואם, להיות",
+      "meaning": "to match or be similar or equal to communicate in writing"
+    },
+    {
+      "en": "costume",
+      "pos": "n",
+      "he": "תחפושת",
+      "meaning": "set of clothes that makes you look like someone else"
+    },
+    {
+      "en": "courage",
+      "pos": "n",
+      "he": "תעוזה, אומץ",
+      "meaning": "bravery"
+    },
+    {
+      "en": "cover",
+      "pos": "v",
+      "he": "לכסות, לסקר",
+      "meaning": "to report or describe an event, to conceal and protect"
+    },
+    {
+      "en": "cure",
+      "pos": "v, n",
+      "he": ", לרפא, ריפוי",
+      "meaning": "something that makes a sickness go away , to heal, to treat"
+    },
+    {
+      "en": "cyberbullying",
+      "pos": "n",
+      "he": "ברשת, בריונות",
+      "meaning": "sending mean messages online"
+    },
+    {
+      "en": "cycle",
+      "pos": "n, v",
+      "he": "מחזוריות,, תקופה, מעגל, אופניים, על, לרכב",
+      "meaning": "period, ride a bicycle"
+    },
+    {
+      "en": "deaf",
+      "pos": "adj",
+      "he": "חירש",
+      "meaning": "unable to hear 2"
+    },
+    {
+      "en": "debt",
+      "pos": "n",
+      "he": "חוב",
+      "meaning": "sum of money that a person owes"
+    },
+    {
+      "en": "decorate",
+      "pos": "v",
+      "he": "לקשט",
+      "meaning": "to make something look better by adding nice elements"
+    },
+    {
+      "en": "dedicate",
+      "pos": "v",
+      "he": "להתמסר, להקדיש",
+      "meaning": "to devote, to honor and remember a person"
+    },
+    {
+      "en": "departure",
+      "pos": "n",
+      "he": "עזיבה, יציאה",
+      "meaning": "the act of leaving place"
+    },
+    {
+      "en": "deposit",
+      "pos": "n",
+      "he": "פיקדון",
+      "meaning": "money put in a bank account"
+    },
+    {
+      "en": "deserve",
+      "pos": "v",
+      "he": "לך, מגיע",
+      "meaning": "entitled to"
+    },
+    {
+      "en": "direct",
+      "pos": "v",
+      "he": ", לביים, לנהל, לכוון",
+      "meaning": "to aim to be in charge of a film or play to control or be in charge"
+    },
+    {
+      "en": "disabled",
+      "pos": "adj, n",
+      "he": "נכה, מוגבלות, בעל",
+      "meaning": "not able to perform natural activities"
+    },
+    {
+      "en": "dispute",
+      "pos": "n",
+      "he": "מחלוקת",
+      "meaning": "fight, argument"
+    },
+    {
+      "en": "destination",
+      "pos": "n",
+      "he": "מטרה, יעד",
+      "meaning": "aim, goal, target, purpose"
+    },
+    {
+      "en": "distinguish",
+      "pos": "v",
+      "he": "להבדיל, להבחין",
+      "meaning": "to recognize the difference"
+    },
+    {
+      "en": "disturb",
+      "pos": "v",
+      "he": "להפריע",
+      "meaning": "annoy, interrupt, bother"
+    },
+    {
+      "en": "do a good/excellent, etc. job",
+      "pos": "",
+      "he": "וכו, מצויין, טוב, ביצוע",
+      "meaning": "to perform a task very well"
+    },
+    {
+      "en": "dozen",
+      "pos": "n",
+      "he": "תריסר",
+      "meaning": "group of twelve things"
+    },
+    {
+      "en": "draft",
+      "pos": "n",
+      "he": "טיוטה",
+      "meaning": "a first plan"
+    },
+    {
+      "en": "dramatic",
+      "pos": "adj",
+      "he": "דרמטי",
+      "meaning": "theatrical, intense, sudden or exciting"
+    },
+    {
+      "en": "earth",
+      "pos": "n",
+      "he": "קרקע, אדמה, הארץ, כדור",
+      "meaning": "soil, ground"
+    },
+    {
+      "en": "earthquake",
+      "pos": "n",
+      "he": "אדמה, רעידת",
+      "meaning": "sudden shaking of the ground"
+    },
+    {
+      "en": "elderly",
+      "pos": "adj",
+      "he": "קשיש, זקן",
+      "meaning": "old, aged 65 or more ,senior"
+    },
+    {
+      "en": "enter",
+      "pos": "v",
+      "he": "להכניס, להיכנס,",
+      "meaning": "join, come in, step in , upload information"
+    },
+    {
+      "en": "episode",
+      "pos": "n",
+      "he": "פרק",
+      "meaning": "a single event among others"
+    },
+    {
+      "en": "escape",
+      "pos": "n",
+      "he": "ברחיה, לברוח",
+      "meaning": "leaving a dangerous or an unpleasant situation"
+    },
+    {
+      "en": "equal",
+      "pos": "v",
+      "he": "להשתוות",
+      "meaning": "to be the same in value or amount as something else"
+    },
+    {
+      "en": "fare",
+      "pos": "n",
+      "he": "תעריף, נסיעה, דמי",
+      "meaning": "the cost of traveling"
+    },
+    {
+      "en": "fire",
+      "pos": "v",
+      "he": "לפטר",
+      "meaning": "dismiss, to stop employing someone"
+    },
+    {
+      "en": "firm",
+      "pos": "adj",
+      "he": "מוצק",
+      "meaning": "hard, solid"
+    },
+    {
+      "en": "float",
+      "pos": "v",
+      "he": "לרחף, לצוף",
+      "meaning": "to stay on the surface without sinking"
+    },
+    {
+      "en": "fold",
+      "pos": "v",
+      "he": "לקפל",
+      "meaning": "to bend, to make a smaller shape (especially with paper or cloth) 3"
+    },
+    {
+      "en": "follow",
+      "pos": "v",
+      "he": "לעקוב",
+      "meaning": "to go in the same direction to understand"
+    },
+    {
+      "en": "for the sake of sth/sb; for sth's/sb's sake",
+      "pos": "",
+      "he": "לשם, ן מישהו, למע",
+      "meaning": "in order to help someone, out of consideration for a person"
+    },
+    {
+      "en": "formal",
+      "pos": "adj, official",
+      "he": "רשמי",
+      "meaning": ""
+    },
+    {
+      "en": "former",
+      "pos": "adj",
+      "he": "הקודם, לשעבר",
+      "meaning": "previous, prior"
+    },
+    {
+      "en": "fortune",
+      "pos": "n",
+      "he": "הון",
+      "meaning": "a large amount of money"
+    },
+    {
+      "en": "free",
+      "pos": "adj, adv",
+      "he": "חופשי, חינם",
+      "meaning": "not limited costing nothing, or not needing to be paid for"
+    },
+    {
+      "en": "free will",
+      "pos": "",
+      "he": "חופשית, בחירה",
+      "meaning": "making choices independently"
+    },
+    {
+      "en": "frozen",
+      "pos": "adj",
+      "he": "קפוא",
+      "meaning": "turned into ice"
+    },
+    {
+      "en": "generous",
+      "pos": "adj",
+      "he": "נדיב",
+      "meaning": "willing to give more than is necessary"
+    },
+    {
+      "en": "get",
+      "pos": "v",
+      "he": "להשיג, לקבל",
+      "meaning": "receive, reach"
+    },
+    {
+      "en": "get in touch",
+      "pos": "",
+      "he": "קשר, ליצור",
+      "meaning": "to make contact"
+    },
+    {
+      "en": "give up sth or give sth up",
+      "pos": "",
+      "he": "לוותר על, בחינם, משהו, לתת, משהו, להפסיק משהו",
+      "meaning": "give sth for free, surrender, abandon, stop doing something"
+    },
+    {
+      "en": "give in/up",
+      "pos": "",
+      "he": "להיכנע, לוותר",
+      "meaning": "stop trying, stop doing smth,"
+    },
+    {
+      "en": "go ahead",
+      "pos": "",
+      "he": "קדימה, התחל, לך על זה,",
+      "meaning": "move forward"
+    },
+    {
+      "en": "grab",
+      "pos": "v",
+      "he": "לאחוז, לתפוס",
+      "meaning": "quickly take hold of something"
+    },
+    {
+      "en": "grateful",
+      "pos": "adj",
+      "he": "תודה, אסיר",
+      "meaning": "thankful"
+    },
+    {
+      "en": "hardware",
+      "pos": "n, v",
+      "he": "כת (כמו כלי בישול),, מת, כלי, במחשבים, חמרה",
+      "meaning": "tools and equipment, the physical and electronic parts of a computer"
+    },
+    {
+      "en": "headquarters",
+      "pos": "n",
+      "he": "מטה, מפקדה",
+      "meaning": "center of control of a company or an organization"
+    },
+    {
+      "en": "here you are/here it is, etc.",
+      "pos": "",
+      "he": "זה, הנה, אתה, הנה",
+      "meaning": "used to call attention to something you are offering"
+    },
+    {
+      "en": "hold up / hold up sb/sth or hold sb/sth up",
+      "pos": "",
+      "he": "למנוע, לעכב",
+      "meaning": "delay or stop someone or something from progressing"
+    },
+    {
+      "en": "honesty",
+      "pos": "n",
+      "he": "יושר, כנות",
+      "meaning": "the quality of being truthful, integrity, sincerity"
+    },
+    {
+      "en": "idiom",
+      "pos": "n",
+      "he": "פתגם",
+      "meaning": "expression"
+    },
+    {
+      "en": "in turn",
+      "pos": "",
+      "he": "ו, בתמורה, בתור",
+      "meaning": "one after the other in order, instead"
+    },
+    {
+      "en": "incident",
+      "pos": "n",
+      "he": "מקרה, תקרית",
+      "meaning": "an unusual event"
+    },
+    {
+      "en": "laugh",
+      "pos": "n",
+      "he": "לצחוק",
+      "meaning": "the sound a person makes when something is funny, chuckle 4"
+    },
+    {
+      "en": "layer",
+      "pos": "n",
+      "he": "שכבה",
+      "meaning": "one in a series of levels placed one above the other"
+    },
+    {
+      "en": "leave behind sb/sth or leave sb/sth behind",
+      "pos": "",
+      "he": "מאחור, להשאיר",
+      "meaning": "go away and not take something or someone with you"
+    },
+    {
+      "en": "let out sb/sth or let sb/sth out",
+      "pos": "",
+      "he": "לשחרר",
+      "meaning": "release"
+    },
+    {
+      "en": "let sb/sth in / pass / through, etc.",
+      "pos": "",
+      "he": "להכניס",
+      "meaning": "to allow someone or something to enter , to pass"
+    },
+    {
+      "en": "light",
+      "pos": "v",
+      "he": "להאיר, להדליק",
+      "meaning": "ignite"
+    },
+    {
+      "en": "lightly",
+      "pos": "adv",
+      "he": "בקלות",
+      "meaning": "gently"
+    },
+    {
+      "en": "liquid",
+      "pos": "n, adj",
+      "he": "נוזל",
+      "meaning": "something flowing, like water, fluid"
+    },
+    {
+      "en": "lively",
+      "pos": "adj",
+      "he": "מרץ, מלא, חיים, מלא",
+      "meaning": "full of energy and life"
+    },
+    {
+      "en": "load",
+      "pos": "v",
+      "he": ", להעלות במחשב, להעמיס",
+      "meaning": "to put a lot of things into a car , to transfer data to the computer"
+    },
+    {
+      "en": "loan",
+      "pos": "n, v",
+      "he": "הלוואה, להלוות",
+      "meaning": "lend"
+    },
+    {
+      "en": "log off/out",
+      "pos": "",
+      "he": "מהמערכת, להתנתק",
+      "meaning": "to exit a computer system ("
+    },
+    {
+      "en": "log in/on",
+      "pos": "",
+      "he": "למערכת, להיכנס",
+      "meaning": "to access a computer system"
+    },
+    {
+      "en": "lonely",
+      "pos": "adj",
+      "he": "בודד",
+      "meaning": "i solated, unhappy because you are not with other people"
+    },
+    {
+      "en": "look",
+      "pos": "n",
+      "he": "חיצוני, מראה",
+      "meaning": "physical appearance"
+    },
+    {
+      "en": "lose interest / patience, etc.",
+      "pos": "",
+      "he": "עניין, לאבד, סובלנות",
+      "meaning": "become upset about waiting"
+    },
+    {
+      "en": "maker",
+      "pos": "n",
+      "he": "יצרן",
+      "meaning": "manufacturer"
+    },
+    {
+      "en": "mark",
+      "pos": "n",
+      "he": "ציון, סימן",
+      "meaning": "sign that remains, grade"
+    },
+    {
+      "en": "marvelous",
+      "pos": "adj",
+      "he": "נהדר, נפלא",
+      "meaning": "excellent, extremely good"
+    },
+    {
+      "en": "mayor",
+      "pos": "n",
+      "he": "העיר, ראש",
+      "meaning": "a leader of a town or a city"
+    },
+    {
+      "en": "melt",
+      "pos": "v",
+      "he": "להמיס, נמס",
+      "meaning": "to become liquid"
+    },
+    {
+      "en": "membership",
+      "pos": "n",
+      "he": "בקבוצה, חברות",
+      "meaning": "belonging to a group or an organization"
+    },
+    {
+      "en": "message",
+      "pos": "n",
+      "he": ", רעיון, הודעה, מסר",
+      "meaning": "an important idea"
+    },
+    {
+      "en": "might as well",
+      "pos": "",
+      "he": "אז, ברירה, אין, אם",
+      "meaning": "should do something because there is no better alternative"
+    },
+    {
+      "en": "miss",
+      "pos": "n",
+      "he": "לפספס, להתגעגע",
+      "meaning": "to feel sad that a person or a thing is not present, to fail to do or experience something, often something planned or expected, or to avoid doing or experiencing something"
+    },
+    {
+      "en": "modest",
+      "pos": "adj",
+      "he": "צנוע",
+      "meaning": "not proud, humble, not talking much about your own abilities 5"
+    },
+    {
+      "en": "mood",
+      "pos": "n",
+      "he": ", אווירה, הרוח, מצב",
+      "meaning": "the way you feel, atmosphere"
+    },
+    {
+      "en": "name",
+      "pos": "n, v",
+      "he": "לציין, מוניטין,, שם",
+      "meaning": "reputation, to mention"
+    },
+    {
+      "en": "off",
+      "pos": "adv",
+      "he": "הנחה, סגור, כבוי",
+      "meaning": "price reduction, not at work, discount"
+    },
+    {
+      "en": "offense",
+      "pos": "n",
+      "he": "התקפה, , פשע, עבירה",
+      "meaning": "crime"
+    },
+    {
+      "en": "(every) once in a while",
+      "pos": "",
+      "he": "פעם, מידי",
+      "meaning": "from time to time"
+    },
+    {
+      "en": "or so",
+      "pos": "",
+      "he": "בערך",
+      "meaning": "approximately"
+    },
+    {
+      "en": "organic",
+      "pos": "adj",
+      "he": "יסודי, בסיסי, אורגני",
+      "meaning": "coming from living things, gradual"
+    },
+    {
+      "en": "pace",
+      "pos": "n",
+      "he": "לצעוד, קצב",
+      "meaning": "pace, the speed at which something moves"
+    },
+    {
+      "en": "partner",
+      "pos": "n",
+      "he": "שותף",
+      "meaning": "a business or a team member"
+    },
+    {
+      "en": "pause",
+      "pos": "n",
+      "he": "הפוגה, הפסקה, פאוזה",
+      "meaning": "break, when something is stopped for a short time"
+    },
+    {
+      "en": "peaceful",
+      "pos": "adj",
+      "he": "רוגע, שליו",
+      "meaning": "calm and quiet"
+    },
+    {
+      "en": "plot",
+      "pos": "n",
+      "he": "מזימה, עלילה",
+      "meaning": "the series of events in a story, a secret plan"
+    },
+    {
+      "en": "position",
+      "pos": "n",
+      "he": "משרה, תפקיד, עמדה",
+      "meaning": "rank; part someone plays in a game (e.g., football), job"
+    },
+    {
+      "en": "pour",
+      "pos": "v",
+      "he": "למזוג, לשפוך",
+      "meaning": "spill"
+    },
+    {
+      "en": "powder",
+      "pos": "n",
+      "he": "אבקה",
+      "meaning": "something soft and dry that looks like sand"
+    },
+    {
+      "en": "preposition",
+      "pos": "n",
+      "he": "יחס, מילת",
+      "meaning": "a word that shows a relationship between two words"
+    },
+    {
+      "en": "pride",
+      "pos": "n",
+      "he": "גאווה",
+      "meaning": "feeling of satisfaction"
+    },
+    {
+      "en": "punish",
+      "pos": "v",
+      "he": "להעניש",
+      "meaning": "t o penalize"
+    },
+    {
+      "en": "quarrel",
+      "pos": "n, v",
+      "he": "ויכוח, ריב, להתווכח",
+      "meaning": "fight"
+    },
+    {
+      "en": "quit",
+      "pos": "v",
+      "he": "להתפטר, לפרוש",
+      "meaning": "stop, give up"
+    },
+    {
+      "en": "race",
+      "pos": "n",
+      "he": "אדם, בני, של, גזע, מרוץ",
+      "meaning": "a competition in which all the competitors try to be the fastest and to finish first a group of people who share the same language , history , characteristics , etc."
+    },
+    {
+      "en": "raw",
+      "pos": "adj",
+      "he": "נא, גלם",
+      "meaning": "not cooked"
+    },
+    {
+      "en": "reassure",
+      "pos": "v",
+      "he": "להבטיח, להרגיע",
+      "meaning": "to calm, to assure 6"
+    },
+    {
+      "en": "remain calm/open, etc.",
+      "pos": "v",
+      "he": "פתוח,, רגוע, להישאר, בשליטה",
+      "meaning": "stay relaxed"
+    },
+    {
+      "en": "reserve",
+      "pos": "v",
+      "he": "מראש, להזמין, לשמור",
+      "meaning": "keep, order"
+    },
+    {
+      "en": "server",
+      "pos": "n",
+      "he": ", מלצר, שרת",
+      "meaning": "the main computer which controls, waiter"
+    },
+    {
+      "en": "shame",
+      "pos": "n",
+      "he": "בושה",
+      "meaning": "guilt, an embarrass ing feeling"
+    },
+    {
+      "en": "shaming",
+      "pos": "n",
+      "he": "ביוש",
+      "meaning": "embarrassing someone in public"
+    },
+    {
+      "en": "shelter",
+      "pos": "n, v",
+      "he": ", לתת מחסה, מחסה, מקלט",
+      "meaning": "something that gives protection, to protect"
+    },
+    {
+      "en": "show up",
+      "pos": "v",
+      "he": "להגיע, להופיע",
+      "meaning": "appear"
+    },
+    {
+      "en": "side",
+      "pos": "n",
+      "he": "צד",
+      "meaning": "aspect"
+    },
+    {
+      "en": "sign",
+      "pos": "v",
+      "he": "לחתום",
+      "meaning": "to write your name , usually on a written or printed document , to show that you agree with its contents or have written or created it yourself"
+    },
+    {
+      "en": "signal",
+      "pos": "n",
+      "he": "סימן, אות",
+      "meaning": "sign"
+    },
+    {
+      "en": "sink",
+      "pos": "to, (, v, n, down, below, the, the, to, descend,",
+      "he": "כיור, לשקוע",
+      "meaning": "cause something or someone to) go surface or to bottom of a liquid or soft substance a basin for washing"
+    },
+    {
+      "en": "slip",
+      "pos": "v, n",
+      "he": ", החלקה, פתק קטן,, להחליק, טעות קטנה",
+      "meaning": "fall, slide a small piece of paper, a small mistake, an act of falling or sliding"
+    },
+    {
+      "en": "smart",
+      "pos": "adj",
+      "he": "חכם",
+      "meaning": "intelligent, controlled by a computer"
+    },
+    {
+      "en": "smooth",
+      "pos": "adj",
+      "he": "חלק",
+      "meaning": "not rough, free of problems"
+    },
+    {
+      "en": "so did we/so have I/so is mine, etc.",
+      "pos": "",
+      "he": "גם אנחנו, כך",
+      "meaning": "indeed, me too, used to say that something is true for your as well"
+    },
+    {
+      "en": "some kind of",
+      "pos": "",
+      "he": "של, סוג",
+      "meaning": "used when talking about something without being specific"
+    },
+    {
+      "en": "somewhere around / between, etc.",
+      "pos": "",
+      "he": "בערך",
+      "meaning": "approximately"
+    },
+    {
+      "en": "sound angry / happy / rude, etc.",
+      "pos": "",
+      "he": "וכו, גס, שמח, כועס, נשמע",
+      "meaning": "t o speak in a way that comes across harsh/cheerful/impolite"
+    },
+    {
+      "en": "speak about/of sth",
+      "pos": "",
+      "he": "על, לדבר",
+      "meaning": "discuss"
+    },
+    {
+      "en": "special offer",
+      "pos": "",
+      "he": "מיוחדת, הצעה",
+      "meaning": "discount available for a limited time 7"
+    },
+    {
+      "en": "speed",
+      "pos": "n",
+      "he": "מהירות",
+      "meaning": "how fast something moves"
+    },
+    {
+      "en": "spill",
+      "pos": "v",
+      "he": "לשפוך",
+      "meaning": "to cause liquid to come out of a container"
+    },
+    {
+      "en": "spirit",
+      "pos": "n",
+      "he": "נפש, רוח",
+      "meaning": "enthusiasm , energy , or courage a particular way of thinking , feeling , or behaving , attitude, morale the form of a dead person , similar to a ghost , or the feeling that a dead person is present although you cannot see them"
+    },
+    {
+      "en": "spread",
+      "pos": "v, n",
+      "he": "להתפשט, למרוח, התפשטות",
+      "meaning": "to cover or reach a wider area"
+    },
+    {
+      "en": "stay",
+      "pos": "n",
+      "he": "שָׁהּות, שהייה",
+      "meaning": "a period of time you spend in a place"
+    },
+    {
+      "en": "strengthen",
+      "pos": "v",
+      "he": "לחזק",
+      "meaning": "to make someone more powerful"
+    },
+    {
+      "en": "strike",
+      "pos": "v, n",
+      "he": "שביתה, לשבות,",
+      "meaning": "to refuse to continue working because of an argument with an employer about working conditions , pay levels , or job losses a period of time when workers refuse to work because of an argument with an employer about working conditions , pay levels , or job losses"
+    },
+    {
+      "en": "strong",
+      "pos": "adj",
+      "he": "חזק",
+      "meaning": "powerful, effective, skilled, determined"
+    },
+    {
+      "en": "struggle",
+      "pos": "v, n",
+      "he": "להיאבק, מאבק",
+      "meaning": "fight"
+    },
+    {
+      "en": "subway",
+      "pos": "n",
+      "he": "תחתית, רכבת",
+      "meaning": "underground railway"
+    },
+    {
+      "en": "suffer from sth",
+      "pos": "",
+      "he": "מ, לסבול",
+      "meaning": "to be badly affected by"
+    },
+    {
+      "en": "super",
+      "pos": "adj",
+      "he": "מעולה",
+      "meaning": "excellent"
+    },
+    {
+      "en": "suspect",
+      "pos": "v, n",
+      "he": "שוד, ח, לחשוד",
+      "meaning": "to believe someone has done something wrong a person believed to have committed a crime or done something wrong"
+    },
+    {
+      "en": "swear",
+      "pos": "v",
+      "he": "לקלל, להישבע",
+      "meaning": "p romise to use words that are rude or offensive"
+    },
+    {
+      "en": "switch",
+      "pos": "n",
+      "he": "מתג",
+      "meaning": "electrical on - off device"
+    },
+    {
+      "en": "symbol",
+      "pos": "n",
+      "he": "סימן, סמל",
+      "meaning": "something that is used to represent an idea"
+    },
+    {
+      "en": "table",
+      "pos": "n",
+      "he": "טבלה",
+      "meaning": "chart, etc. 8"
+    },
+    {
+      "en": "take pleasure/pride/an interest, etc.",
+      "pos": "",
+      "he": "להתגאות, להתענג, להתעניין ב",
+      "meaning": "enjoy, be satisfied with your achievements"
+    },
+    {
+      "en": "take sb's place",
+      "pos": "",
+      "he": "להחליף",
+      "meaning": "to replace, do something instead of someone else"
+    },
+    {
+      "en": "tear",
+      "pos": "v, n",
+      "he": "לקרוע, קרע, חור, דמעה",
+      "meaning": "to r ip a hole in a piece of paper , cloth a drop of salty liquid that flows from the eye , as a result of strong emotion , especially un happiness , or pain"
+    },
+    {
+      "en": "term",
+      "pos": "n",
+      "he": "כהונה, תקופת, מושג, מונח, סמסטר",
+      "meaning": "a concept, a fixed period of time, a , semester"
+    },
+    {
+      "en": "terminal",
+      "pos": "n",
+      "he": "מסוף, טרמינל",
+      "meaning": "place where people wait to get onto trains, buses, etc."
+    },
+    {
+      "en": "thief",
+      "pos": "n",
+      "he": "גנב",
+      "meaning": "person who steals"
+    },
+    {
+      "en": "tight",
+      "pos": "adj, adv",
+      "he": "הדוק, צמוד",
+      "meaning": "firm; controlled"
+    },
+    {
+      "en": "that kind/sort of thing",
+      "pos": "",
+      "he": "מהסוג הזה, משהו",
+      "meaning": "similar item"
+    },
+    {
+      "en": "that's it",
+      "pos": "",
+      "he": "זה, זהו",
+      "meaning": "used to say that something is finished"
+    },
+    {
+      "en": "the following day / morning, etc.",
+      "pos": "",
+      "he": "למחרת",
+      "meaning": "the next day"
+    },
+    {
+      "en": "tip",
+      "pos": "n",
+      "he": "ה, טיפ, עצ",
+      "meaning": "a piece of advice"
+    },
+    {
+      "en": "tired of doing sth",
+      "pos": "",
+      "he": "מ, נמאס",
+      "meaning": "feeling bored with"
+    },
+    {
+      "en": "tiring",
+      "pos": "adj",
+      "he": "מעייף",
+      "meaning": "making one feel exhausted"
+    },
+    {
+      "en": "touch",
+      "pos": "n",
+      "he": "מגע, לגעת",
+      "meaning": "the ability to know what something is like by feeling it with the fingers a quick , light movement of one thing, especially a hand , onto and off another thing a small addition or detail that makes something better"
+    },
+    {
+      "en": "tough",
+      "pos": "adj",
+      "he": "קשוח, חזק, קשה",
+      "meaning": "difficult to deal with"
+    },
+    {
+      "en": "trade",
+      "pos": "n",
+      "he": "לסחור, מסחר, סחר",
+      "meaning": "industry, occupation, job, business"
+    },
+    {
+      "en": "transfer",
+      "pos": "v",
+      "he": "העברה, להעביר",
+      "meaning": "to move from one place to another"
+    },
+    {
+      "en": "tribe",
+      "pos": "n",
+      "he": "שבט",
+      "meaning": "a social group of people of the same race 9"
+    },
+    {
+      "en": "trick",
+      "pos": "n, v",
+      "he": "תעלול, תחבולה",
+      "meaning": "clever act that is intended to amaze or confuse"
+    },
+    {
+      "en": "turn (sb/sth) into sb/sth",
+      "pos": "",
+      "he": "ל, להפוך, נהיה",
+      "meaning": "become something different"
+    },
+    {
+      "en": "underline",
+      "pos": "v",
+      "he": "מתחת, קו, למתוח, להדגיש",
+      "meaning": "to draw a line under a word, especially in order to show its importance , emphasize"
+    },
+    {
+      "en": "union",
+      "pos": "n",
+      "he": "איגוד, איחוד",
+      "meaning": "an organization that represents workers"
+    },
+    {
+      "en": "use",
+      "pos": "n, v",
+      "he": "שימוש, להשתמש",
+      "meaning": "to do something with an object, machine; the way a word is used; to say or write a particular word"
+    },
+    {
+      "en": "via",
+      "pos": "prep",
+      "he": "באמצעות, דרך",
+      "meaning": "by way of, by use of, through"
+    },
+    {
+      "en": "victim",
+      "pos": "n",
+      "he": "קורבן",
+      "meaning": "person who has suffered harm"
+    },
+    {
+      "en": "warm",
+      "pos": "v",
+      "he": "לחמם",
+      "meaning": "to make someone or something less cold"
+    },
+    {
+      "en": "weakness",
+      "pos": "n",
+      "he": "חולשה",
+      "meaning": "lack of strength in a particular area"
+    },
+    {
+      "en": "wear (sth) out or wear out (sth)",
+      "pos": "",
+      "he": "נשחק, בלוי",
+      "meaning": "become damaged due to use"
+    },
+    {
+      "en": "weather forecast",
+      "pos": "",
+      "he": "האוויר, מזג, תחזית",
+      "meaning": "report on future temperatures, rain, snow, etc."
+    },
+    {
+      "en": "weigh",
+      "pos": "n, v",
+      "he": "לשקול, משקל",
+      "meaning": "heaviness; to find out how heavy something is, to consider"
+    },
+    {
+      "en": "weird",
+      "pos": "adj",
+      "he": "משונה, מוזר",
+      "meaning": "strange"
+    },
+    {
+      "en": "whatever",
+      "pos": "det, pro, n",
+      "he": "שיהיה, מה, שתגיד, מה",
+      "meaning": "anything at all, no matter what"
+    },
+    {
+      "en": "Who cares?",
+      "pos": "",
+      "he": "אכפת, למי",
+      "meaning": "who would care"
+    },
+    {
+      "en": "will",
+      "pos": "n",
+      "he": "צוואה, רצון",
+      "meaning": "strong wish to achieve something"
+    },
+    {
+      "en": "wise",
+      "pos": "adj",
+      "he": "נבון, חכם",
+      "meaning": "smart, having good judgement"
+    },
+    {
+      "en": "wrap",
+      "pos": "v",
+      "he": "לכרוך, לעטוף",
+      "meaning": "to cover in order to protect"
+    },
+    {
+      "en": "Yours sincerely",
+      "pos": "",
+      "he": "רב, בכבוד, שלך",
+      "meaning": "polite and formal way of ending a letter 10"
+    }
+  ],
+  "listD": [
+    {
+      "en": "a little (something)",
+      "pos": "adjective",
+      "he": "משהו קטן",
+      "meaning": "a small amount of (something)"
+    },
+    {
+      "en": "aggressive",
+      "pos": "adjective",
+      "he": "אגרסיבי",
+      "meaning": "hostile, forceful, destructive"
+    },
+    {
+      "en": "air force",
+      "pos": "noun",
+      "he": "חיל אוויר",
+      "meaning": "the branch of the military concerned with air warfare, usually involving aircraft"
+    },
+    {
+      "en": "alarm",
+      "pos": "noun",
+      "he": "אזעקה",
+      "meaning": "a signal that warns"
+    },
+    {
+      "en": "all is well",
+      "pos": "idiom",
+      "he": "הכל בסדר",
+      "meaning": "everything is normal and working as it should"
+    },
+    {
+      "en": "all over the place",
+      "pos": "idiom",
+      "he": "בכל מקום",
+      "meaning": "not organized in a logical way"
+    },
+    {
+      "en": "ambassador",
+      "pos": "noun",
+      "he": "שגריר",
+      "meaning": "an official representative or messenger, especially the highest-ranking diplomat of one country residing in a foreign country"
+    },
+    {
+      "en": "arrow",
+      "pos": "noun",
+      "he": "חץ",
+      "meaning": "a mark on a map, board or sign indicating direction"
+    },
+    {
+      "en": "artistic",
+      "pos": "adjective",
+      "he": "אמנותי",
+      "meaning": "showing imaginative skill"
+    },
+    {
+      "en": "at fault",
+      "pos": "idiom",
+      "he": "אשם",
+      "meaning": "responsible for a bad thing"
+    },
+    {
+      "en": "bank",
+      "pos": "noun",
+      "he": "בנק",
+      "meaning": "the rising ground bordering a lake or river"
+    },
+    {
+      "en": "bank account",
+      "pos": "noun",
+      "he": "חשבון בנק",
+      "meaning": "money deposited in a financial institution which the depositor can take out as he wishes"
+    },
+    {
+      "en": "bargain",
+      "pos": "noun",
+      "he": "מציאה",
+      "meaning": "(1) an agreement, often involving buying or selling"
+    },
+    {
+      "en": "base",
+      "pos": "noun",
+      "he": "בסיס",
+      "meaning": "a permanent military camp or center of operations (secondary meaning)"
+    },
+    {
+      "en": "bay",
+      "pos": "noun",
+      "he": "מפרץ",
+      "meaning": "a small body of water set off from the main body of water and smaller than a gulf"
+    },
+    {
+      "en": "be expecting (a baby)",
+      "pos": "idiom",
+      "he": "להיות בהריון",
+      "meaning": "to be pregnant"
+    },
+    {
+      "en": "believe it or not",
+      "pos": "idiom",
+      "he": "(לתינוק)",
+      "meaning": "used to suggest that the listener will be surprised"
+    },
+    {
+      "en": "bell",
+      "pos": "noun",
+      "he": "תאמינו או לא",
+      "meaning": "a hollow piece of metal that makes a noise when it is hit"
+    },
+    {
+      "en": "bench",
+      "pos": "noun",
+      "he": "פעמון",
+      "meaning": "a long seat for two or more people"
+    },
+    {
+      "en": "blow up",
+      "pos": "phrasal verb",
+      "he": "ספסל",
+      "meaning": "(1) to explode"
+    },
+    {
+      "en": "boiled",
+      "pos": "adjective",
+      "he": "רתוח",
+      "meaning": "cooked in very hot water"
+    },
+    {
+      "en": "brake",
+      "pos": "noun",
+      "he": "בלם",
+      "meaning": "something used to stop or slow down movement or activity, often a vehicle verb to activate the brakes on a vehicle"
+    },
+    {
+      "en": "branch",
+      "pos": "noun",
+      "he": "ענף",
+      "meaning": "one of many physical locations of the same business"
+    },
+    {
+      "en": "breast",
+      "pos": "noun",
+      "he": "שד",
+      "meaning": "one of the pair of mammary glands extending from the chest of a human female"
+    },
+    {
+      "en": "brick",
+      "pos": "noun",
+      "he": "לבנה",
+      "meaning": "a building block made of clay hardened by heat"
+    },
+    {
+      "en": "bucket",
+      "pos": "noun",
+      "he": "דלי",
+      "meaning": "a cylindrical container used to hold or carry liquids or solids; pail"
+    },
+    {
+      "en": "bug",
+      "pos": "noun",
+      "he": "חרק",
+      "meaning": "(1) an unwanted or irritating insect"
+    },
+    {
+      "en": "bull",
+      "pos": "noun",
+      "he": "שור",
+      "meaning": "the male partner of a cow"
+    },
+    {
+      "en": "bunch",
+      "pos": "noun",
+      "he": "חבורה",
+      "meaning": "a number of things of the same kind; group"
+    },
+    {
+      "en": "bunch",
+      "pos": "noun",
+      "he": "חבורה",
+      "meaning": ""
+    },
+    {
+      "en": "burst into tears",
+      "pos": "idiom",
+      "he": "פרץ בבכי",
+      "meaning": "to start to cry"
+    },
+    {
+      "en": "bury",
+      "pos": "verb",
+      "he": "לקבור",
+      "meaning": "to put into a hole in the ground and cover with dirt, especially a dead body"
+    },
+    {
+      "en": "butcher",
+      "pos": "noun",
+      "he": "קצב",
+      "meaning": "a person who sells meat"
+    },
+    {
+      "en": "cab",
+      "pos": "noun",
+      "he": "מונית",
+      "meaning": "a car for hire; taxi"
+    },
+    {
+      "en": "cabin",
+      "pos": "noun",
+      "he": "בקתה",
+      "meaning": "(1) a private room on a ship or boat"
+    },
+    {
+      "en": "catalog (or) catalogue",
+      "pos": "noun",
+      "he": "קטלוג",
+      "meaning": "an organized list of things and their descriptions"
+    },
+    {
+      "en": "cave",
+      "pos": "noun",
+      "he": "מערה",
+      "meaning": "a natural chamber in the earth, often in the side of a hill"
+    },
+    {
+      "en": "certificate",
+      "pos": "noun",
+      "he": "תעודה",
+      "meaning": "a document containing an authoritative statement as to the truth of something"
+    },
+    {
+      "en": "charge",
+      "pos": "verb",
+      "he": "חיוב",
+      "meaning": "to supply with electrical energy"
+    },
+    {
+      "en": "check in",
+      "pos": "phrasal verb",
+      "he": "צ'ק-אין",
+      "meaning": "to report one’s presence or arrival"
+    },
+    {
+      "en": "check out",
+      "pos": "phrasal verb",
+      "he": "צ'ק-אאוט",
+      "meaning": "to pay the cost of items purchased in a store or the cost of a hotel visit"
+    },
+    {
+      "en": "cheers !",
+      "pos": "interjection",
+      "he": "לחיים!",
+      "meaning": "said when drinking in honor of someone"
+    },
+    {
+      "en": "cold",
+      "pos": "adjective",
+      "he": "הצטננות",
+      "meaning": "a lack of normal human emotion, friendliness or compassion (secondary meaning)"
+    },
+    {
+      "en": "collar",
+      "pos": "noun",
+      "he": "צווארון",
+      "meaning": "a band, strip or chain worn around the neck"
+    },
+    {
+      "en": "crash",
+      "pos": "verb",
+      "he": "התרסקות",
+      "meaning": "(1) to break with noise and violence(2) to cause a computer system to malfunction"
+    },
+    {
+      "en": "crash",
+      "pos": "noun",
+      "he": "התרסקות",
+      "meaning": "(1) the loud sound of things smashing together(2) a sudden decline or failure, particularly a business"
+    },
+    {
+      "en": "cross",
+      "pos": "noun",
+      "he": "צלב",
+      "meaning": "two wooden beams fastened together at 90 degrees and used as a method of execution in ancient Rome."
+    },
+    {
+      "en": "customs",
+      "pos": "noun",
+      "he": "מכס",
+      "meaning": "taxes paid on imported goods"
+    },
+    {
+      "en": "date",
+      "pos": "noun",
+      "he": "תאריך",
+      "meaning": "a romantic meeting between two people."
+    },
+    {
+      "en": "deck",
+      "pos": "noun",
+      "he": "חפיסה",
+      "meaning": "the floor of a ship"
+    },
+    {
+      "en": "defeat",
+      "pos": "verb",
+      "he": "תבוסה",
+      "meaning": "to win victory over someone; beat noun the loss of a game or contest"
+    },
+    {
+      "en": "devil",
+      "pos": "noun",
+      "he": "שטן",
+      "meaning": "the spirit of evil and ruler of Hell in Christian religious thought (often written with a capital “d” as Devil)"
+    },
+    {
+      "en": "diagram",
+      "pos": "noun",
+      "he": "דיאגרמה",
+      "meaning": "a drawing which explains rather than represents"
+    },
+    {
+      "en": "difficult",
+      "pos": "adjective",
+      "he": "קשה",
+      "meaning": "hard to deal with; unfriendly, uncooperative (secondary meaning)"
+    },
+    {
+      "en": "dishonest",
+      "pos": "adjective",
+      "he": "לא ישר",
+      "meaning": "not truthful or trustworthy"
+    },
+    {
+      "en": "disk (also spelled as disc)",
+      "pos": "noun",
+      "he": "דיסק (אוית גם כדיסק)",
+      "meaning": "a thin, circular object, such as those used to store computer data"
+    },
+    {
+      "en": "divorce",
+      "pos": "noun",
+      "he": "גירושין",
+      "meaning": "the action of legally ending a marriage"
+    },
+    {
+      "en": "don’t ask me!",
+      "pos": "idiom",
+      "he": "אל תשאל אותי!",
+      "meaning": "used to say that one does not know the answer to a question"
+    },
+    {
+      "en": "don’t ask!",
+      "pos": "idiom",
+      "he": "אל תשאל!",
+      "meaning": "used to say that something is too strange or complicated to explain."
+    },
+    {
+      "en": "dreadful",
+      "pos": "adjective",
+      "he": "נורא",
+      "meaning": "unpleasant, terrifying, horrible"
+    },
+    {
+      "en": "drink",
+      "pos": "verb",
+      "he": "משקה",
+      "meaning": "to imbibe or ingest alcohol (secondary meaning)"
+    },
+    {
+      "en": "drink",
+      "pos": "verb",
+      "he": "לשתות",
+      "meaning": "to imbibe or ingest alcohol (secondary meaning)"
+    },
+    {
+      "en": "drive",
+      "pos": "noun",
+      "he": "לנהוג",
+      "meaning": "a device for reading or writing on magnetic discs (secondary meaning)"
+    },
+    {
+      "en": "drop",
+      "pos": "noun",
+      "he": "לנשור",
+      "meaning": "a small quantity of liquid in a round spherical shape"
+    },
+    {
+      "en": "elbow",
+      "pos": "noun",
+      "he": "מרפק",
+      "meaning": "the joint of the human arm"
+    },
+    {
+      "en": "engagement",
+      "pos": "noun",
+      "he": "אירוסין",
+      "meaning": "the period between agreeing to marry and the wedding"
+    },
+    {
+      "en": "explode",
+      "pos": "verb",
+      "he": "להתפוצץ",
+      "meaning": "to burst suddenly with violence and noise"
+    },
+    {
+      "en": "fall in love",
+      "pos": "idiom",
+      "he": "להתאהב",
+      "meaning": "to begin to feel romantic attraction"
+    },
+    {
+      "en": "fasten",
+      "pos": "verb",
+      "he": "להדק",
+      "meaning": "to attach or secure against opening"
+    },
+    {
+      "en": "fly",
+      "pos": "noun",
+      "he": "לעוף",
+      "meaning": "an insect with wings"
+    },
+    {
+      "en": "folk",
+      "pos": "noun",
+      "he": "עם",
+      "meaning": "people generally"
+    },
+    {
+      "en": "fool",
+      "pos": "noun",
+      "he": "טיפש",
+      "meaning": "a person lacking in judgment and understanding"
+    },
+    {
+      "en": "for the fun of it or just for fun",
+      "pos": "idiom",
+      "he": "בשביל הכיף או סתם בשביל הכיף",
+      "meaning": "for no purpose other than amusement or pleasure"
+    },
+    {
+      "en": "force",
+      "pos": "noun",
+      "he": "כוח",
+      "meaning": "a group of soldiers or ships put together for a military purpose (secondary meaning)"
+    },
+    {
+      "en": "forehead",
+      "pos": "noun",
+      "he": "מצח",
+      "meaning": "the part of the face above the eyes"
+    },
+    {
+      "en": "forgetful",
+      "pos": "adjective",
+      "he": "שכחן",
+      "meaning": "characterized by failing to remember"
+    },
+    {
+      "en": "garage",
+      "pos": "noun",
+      "he": "מוסך",
+      "meaning": "a repair shop for automobiles"
+    },
+    {
+      "en": "gate",
+      "pos": "noun",
+      "he": "שער",
+      "meaning": "the part of an airport for departure and arrival of airplanes"
+    },
+    {
+      "en": "gentleman",
+      "pos": "noun",
+      "he": "ג'נטלמן",
+      "meaning": "a man who behaves in a proper, correct and honorable way"
+    },
+    {
+      "en": "get away with (something)",
+      "pos": "idiom",
+      "he": "להתחמק ממשהו",
+      "meaning": "to avoid punishment for something"
+    },
+    {
+      "en": "get in",
+      "pos": "phrasal verb",
+      "he": "להיכנס",
+      "meaning": "to enter or arrive"
+    },
+    {
+      "en": "ghost",
+      "pos": "noun",
+      "he": "רוח רפאים",
+      "meaning": "the soul of a dead person seen by the living"
+    },
+    {
+      "en": "giant",
+      "pos": "noun",
+      "he": "ענק",
+      "meaning": "a fictional human-like person of enormous size adjective extremely large or powerful"
+    },
+    {
+      "en": "grow tired, old, calm, etc.",
+      "pos": "idiom",
+      "he": "להתעייף, להזדקן, להירגע וכו'.",
+      "meaning": "to become tired, old, calm, etc."
+    },
+    {
+      "en": "hang around (US) hang about (UK)",
+      "pos": "phrasal verb",
+      "he": "להסתובב",
+      "meaning": "to stay in or at a place for a period of time"
+    },
+    {
+      "en": "hang out",
+      "pos": "phrasal verb",
+      "he": "לבלות",
+      "meaning": "to spend time relaxing or socializing"
+    },
+    {
+      "en": "harbor",
+      "pos": "noun",
+      "he": "נמל",
+      "meaning": "a part of a body of water deep enough for a ship to anchor"
+    },
+    {
+      "en": "heaven",
+      "pos": "noun",
+      "he": "גן עדן",
+      "meaning": "the place where God lives with the blessed dead, according to some religious traditions (often capitalized as Heaven)"
+    },
+    {
+      "en": "heel",
+      "pos": "noun",
+      "he": "עקב",
+      "meaning": "the back of the human foot below the ankle"
+    },
+    {
+      "en": "hell",
+      "pos": "noun",
+      "he": "גיהנום",
+      "meaning": "the place where the devil lives with the dead suffering eternal punishment, according to some religious traditions (often capitalized as Hell)"
+    },
+    {
+      "en": "horror",
+      "pos": "noun",
+      "he": "אימה",
+      "meaning": "painful and intense fear"
+    },
+    {
+      "en": "hunt",
+      "pos": "verb",
+      "he": "ציד",
+      "meaning": "to pursue with intent to capture"
+    },
+    {
+      "en": "hurry/hurry up",
+      "pos": "verb/phrasal verb",
+      "he": "להזדרז",
+      "meaning": "to go quickly"
+    },
+    {
+      "en": "hut",
+      "pos": "noun",
+      "he": "צריף",
+      "meaning": "a small, simple, temporary building; shack"
+    },
+    {
+      "en": "immoral",
+      "pos": "adjective",
+      "he": "לא מוסרי",
+      "meaning": "conflicting with accepted values and ethics"
+    },
+    {
+      "en": "in tears",
+      "pos": "idiom",
+      "he": "בדמעות",
+      "meaning": "having small drops of fluid come out of one’s eyes"
+    },
+    {
+      "en": "initial",
+      "pos": "noun",
+      "he": "ראשוני",
+      "meaning": "the first letter of a name"
+    },
+    {
+      "en": "insult",
+      "pos": "verb",
+      "he": "עלבון",
+      "meaning": "to offend or treat with a lack of respect"
+    },
+    {
+      "en": "insurance",
+      "pos": "noun",
+      "he": "ביטוח",
+      "meaning": "a contract requiring a company to pay for someone’s loss"
+    },
+    {
+      "en": "iron",
+      "pos": "verb",
+      "he": "ברזל",
+      "meaning": "to make smooth with a heated metal tool noun the most common elemental metal having the chemical symbol Fe"
+    },
+    {
+      "en": "jog",
+      "pos": "verb",
+      "he": "ריצה קלה",
+      "meaning": "to run slowly"
+    },
+    {
+      "en": "jump",
+      "pos": "verb",
+      "he": "לקפוץ",
+      "meaning": "(1) to spring into the air"
+    },
+    {
+      "en": "jury",
+      "pos": "noun",
+      "he": "חבר מושבעים",
+      "meaning": "a small group of people who swear to give a serious decision about something, often a court case"
+    },
+    {
+      "en": "knit",
+      "pos": "verb",
+      "he": "לסרוג",
+      "meaning": "a method of creating things to wear by hand with yarn, such as sweaters or kippot"
+    },
+    {
+      "en": "laser",
+      "pos": "noun",
+      "he": "לייזר",
+      "meaning": "an intense electromagnetic beam of light and energy"
+    },
+    {
+      "en": "lead",
+      "pos": "noun",
+      "he": "עופרת",
+      "meaning": "a position at the front, especially in a competition"
+    },
+    {
+      "en": "learning",
+      "pos": "noun",
+      "he": "למידה",
+      "meaning": "the act or experience of acquiring knowledge"
+    },
+    {
+      "en": "lightning",
+      "pos": "noun",
+      "he": "ברק",
+      "meaning": "a discharge of electricity from the sky"
+    },
+    {
+      "en": "literary",
+      "pos": "adjective",
+      "he": "ספרותי",
+      "meaning": "having the characteristics of literature"
+    },
+    {
+      "en": "loaf",
+      "pos": "noun",
+      "he": "כיכר לחם",
+      "meaning": "a shaped mass of bread"
+    },
+    {
+      "en": "loose",
+      "pos": "adjective",
+      "he": "רופף",
+      "meaning": "not tight or secure"
+    },
+    {
+      "en": "lover",
+      "pos": "noun",
+      "he": "מאהב",
+      "meaning": "(1) sexual partner"
+    },
+    {
+      "en": "madam",
+      "pos": "noun",
+      "he": "גברתי",
+      "meaning": "a polite and respectful way to address a woman"
+    },
+    {
+      "en": "magnificent",
+      "pos": "adjective",
+      "he": "מפואר",
+      "meaning": "epic, massive, splendid, impressive"
+    },
+    {
+      "en": "make",
+      "pos": "verb",
+      "he": "לעשות",
+      "meaning": "to include in one’s travel plans; to arrive"
+    },
+    {
+      "en": "marriage",
+      "pos": "noun",
+      "he": "נישואין",
+      "meaning": "the state of being united as spouses according to the law"
+    },
+    {
+      "en": "mask",
+      "pos": "noun",
+      "he": "מסכה",
+      "meaning": "a cover for the face used for disguise"
+    },
+    {
+      "en": "mate",
+      "pos": "noun",
+      "he": "בן זוג",
+      "meaning": "either member of a couple, especially a married couple"
+    },
+    {
+      "en": "mess",
+      "pos": "noun",
+      "he": "בלגן",
+      "meaning": "a disordered and unpleasant condition"
+    },
+    {
+      "en": "mix up",
+      "pos": "phrasal verb",
+      "he": "לבלבל",
+      "meaning": "to confuse one thing for another"
+    },
+    {
+      "en": "monster",
+      "pos": "noun",
+      "he": "מפלצת",
+      "meaning": "an animal of strange or terrifying shape"
+    },
+    {
+      "en": "moral",
+      "pos": "noun",
+      "he": "מוסרי",
+      "meaning": "the lesson to be learned from a story"
+    },
+    {
+      "en": "naked",
+      "pos": "adjective",
+      "he": "עירום",
+      "meaning": "not covered by clothing; nude"
+    },
+    {
+      "en": "nasty",
+      "pos": "adjective",
+      "he": "מגעיל",
+      "meaning": "filthy and disgusting"
+    },
+    {
+      "en": "navy",
+      "pos": "noun",
+      "he": "חיל הים",
+      "meaning": "a nation’s ships of war"
+    },
+    {
+      "en": "neat",
+      "pos": "adjective",
+      "he": "מסודר",
+      "meaning": "clean and orderly"
+    },
+    {
+      "en": "next door",
+      "pos": "adjective",
+      "he": "שליד",
+      "meaning": "in the next building, apartment or room"
+    },
+    {
+      "en": "not believe your eyes, ears",
+      "pos": "idiom",
+      "he": "לא להאמין למראה עיניך, אוזניך",
+      "meaning": "used to suggest that something amazing or very unlikely is happening"
+    },
+    {
+      "en": "nut",
+      "pos": "noun",
+      "he": "אגוז",
+      "meaning": "a hard, dry fruit or seed covered by a shell, such as peanuts, walnuts, chestnuts, hazel nuts, etc."
+    },
+    {
+      "en": "on a diet",
+      "pos": "idiom",
+      "he": "בדיאטה",
+      "meaning": "eating less food in order to lose weight"
+    },
+    {
+      "en": "on board",
+      "pos": "idiom",
+      "he": "על הסיפון",
+      "meaning": "(1) on a ship, aboard"
+    },
+    {
+      "en": "on display",
+      "pos": "idiom",
+      "he": "בתצוגה",
+      "meaning": "put somewhere for people to see"
+    },
+    {
+      "en": "on duty",
+      "pos": "idiom",
+      "he": "בתפקיד",
+      "meaning": "responsible for an assigned task; on the job"
+    },
+    {
+      "en": "off duty",
+      "pos": "idiom",
+      "he": "מחוץ לתפקיד",
+      "meaning": "free from responsibility"
+    },
+    {
+      "en": "orchestra",
+      "pos": "noun",
+      "he": "תִזמוֹרֶת",
+      "meaning": "the space in front of the stage in a modern theater that is used by musicians"
+    },
+    {
+      "en": "pack",
+      "pos": "noun",
+      "he": "לֶאֱרוֹז",
+      "meaning": "a number of individual items packaged as a unit"
+    },
+    {
+      "en": "painful",
+      "pos": "adjective",
+      "he": "כּוֹאֵב",
+      "meaning": "feeling or giving pain or hurt"
+    },
+    {
+      "en": "pale",
+      "pos": "adjective",
+      "he": "חיוור",
+      "meaning": "lacking in color"
+    },
+    {
+      "en": "passage",
+      "pos": "noun",
+      "he": "מַעֲבָר",
+      "meaning": "a road or path by which something passes, such as a hallway or tunnel"
+    },
+    {
+      "en": "pavement",
+      "pos": "noun",
+      "he": "מִדרָכָה",
+      "meaning": "(1) the material with which something is paved (US)"
+    },
+    {
+      "en": "peak",
+      "pos": "noun",
+      "he": "שִׂיא",
+      "meaning": "the top of a hill or mountain"
+    },
+    {
+      "en": "penalty",
+      "pos": "noun",
+      "he": "עוֹנֶשׁ",
+      "meaning": "a loss of rights or property as punishment for breaking a law or rule"
+    },
+    {
+      "en": "pill",
+      "pos": "noun",
+      "he": "כַּדוּר",
+      "meaning": "medicine in a small, round mass which one swallows whole"
+    },
+    {
+      "en": "pin",
+      "pos": "noun",
+      "he": "פִּין",
+      "meaning": "a piece of wood or metal used to fasten things together"
+    },
+    {
+      "en": "pity",
+      "pos": "noun",
+      "he": "רַחֲמִים",
+      "meaning": "a feeling of sadness for the suffering of another person"
+    },
+    {
+      "en": "pork",
+      "pos": "noun",
+      "he": "חֲזִיר",
+      "meaning": "the meat of a pig"
+    },
+    {
+      "en": "pray",
+      "pos": "verb",
+      "he": "לְהִתְפַּלֵל",
+      "meaning": "to direct one’s thoughts to communication with God"
+    },
+    {
+      "en": "pregnant",
+      "pos": "adjective",
+      "he": "בְּהֵרָיוֹן",
+      "meaning": "containing an unborn child within the body"
+    },
+    {
+      "en": "priest",
+      "pos": "noun",
+      "he": "כּוֹמֶר",
+      "meaning": "someone who is authorized to perform the sacred traditions of a religion"
+    },
+    {
+      "en": "propose",
+      "pos": "verb",
+      "he": "לְהַצִיעַ",
+      "meaning": "to make an offer of marriage (secondary meaning)"
+    },
+    {
+      "en": "pump",
+      "pos": "noun",
+      "he": "לִשְׁאוֹב",
+      "meaning": "a mechanical device that raises, transfers or delivers fluids verb to raise, move or transfer a fluid with a mechanical device"
+    },
+    {
+      "en": "queue",
+      "pos": "noun",
+      "he": "תוֹר",
+      "meaning": "a waiting line, usually of people"
+    },
+    {
+      "en": "racket",
+      "pos": "noun",
+      "he": "מַחבֵּט",
+      "meaning": "a net on a handle used in sports"
+    },
+    {
+      "en": "rainbow",
+      "pos": "noun",
+      "he": "קֶשֶׁת",
+      "meaning": "the colors of the spectrum in a semi-circle appearing in the sky"
+    },
+    {
+      "en": "range",
+      "pos": "noun",
+      "he": "לָנוּעַ",
+      "meaning": "a series of mountains (secondary meaning)"
+    },
+    {
+      "en": "refund",
+      "pos": "noun",
+      "he": "הֶחזֵר",
+      "meaning": "money that was paid and now returned verb to return money, to repay"
+    },
+    {
+      "en": "regards",
+      "pos": "noun",
+      "he": "בברכה",
+      "meaning": "friendly greetings"
+    },
+    {
+      "en": "republic",
+      "pos": "noun",
+      "he": "רֶפּוּבּלִיקָה",
+      "meaning": "a government having a chief of state who is not a king or queen but rather a president"
+    },
+    {
+      "en": "resort",
+      "pos": "noun",
+      "he": "אתר נופש",
+      "meaning": "a place where people stay for recreation and entertainment, usually on vacation or holiday"
+    },
+    {
+      "en": "rob",
+      "pos": "verb",
+      "he": "לִשְׁדוֹד",
+      "meaning": "to take something away by force"
+    },
+    {
+      "en": "romantic",
+      "pos": "adjective",
+      "he": "רוֹמַנטִי",
+      "meaning": "like a love story"
+    },
+    {
+      "en": "rope",
+      "pos": "noun",
+      "he": "חֶבֶל",
+      "meaning": "a large strip of fibers or wire twisted or braided together"
+    },
+    {
+      "en": "rub (something) out/rub out (something)",
+      "pos": "phrasal verb",
+      "he": "לשפשף (משהו) החוצה/לשפשף (משהו)",
+      "meaning": "(1) to remove by friction"
+    },
+    {
+      "en": "rubber",
+      "pos": "noun",
+      "he": "גוּמִי",
+      "meaning": "an elastic substance made from various tropical plants"
+    },
+    {
+      "en": "rubbish",
+      "pos": "noun",
+      "he": "שְׁטוּיוֹת",
+      "meaning": "garbage, trash"
+    },
+    {
+      "en": "rude",
+      "pos": "adjective",
+      "he": "גַס",
+      "meaning": "not polite"
+    },
+    {
+      "en": "scandal",
+      "pos": "noun",
+      "he": "שַׁעֲרוּרִיָה",
+      "meaning": "a circumstance or action which offends accepted morals"
+    },
+    {
+      "en": "sculpture",
+      "pos": "noun",
+      "he": "פֶּסֶל",
+      "meaning": "a three-dimensional work of art, such as a statue"
+    },
+    {
+      "en": "see off (someone)/see (someone) off",
+      "pos": "phrasal verb",
+      "he": "לראות (מישהו)/לראות (מישהו)",
+      "meaning": "to go to an airport or train station in order to say goodbye"
+    },
+    {
+      "en": "selfish",
+      "pos": "adjective",
+      "he": "אָנוֹכִי",
+      "meaning": "thinking of oneself without considering others"
+    },
+    {
+      "en": "separate",
+      "pos": "verb",
+      "he": "נִפרָד",
+      "meaning": "to live apart from one’s spouse, often followed by divorce (secondary definition)"
+    },
+    {
+      "en": "sex",
+      "pos": "noun",
+      "he": "מִין",
+      "meaning": "the physical act of mating, making love"
+    },
+    {
+      "en": "shade",
+      "pos": "noun",
+      "he": "צֵל",
+      "meaning": "relative darkness caused by blocking the light"
+    },
+    {
+      "en": "shake one’s head",
+      "pos": "idiom",
+      "he": "לנער את הראש",
+      "meaning": "to turn one’s head from side to side as a way of saying “no”."
+    },
+    {
+      "en": "shave",
+      "pos": "verb",
+      "he": "לְגַלֵחַ",
+      "meaning": "to remove hair close to the roots, usually with a knife or razor noun the act of shaving"
+    },
+    {
+      "en": "shore",
+      "pos": "noun",
+      "he": "חוֹף",
+      "meaning": "the land on the edge of a large body of water"
+    },
+    {
+      "en": "show (someone) around",
+      "pos": "phrasal verb",
+      "he": "להראות (מישהו) מסביב",
+      "meaning": "to guide someone who is visiting a place"
+    },
+    {
+      "en": "shut (someone) up",
+      "pos": "phrasal verb",
+      "he": "סתום (מישהו)",
+      "meaning": "(1) to cause someone to stop talking"
+    },
+    {
+      "en": "sidewalk (North America(pavement (Great Britain)",
+      "pos": "noun",
+      "he": "מִדרָכָה",
+      "meaning": "a place for walking on foot at the side of a street; pavement"
+    },
+    {
+      "en": "sigh",
+      "pos": "noun",
+      "he": "אֲנָחָה",
+      "meaning": "a deep breath indicating relief or exhaustion verb to take and release a deep breath as a sign of relief or exhaustion"
+    },
+    {
+      "en": "silk",
+      "pos": "noun",
+      "he": "מֶשִׁי",
+      "meaning": "a fine protein fiber produced by various insect larvae"
+    },
+    {
+      "en": "sit up/stand up straight",
+      "pos": "idiom",
+      "he": "שב/עמוד זקוף",
+      "meaning": "to rise to a sitting/standing position with one’s back straight"
+    },
+    {
+      "en": "slave",
+      "pos": "noun",
+      "he": "עֶבֶד",
+      "meaning": "a person forced to work for another without compensation"
+    },
+    {
+      "en": "sleeve",
+      "pos": "noun",
+      "he": "שַׁרווּל",
+      "meaning": "a part of a piece of clothing covering an arm"
+    },
+    {
+      "en": "sore",
+      "pos": "adjective",
+      "he": "דַלֶקֶת",
+      "meaning": "feeling or affected by pain"
+    },
+    {
+      "en": "split up",
+      "pos": "phrasal verb",
+      "he": "לְהִתְפַּצֵל",
+      "meaning": "to divide into parts"
+    },
+    {
+      "en": "sportsman",
+      "pos": "noun",
+      "he": "ספּוֹרטַאִי",
+      "meaning": "a person who enjoys sports, particularly hunting and fishing"
+    },
+    {
+      "en": "spot",
+      "pos": "verb",
+      "he": "לְזַהוֹת",
+      "meaning": "to detect or notice; to locate or identify"
+    },
+    {
+      "en": "spy",
+      "pos": "verb",
+      "he": "מְרַגֵל",
+      "meaning": "to watch secretly, usually for a hostile purpose"
+    },
+    {
+      "en": "squeeze",
+      "pos": "verb",
+      "he": "לִסְחוֹט",
+      "meaning": "to put pressure on both sides of something"
+    },
+    {
+      "en": "stare",
+      "pos": "verb",
+      "he": "לִנְעוֹץ מַבָּט",
+      "meaning": "to look intensely with wide-open eyes."
+    },
+    {
+      "en": "stay over",
+      "pos": "phrasal verb",
+      "he": "להישאר לישון",
+      "meaning": "to sleep at another person’s house for the night"
+    },
+    {
+      "en": "stay up",
+      "pos": "phrasal verb",
+      "he": "הישאר ער",
+      "meaning": "to continue to be awake past the time one usually goes to bed"
+    },
+    {
+      "en": "steep",
+      "pos": "adjective  idiom",
+      "he": "תָלוּל",
+      "meaning": "at a large angle to the horizon"
+    },
+    {
+      "en": "step back",
+      "pos": "phrasal verb",
+      "he": "צעד אחורה",
+      "meaning": "to pause an activity in order to think about it"
+    },
+    {
+      "en": "step forward",
+      "pos": "phrasal verb",
+      "he": "צעד קדימה",
+      "meaning": "to give or offer help or information"
+    },
+    {
+      "en": "step on (something)",
+      "pos": "phrasal verb",
+      "he": "לדרוך על (משהו)",
+      "meaning": "to place one’s foot upon something"
+    },
+    {
+      "en": "step in (something)",
+      "pos": "phrasal verb",
+      "he": "להתערב (משהו)",
+      "meaning": "to get involved in a dispute"
+    },
+    {
+      "en": "stick",
+      "pos": "noun",
+      "he": "מַקֵל",
+      "meaning": "a short branch of a tree, rod"
+    },
+    {
+      "en": "strangely enough (also oddly enough)",
+      "pos": "idiom",
+      "he": "באופן מוזר (וגם באופן מוזר)",
+      "meaning": "used to indicate something unlikely or unbelievable, similar to believe it or not"
+    },
+    {
+      "en": "stretch",
+      "pos": "verb",
+      "he": "לִמְתוֹחַ",
+      "meaning": "to reach out, extend"
+    },
+    {
+      "en": "stream",
+      "pos": "noun",
+      "he": "זֶרֶם",
+      "meaning": "a body of running water, such as a river or creek"
+    },
+    {
+      "en": "strict",
+      "pos": "adjective",
+      "he": "קַפְּדָנִי",
+      "meaning": "severe and inflexible in terms of control or discipline"
+    },
+    {
+      "en": "string",
+      "pos": "noun",
+      "he": "חוּט",
+      "meaning": "a cord or thin rope, often used to tie or fasten adjective of or related to string instruments, such as violins or guitars"
+    },
+    {
+      "en": "stripe",
+      "pos": "noun",
+      "he": "פַּס",
+      "meaning": "a line of different color than the adjacent parts"
+    },
+    {
+      "en": "suit",
+      "pos": "verb",
+      "he": "חֲלִיפָה",
+      "meaning": "to meet the needs of; to be proper for"
+    },
+    {
+      "en": "swear",
+      "pos": "verb",
+      "he": "לְקַלֵל",
+      "meaning": "(1) to take an oath"
+    },
+    {
+      "en": "sweep",
+      "pos": "verb",
+      "he": "לְטַאטֵא",
+      "meaning": "to remove from a surface with a broom or brush"
+    },
+    {
+      "en": "sword",
+      "pos": "noun",
+      "he": "חֶרֶב",
+      "meaning": "a weapon with a long blade"
+    },
+    {
+      "en": "tail",
+      "pos": "noun",
+      "he": "זָנָב",
+      "meaning": "the rear end of the body of an animal"
+    },
+    {
+      "en": "take a risk (also take a chance)",
+      "pos": "idiom",
+      "he": "לקחת סיכון",
+      "meaning": "to do something that may result in loss or failure"
+    },
+    {
+      "en": "take (someone) out, or take out (someone)",
+      "pos": "phrasal verb",
+      "he": "להוציא (מישהו)",
+      "meaning": "(1) to invite on a date"
+    },
+    {
+      "en": "take (someone) out, or take out (someone)",
+      "pos": "phrasal verb",
+      "he": "להוציא (מישהו)",
+      "meaning": "(2) to eliminate, kill or destroy"
+    },
+    {
+      "en": "tap",
+      "pos": "noun",
+      "he": "הקש",
+      "meaning": "the sound of a light blow"
+    },
+    {
+      "en": "temple",
+      "pos": "noun",
+      "he": "המקדש",
+      "meaning": "a building for religious practice"
+    },
+    {
+      "en": "territory",
+      "pos": "noun",
+      "he": "פְּרָטִיָה",
+      "meaning": "a geographic area"
+    },
+    {
+      "en": "terror",
+      "pos": "noun",
+      "he": "טֵרוֹר",
+      "meaning": "a state of intense, overwhelming fear"
+    },
+    {
+      "en": "tie (someone or something) up, tie up (someone or something)",
+      "pos": "phrasal verb",
+      "he": "לקשור(מישהו או משהו)",
+      "meaning": "to attach, fasten or bind securely"
+    },
+    {
+      "en": "tournament",
+      "pos": "noun",
+      "he": "טוּרנִיר",
+      "meaning": "a series of games or contests"
+    },
+    {
+      "en": "track",
+      "pos": "noun",
+      "he": "מַסלוּל",
+      "meaning": "track-and-field sports, especially those performed on a running track (secondary meaning)"
+    },
+    {
+      "en": "tragedy",
+      "pos": "noun",
+      "he": "טְרָגֶדִיָה",
+      "meaning": "(1) a disastrous event, catastrophe"
+    },
+    {
+      "en": "triangle",
+      "pos": "noun",
+      "he": "מְשּוּלָשׁ",
+      "meaning": "a polygon having three sides"
+    },
+    {
+      "en": "tube",
+      "pos": "noun",
+      "he": "שְׁפוֹפֶרֶת",
+      "meaning": "a long, hollow cylinder"
+    },
+    {
+      "en": "undressed",
+      "pos": "adjective",
+      "he": "לא לבוש",
+      "meaning": "partially clothed or nude"
+    },
+    {
+      "en": "unpack",
+      "pos": "verb",
+      "he": "לִפְרוֹק",
+      "meaning": "to remove the contents of something"
+    },
+    {
+      "en": "van",
+      "pos": "noun",
+      "he": "טֶנדֶר",
+      "meaning": "an enclosed wagon or truck used to transport things or animals"
+    },
+    {
+      "en": "verse",
+      "pos": "noun",
+      "he": "פָּסוּק",
+      "meaning": "a line of poetry"
+    },
+    {
+      "en": "weapon",
+      "pos": "noun",
+      "he": "נֶשֶׁק",
+      "meaning": "a tool used to injure, kill or destroy"
+    },
+    {
+      "en": "web",
+      "pos": "noun",
+      "he": "אינטרנט",
+      "meaning": "a network of thin thread used as a nest for spiders"
+    },
+    {
+      "en": "wheat",
+      "pos": "noun",
+      "he": "חיטה",
+      "meaning": "a cereal grain used to make bread"
+    },
+    {
+      "en": "drunk",
+      "pos": "adjective",
+      "he": "שיכור",
+      "meaning": "not able to function normally because of drinking too much alcohol"
+    },
+    {
+      "en": "scratch",
+      "pos": "noun",
+      "he": "שריטה",
+      "meaning": "a minor mark or injury caused by something sharp"
+    }
+  ]
+}
