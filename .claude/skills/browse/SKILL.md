@@ -1,1 +1,1 @@
-/Users/adirron/Library/Mobile Documents/com~apple~CloudDocs/Claude Code Projects/speaking-dutch/.claude/skills/gstack/browse/SKILL.md
+../gstack/browse/SKILL.md
