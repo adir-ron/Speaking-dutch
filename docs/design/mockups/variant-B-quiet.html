@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Speaking Dutch — Quiet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:          #FAFAF7;   /* barely-warm off-white */
+    --ink:         #1A1D1C;   /* near-black */
+    --ink-soft:    #555B57;   /* body secondary */
+    --ink-whisper: #8C938E;   /* tertiary */
+    --rule:        #E6E7E2;
+    --accent:      #5E7D66;   /* muted sage */
+    --accent-soft: #C8D4CB;
+    --surface:     #FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--ink);
+    font-family:'Geist','Inter',-apple-system,system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  body{display:flex;justify-content:center;align-items:flex-start}
+  .phone{
+    width:390px;min-height:844px;background:var(--bg);position:relative;
+    padding:60px 24px 36px;display:flex;flex-direction:column;
+  }
+  .top{
+    display:flex;justify-content:space-between;align-items:center;
+    margin-bottom:80px;
+  }
+  .brand{
+    font-family:'Geist',sans-serif;font-size:14px;font-weight:600;
+    letter-spacing:-0.01em;color:var(--ink);
+  }
+  .streak{
+    font-family:'Geist',sans-serif;font-size:12px;color:var(--ink-whisper);
+    letter-spacing:0.02em;display:flex;align-items:center;gap:6px;
+  }
+  .streak::before{
+    content:'';width:5px;height:5px;border-radius:50%;background:var(--accent);
+  }
+  .greeting .eyebrow{
+    font-family:'Geist',sans-serif;font-size:11px;font-weight:500;
+    letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-whisper);
+    margin-bottom:18px;
+  }
+  .greeting .line1{
+    font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:28px;
+    line-height:1.22;color:var(--ink);letter-spacing:-0.01em;
+    margin:0 0 14px;
+  }
+  .greeting .line1 b{font-weight:500;color:var(--accent)}
+  .greeting .line2{
+    font-family:'Fraunces',Georgia,serif;font-weight:400;font-style:italic;
+    font-size:20px;line-height:1.35;color:var(--ink-soft);margin:0;
+  }
+  .mic-zone{
+    flex:1;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;padding:40px 0;
+  }
+  .mic-wrap{position:relative;width:172px;height:172px}
+  .mic-halo{
+    position:absolute;inset:-18px;border-radius:50%;
+    border:1px solid var(--accent-soft);opacity:0.7;
+    animation:pulse 3.2s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{transform:scale(1);opacity:0.7}
+    50%{transform:scale(1.06);opacity:0.35}
+  }
+  .mic{
+    width:172px;height:172px;border-radius:50%;
+    background:var(--surface);
+    border:1px solid var(--rule);
+    box-shadow:
+      0 0 0 1px rgba(0,0,0,0.02),
+      0 12px 30px -14px rgba(26,29,28,0.18),
+      0 2px 8px -4px rgba(26,29,28,0.10);
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+  }
+  .mic svg{width:46px;height:46px;color:var(--accent);stroke-width:1.6}
+  .cta-label{
+    margin-top:26px;font-family:'Geist',sans-serif;font-size:13px;
+    color:var(--ink-soft);font-weight:500;letter-spacing:0.01em;
+  }
+  .panel{
+    border-top:1px solid var(--rule);padding-top:18px;margin-top:12px;
+  }
+  .panel .panel-title{
+    font-family:'Geist',sans-serif;font-size:11px;font-weight:500;
+    letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-whisper);
+    margin-bottom:10px;
+  }
+  .panel .panel-empty{
+    font-family:'Fraunces',serif;font-style:italic;font-size:14px;
+    color:var(--ink-whisper);margin:0;
+  }
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="top">
+      <div class="brand">Speaking Dutch</div>
+      <div class="streak">3 days</div>
+    </div>
+    <div class="greeting">
+      <div class="eyebrow">Yesterday</div>
+      <p class="line1">You stumbled on <b>modal verb word order</b> twice.</p>
+      <p class="line2">Today let's try it again — talking to your neighbor.</p>
+    </div>
+    <div class="mic-zone">
+      <div class="mic-wrap">
+        <div class="mic-halo"></div>
+        <div class="mic" aria-label="Tap to talk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="3" width="6" height="12" rx="3"/>
+            <path d="M5 11a7 7 0 0 0 14 0"/>
+            <line x1="12" y1="18" x2="12" y2="22"/>
+          </svg>
+        </div>
+      </div>
+      <div class="cta-label">Tap to start</div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">What Buddy noticed</div>
+      <p class="panel-empty">Your feedback appears here after each session.</p>
+    </div>
+  </div>
+</body>
+</html>

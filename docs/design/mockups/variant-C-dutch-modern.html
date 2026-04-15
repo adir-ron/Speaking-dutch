@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Speaking Dutch — Dutch Modern</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GT+Sectra:ital,wght@0,400;0,500;1,400&family=Söhne:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:          #F4EDE1;   /* warm ecru */
+    --bg-card:     #FBF7EE;   /* lifted */
+    --ink:         #141414;   /* near-black */
+    --ink-soft:    #4A443C;
+    --ink-whisper: #8A8271;
+    --rule:        #E0D6C3;
+    --accent:      #DC5B2B;   /* muted Dutch tangerine */
+    --accent-deep: #B64416;
+    --accent-wash: #F8DCCC;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--ink);
+    font-family:'Inter',-apple-system,system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  body{display:flex;justify-content:center;align-items:flex-start}
+  .phone{
+    width:390px;min-height:844px;background:var(--bg);position:relative;
+    padding:56px 28px 40px;display:flex;flex-direction:column;
+  }
+  .header{
+    display:flex;justify-content:space-between;align-items:center;
+    margin-bottom:40px;
+  }
+  .brand{
+    font-family:'Newsreader','Fraunces',Georgia,serif;font-size:18px;
+    font-weight:500;letter-spacing:-0.01em;color:var(--ink);
+    font-style:italic;
+  }
+  .brand .dot{color:var(--accent);font-style:normal;margin-right:2px}
+  .day-pill{
+    font-family:'Inter',sans-serif;font-size:11px;font-weight:600;
+    letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--accent-deep);background:var(--accent-wash);
+    padding:6px 10px;border-radius:999px;
+  }
+  .greeting{margin-bottom:28px}
+  .greeting .eyebrow{
+    font-family:'Inter',sans-serif;font-size:11px;font-weight:600;
+    letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-whisper);
+    margin-bottom:16px;display:flex;align-items:center;gap:8px;
+  }
+  .greeting .eyebrow::after{
+    content:'';flex:1;height:1px;background:var(--rule);
+  }
+  .greeting .memory{
+    font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:30px;
+    line-height:1.2;color:var(--ink);letter-spacing:-0.015em;
+    margin:0 0 12px;
+  }
+  .greeting .memory .hl{
+    background:linear-gradient(180deg,transparent 60%,var(--accent-wash) 60%);
+    padding:0 2px;color:var(--accent-deep);
+  }
+  .greeting .today{
+    font-family:'Newsreader',Georgia,serif;font-weight:400;font-style:italic;
+    font-size:21px;line-height:1.3;color:var(--ink-soft);margin:0;
+  }
+  .mic-zone{
+    flex:1;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;padding:28px 0;
+  }
+  .mic-wrap{position:relative}
+  .mic{
+    width:168px;height:168px;border-radius:50%;
+    background:radial-gradient(circle at 30% 25%, #FBF7EE 0%, #F0E5D2 70%, #E6D9BF 100%);
+    border:1.5px solid rgba(220,91,43,0.18);
+    box-shadow:
+      inset 0 2px 0 rgba(255,255,255,0.8),
+      inset 0 -2px 4px rgba(180,70,22,0.10),
+      0 20px 40px -14px rgba(60,40,20,0.35),
+      0 4px 12px -4px rgba(60,40,20,0.18);
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+    animation:breathe 4s ease-in-out infinite;
+  }
+  .mic::before{
+    content:'';position:absolute;inset:-14px;border-radius:50%;
+    border:1px dashed rgba(220,91,43,0.35);
+    animation:rotate 24s linear infinite;
+  }
+  @keyframes breathe{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.025)}
+  }
+  @keyframes rotate{
+    from{transform:rotate(0deg)}
+    to{transform:rotate(360deg)}
+  }
+  .mic svg{width:46px;height:46px;color:var(--accent)}
+  .cta-label{
+    margin-top:24px;font-family:'Inter',sans-serif;font-size:14px;
+    color:var(--ink);font-weight:500;letter-spacing:-0.005em;
+  }
+  .cta-sub{
+    margin-top:4px;font-family:'Newsreader',serif;font-style:italic;
+    font-size:14px;color:var(--ink-whisper);
+  }
+  .panel{
+    background:var(--bg-card);border-radius:14px;padding:16px 18px;
+    border:1px solid var(--rule);
+  }
+  .panel-title{
+    font-family:'Inter',sans-serif;font-size:11px;font-weight:600;
+    letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-whisper);
+    margin-bottom:8px;
+  }
+  .panel-empty{
+    font-family:'Newsreader',serif;font-style:italic;font-size:15px;
+    color:var(--ink-soft);margin:0;line-height:1.35;
+  }
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="header">
+      <div class="brand"><span class="dot">●</span>Speaking <em>Dutch</em></div>
+      <div class="day-pill">Day 3</div>
+    </div>
+    <div class="greeting">
+      <div class="eyebrow">Yesterday</div>
+      <p class="memory">You tripped on <span class="hl">modal verb word order</span> twice.</p>
+      <p class="today">Today let's try it again, talking to your neighbor.</p>
+    </div>
+    <div class="mic-zone">
+      <div class="mic-wrap">
+        <div class="mic" aria-label="Tap to talk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="3" width="6" height="12" rx="3"/>
+            <path d="M5 11a7 7 0 0 0 14 0"/>
+            <line x1="12" y1="18" x2="12" y2="22"/>
+          </svg>
+        </div>
+      </div>
+      <div class="cta-label">Tap to start</div>
+      <div class="cta-sub">about 5 minutes</div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">What Buddy noticed</div>
+      <p class="panel-empty">Your feedback from today's conversation will show up here.</p>
+    </div>
+  </div>
+</body>
+</html>
