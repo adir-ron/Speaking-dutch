@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Speaking Dutch — Notebook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:            #F7F1E7;    /* warm cream, aged-paper */
+    --bg-elev:       #FAF5EC;    /* lifted cream */
+    --ink:           #2A2620;    /* warm near-black */
+    --ink-soft:      #5A5249;    /* muted warm gray */
+    --ink-whisper:   #8E857A;    /* tertiary */
+    --rule:          #E7DFD1;    /* hairline divider */
+    --accent:        #B4703A;    /* muted amber / burnt honey */
+    --accent-soft:   #E8C7A2;    /* amber wash */
+    --accent-ring:   rgba(180,112,58,0.18);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--ink);
+    font-family:'Geist','Inter',-apple-system,system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+  body{display:flex;justify-content:center;align-items:flex-start}
+  .phone{
+    width:390px;min-height:844px;background:var(--bg);position:relative;
+    padding:64px 28px 40px;display:flex;flex-direction:column;
+  }
+  .brand{
+    font-family:'Geist',sans-serif;font-size:13px;letter-spacing:0.08em;
+    text-transform:uppercase;color:var(--ink-whisper);font-weight:500;
+    display:flex;align-items:center;gap:8px;margin-bottom:56px;
+  }
+  .brand::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .greeting{margin-bottom:auto}
+  .greeting .label{
+    font-family:'Geist',sans-serif;font-size:12px;letter-spacing:0.06em;
+    text-transform:uppercase;color:var(--ink-whisper);font-weight:500;
+    margin-bottom:14px;
+  }
+  .greeting .memory{
+    font-family:'Instrument Serif',Georgia,serif;font-size:30px;line-height:1.18;
+    font-weight:400;color:var(--ink);letter-spacing:-0.01em;
+    margin:0 0 20px;
+  }
+  .greeting .memory em{font-style:italic;color:var(--accent)}
+  .greeting .today{
+    font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.25;
+    color:var(--ink-soft);margin:0;font-style:italic;
+  }
+  .mic-zone{
+    display:flex;flex-direction:column;align-items:center;
+    padding:36px 0 24px;
+  }
+  .mic{
+    width:164px;height:164px;border-radius:50%;
+    background:linear-gradient(145deg,#FCF8F0 0%,#EFE5D2 100%);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.9) inset,
+      0 -1px 0 rgba(180,112,58,0.08) inset,
+      0 18px 40px -12px rgba(80,60,30,0.28),
+      0 4px 14px -6px rgba(80,60,30,0.18);
+    display:flex;align-items:center;justify-content:center;
+    border:1px solid rgba(180,112,58,0.15);
+    position:relative;
+    animation:breathe 4s ease-in-out infinite;
+  }
+  .mic::after{
+    content:'';position:absolute;inset:-10px;border-radius:50%;
+    border:1px solid var(--accent-ring);opacity:0.6;
+  }
+  @keyframes breathe{
+    0%,100%{transform:scale(1);box-shadow:0 1px 0 rgba(255,255,255,0.9) inset,0 -1px 0 rgba(180,112,58,0.08) inset,0 18px 40px -12px rgba(80,60,30,0.28),0 4px 14px -6px rgba(80,60,30,0.18)}
+    50%{transform:scale(1.02);box-shadow:0 1px 0 rgba(255,255,255,0.9) inset,0 -1px 0 rgba(180,112,58,0.08) inset,0 22px 48px -12px rgba(80,60,30,0.32),0 6px 18px -6px rgba(80,60,30,0.22)}
+  }
+  .mic svg{width:44px;height:44px;color:var(--accent)}
+  .cta-label{
+    margin-top:22px;font-family:'Geist',sans-serif;font-size:14px;
+    color:var(--ink-soft);font-weight:500;letter-spacing:0.01em;
+  }
+  .panel{
+    margin-top:auto;padding-top:22px;border-top:1px solid var(--rule);
+    font-family:'Geist',sans-serif;font-size:13px;color:var(--ink-whisper);
+    letter-spacing:0.04em;text-transform:uppercase;font-weight:500;
+  }
+  .panel .placeholder{
+    margin-top:10px;font-family:'Instrument Serif',serif;font-style:italic;
+    font-size:15px;color:var(--ink-whisper);text-transform:none;letter-spacing:0;
+    font-weight:400;
+  }
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="brand">Speaking&nbsp;Dutch</div>
+    <div class="greeting">
+      <div class="label">Yesterday</div>
+      <p class="memory">You mixed up <em>modal verb</em> word order twice.</p>
+      <p class="today">Today: same pattern, talking to your neighbor.</p>
+    </div>
+    <div class="mic-zone">
+      <div class="mic" aria-label="Tap to talk">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="3" width="6" height="12" rx="3"/>
+          <path d="M5 11a7 7 0 0 0 14 0"/>
+          <line x1="12" y1="18" x2="12" y2="22"/>
+        </svg>
+      </div>
+      <div class="cta-label">Tap to start</div>
+    </div>
+    <div class="panel">
+      What Buddy noticed
+      <div class="placeholder">appears after you finish</div>
+    </div>
+  </div>
+</body>
+</html>

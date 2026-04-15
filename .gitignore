@@ -2,7 +2,15 @@ node_modules/
 uploads/*.json
 *.log
 .env
+.env.local
+.env.*.local
 ENV.txt
 listD.json
 words_compact.json
 words_inline.json
+
+# Claude Code user-machine-specific settings
+.claude/settings.local.json
+
+# gstack user-machine artifacts (live in ~/.gstack/ instead — do not commit)
+.gstack/
