@@ -235,13 +235,10 @@ export function useSession() {
 
       case "error":
         setErrorText(undefined);
-        if (retryCountRef.current >= 2) {
-          await endSession();
-        } else {
-          setMicState("idle");
-          setStatusText("Tap to speak");
-          setHintText(undefined);
-        }
+        retryCountRef.current = 0;
+        setMicState("idle");
+        setStatusText("Tap to speak");
+        setHintText(undefined);
         break;
     }
   }, [sessionActive, micState, unlock, startRecording, stopRecording, interrupt, speak, endSession]);
