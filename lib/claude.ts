@@ -12,24 +12,29 @@ function getClient(): Anthropic {
 }
 
 /**
- * Non-streaming conversation turn with Claude.
- * Returns the full response text directly.
+ * Stream a conversation turn. Returns full text as fast as possible.
  */
 export async function conversationTurn(
   systemPrompt: string,
   userMessage: string,
 ): Promise<string> {
   const anthropic = getClient();
+  let fullText = "";
 
-  const response = await anthropic.messages.create({
+  const stream = anthropic.messages.stream({
     model: MODEL,
-    max_tokens: 300,
+    max_tokens: 150,
     system: systemPrompt,
     messages: [{ role: "user", content: userMessage }],
   });
 
-  const text = response.content[0].type === "text" ? response.content[0].text : "";
-  return text;
+  for await (const event of stream) {
+    if (event.type === "content_block_delta" && event.delta.type === "text_delta") {
+      fullText += event.delta.text;
+    }
+  }
+
+  return fullText;
 }
 
 /**
