@@ -9,27 +9,25 @@ interface UseDeepgramOptions {
 
 /**
  * Manages Deepgram STT via browser-direct WSS.
- * Fetches a short-lived JWT from /api/deepgram/token, opens WSS,
- * streams MediaRecorder chunks, and fires onTranscript on SpeechFinal.
+ * Collects all final transcript segments during recording.
+ * On stop: flushes Deepgram, waits for final result, then fires onTranscript.
  */
 export function useDeepgram({ onTranscript, onError }: UseDeepgramOptions) {
   const wsRef = useRef<WebSocket | null>(null);
   const recorderRef = useRef<MediaRecorder | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
+  const transcriptPartsRef = useRef<string[]>([]);
   const [isRecording, setIsRecording] = useState(false);
 
   const startRecording = useCallback(async () => {
+    transcriptPartsRef.current = [];
+
     try {
-      // Get mic access
       const stream = await navigator.mediaDevices.getUserMedia({
-        audio: {
-          channelCount: 1,
-          sampleRate: 16000,
-        },
+        audio: { channelCount: 1, sampleRate: 16000 },
       });
       streamRef.current = stream;
 
-      // Fetch short-lived token
       const tokenRes = await fetch("/api/deepgram/token");
       if (!tokenRes.ok) {
         onError("Failed to get speech token");
@@ -37,7 +35,6 @@ export function useDeepgram({ onTranscript, onError }: UseDeepgramOptions) {
       }
       const { token } = await tokenRes.json();
 
-      // Open WSS to Deepgram
       const ws = new WebSocket(
         `wss://api.deepgram.com/v1/listen?language=nl&model=nova-2&smart_format=true&encoding=opus&sample_rate=48000`,
         ["token", token],
@@ -45,15 +42,11 @@ export function useDeepgram({ onTranscript, onError }: UseDeepgramOptions) {
       wsRef.current = ws;
 
       ws.onopen = () => {
-        // Start MediaRecorder once WS is open
         const mimeType = MediaRecorder.isTypeSupported("audio/webm;codecs=opus")
           ? "audio/webm;codecs=opus"
           : "audio/webm";
 
-        const recorder = new MediaRecorder(stream, {
-          mimeType,
-          audioBitsPerSecond: 64000,
-        });
+        const recorder = new MediaRecorder(stream, { mimeType, audioBitsPerSecond: 64000 });
         recorderRef.current = recorder;
 
         recorder.ondataavailable = (e) => {
@@ -62,16 +55,16 @@ export function useDeepgram({ onTranscript, onError }: UseDeepgramOptions) {
           }
         };
 
-        recorder.start(250); // send chunks every 250ms
+        recorder.start(250);
         setIsRecording(true);
       };
 
       ws.onmessage = (event) => {
         const data = JSON.parse(event.data);
         if (data.is_final && data.channel?.alternatives?.[0]?.transcript) {
-          const transcript = data.channel.alternatives[0].transcript.trim();
-          if (transcript) {
-            onTranscript(transcript);
+          const text = data.channel.alternatives[0].transcript.trim();
+          if (text) {
+            transcriptPartsRef.current.push(text);
           }
         }
       };
@@ -80,8 +73,17 @@ export function useDeepgram({ onTranscript, onError }: UseDeepgramOptions) {
         onError("Having trouble hearing you");
       };
 
+      // When Deepgram closes the connection (after we send CloseStream),
+      // deliver the collected transcript
       ws.onclose = () => {
         setIsRecording(false);
+        const fullTranscript = transcriptPartsRef.current.join(" ").trim();
+        if (fullTranscript) {
+          onTranscript(fullTranscript);
+        } else {
+          // No speech detected
+          onError("Having trouble hearing you");
+        }
       };
     } catch (err) {
       if (err instanceof DOMException && err.name === "NotAllowedError") {
@@ -93,23 +95,23 @@ export function useDeepgram({ onTranscript, onError }: UseDeepgramOptions) {
   }, [onTranscript, onError]);
 
   const stopRecording = useCallback(() => {
+    // Stop the MediaRecorder (stops sending audio chunks)
     if (recorderRef.current && recorderRef.current.state !== "inactive") {
       recorderRef.current.stop();
       recorderRef.current = null;
     }
-    if (wsRef.current) {
-      // Send close message to Deepgram
-      if (wsRef.current.readyState === WebSocket.OPEN) {
-        wsRef.current.send(JSON.stringify({ type: "CloseStream" }));
-      }
-      wsRef.current.close();
-      wsRef.current = null;
-    }
+
+    // Stop mic
     if (streamRef.current) {
       streamRef.current.getTracks().forEach((t) => t.stop());
       streamRef.current = null;
     }
-    setIsRecording(false);
+
+    // Tell Deepgram to flush and close. The onclose handler delivers the transcript.
+    if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
+      wsRef.current.send(JSON.stringify({ type: "CloseStream" }));
+      // Deepgram will close the WS after flushing, which triggers onclose -> onTranscript
+    }
   }, []);
 
   return { startRecording, stopRecording, isRecording };
