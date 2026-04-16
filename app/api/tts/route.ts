@@ -25,6 +25,7 @@ export async function POST(req: NextRequest) {
       voice: "nova",
       input: text,
       response_format: "mp3",
+      speed: 0.85,
     });
 
     // Stream the audio response
