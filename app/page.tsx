@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation";
+import { auth } from "@/lib/auth";
 import { pickTarget } from "@/lib/learner-model";
 import { composeGreeting } from "@/lib/memory-greeting";
 import { getOpeningLines } from "@/lib/prompt-composer";
@@ -7,6 +9,12 @@ import HomeClient from "./HomeClient";
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
+  // Check auth before touching the DB
+  const session = await auth();
+  if (!session) {
+    redirect("/login");
+  }
+
   // Ensure DB is migrated
   await runMigrations();
 
