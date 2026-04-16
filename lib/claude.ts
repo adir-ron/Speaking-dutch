@@ -1,5 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 
+const MODEL = "claude-3-5-sonnet-latest";
+
 let client: Anthropic | null = null;
 
 function getClient(): Anthropic {
@@ -10,49 +12,28 @@ function getClient(): Anthropic {
 }
 
 /**
- * Stream a conversation turn with Claude.
- * Returns the full response text and a ReadableStream for the client.
+ * Non-streaming conversation turn with Claude.
+ * Returns the full response text directly.
  */
-export async function streamConversationTurn(
+export async function conversationTurn(
   systemPrompt: string,
   userMessage: string,
-): Promise<{ stream: ReadableStream<Uint8Array>; getFullText: () => string }> {
+): Promise<string> {
   const anthropic = getClient();
-  let fullText = "";
 
-  const messageStream = anthropic.messages.stream({
-    model: "claude-sonnet-4-6-20250514",
+  const response = await anthropic.messages.create({
+    model: MODEL,
     max_tokens: 300,
     system: systemPrompt,
     messages: [{ role: "user", content: userMessage }],
   });
 
-  const encoder = new TextEncoder();
-  const readable = new ReadableStream<Uint8Array>({
-    async start(controller) {
-      for await (const event of messageStream) {
-        if (
-          event.type === "content_block_delta" &&
-          event.delta.type === "text_delta"
-        ) {
-          const text = event.delta.text;
-          fullText += text;
-          controller.enqueue(encoder.encode(text));
-        }
-      }
-      controller.close();
-    },
-  });
-
-  return {
-    stream: readable,
-    getFullText: () => fullText,
-  };
+  const text = response.content[0].type === "text" ? response.content[0].text : "";
+  return text;
 }
 
 /**
  * Run the post-session analyzer.
- * Returns structured JSON analysis of the session.
  */
 export async function analyzeSession(
   targetItemId: string,
@@ -76,7 +57,7 @@ export async function analyzeSession(
     .join("\n");
 
   const response = await anthropic.messages.create({
-    model: "claude-sonnet-4-6-20250514",
+    model: MODEL,
     max_tokens: 1000,
     system: `You are a Dutch language learning analyst. Analyze the conversation transcript and evaluate the learner's performance on the target curriculum item.
 
@@ -109,7 +90,6 @@ Analyze the learner's performance on "${targetLabel}". Return JSON only.`,
 
   const text = response.content[0].type === "text" ? response.content[0].text : "";
 
-  // Extract JSON from response (handle markdown code blocks)
   const jsonMatch = text.match(/\{[\s\S]*\}/);
   if (!jsonMatch) {
     throw new Error("Analyzer returned no valid JSON");
