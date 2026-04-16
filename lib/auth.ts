@@ -1,6 +1,7 @@
 import NextAuth from "next-auth";
 import type { NextAuthConfig } from "next-auth";
 import { Resend } from "resend";
+import { TursoAdapter } from "./auth-adapter";
 
 const resend = new Resend(process.env.AUTH_RESEND_KEY);
 
@@ -10,6 +11,7 @@ const allowedEmails = (process.env.ALLOWED_EMAILS || "")
   .filter(Boolean);
 
 export const authConfig: NextAuthConfig = {
+  adapter: TursoAdapter(),
   providers: [
     {
       id: "email",
