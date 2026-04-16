@@ -1,9 +1,20 @@
 import { getDb } from "./db";
-import { runMigrations } from "./migrate";
 import curriculum from "../seeds/curriculum.json";
 
-export async function seedCurriculum(): Promise<void> {
+let seeded = false;
+
+/**
+ * Seed curriculum if the table is empty. Safe to call on every request.
+ */
+export async function ensureSeeded(): Promise<void> {
+  if (seeded) return;
+
   const db = getDb();
+  const count = await db.execute("SELECT COUNT(*) as cnt FROM curriculum_items");
+  if ((count.rows[0].cnt as number) > 0) {
+    seeded = true;
+    return;
+  }
 
   for (const item of curriculum) {
     await db.execute({
@@ -22,17 +33,5 @@ export async function seedCurriculum(): Promise<void> {
     });
   }
 
-  console.log(`Seeded ${curriculum.length} curriculum items.`);
-}
-
-// Run directly via `npx tsx lib/seed.ts`
-if (require.main === module) {
-  (async () => {
-    await runMigrations();
-    await seedCurriculum();
-    process.exit(0);
-  })().catch((err) => {
-    console.error("Seed failed:", err);
-    process.exit(1);
-  });
+  seeded = true;
 }
