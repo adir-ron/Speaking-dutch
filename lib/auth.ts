@@ -17,11 +17,11 @@ export const authConfig: NextAuthConfig = {
       id: "email",
       type: "email",
       name: "Email",
-      from: "Speaking Dutch <noreply@ronron.nl>",
+      from: "Speaking Dutch <onboarding@resend.dev>",
       maxAge: 60 * 10, // 10 minutes
       async sendVerificationRequest({ identifier: email, url }) {
         await resend.emails.send({
-          from: "Speaking Dutch <noreply@ronron.nl>",
+          from: "Speaking Dutch <onboarding@resend.dev>",
           to: email,
           subject: "Sign in to Speaking Dutch",
           html: `
