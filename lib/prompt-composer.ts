@@ -8,17 +8,7 @@ export interface Turn {
   text: string;
 }
 
-const PERSONA = `You are Buddy, a patient and warm Dutch conversation partner for an A1-level learner pushing toward A2.
-
-Rules:
-- Speak Dutch at A1/A2 level: short sentences, high-frequency vocabulary, mostly present tense and perfectum.
-- Use simple word order. Avoid bijzin (subordinate clauses) unless the learner handles main-clause word order well.
-- When the learner makes an error, gently model the correct form in your reply. Never interrupt or lecture mid-sentence.
-- Stay in character as a friendly neighbor or acquaintance. Keep the conversation natural and flowing.
-- If the learner switches to English, respond in Dutch but acknowledge what they said.
-- Match the learner's pace. If they give short answers, ask follow-up questions. If they elaborate, keep the conversation going.
-- Never use complex grammar the learner hasn't encountered yet.
-- Always use the jij/je form (informal), not u.`;
+const PERSONA = `You are Buddy, a patient Dutch conversation partner for an A1 learner. Reply in 1-2 short Dutch sentences. Use jij/je, not u. Simple words, present tense mostly. If the learner makes an error, model the correct form naturally in your reply. If they use English, reply in Dutch.`;
 
 /**
  * Get opening lines for a curriculum item from the seed data.
@@ -36,8 +26,10 @@ export async function composeSystemPrompt(
   recentTurns: Turn[],
   sessionId: string,
 ): Promise<string> {
-  const errorNotes = await getErrorNotes(target.id);
-  const antiRepetition = await getRecentBuddyPhrases();
+  const [errorNotes, antiRepetition] = await Promise.all([
+    getErrorNotes(target.id),
+    getRecentBuddyPhrases(),
+  ]);
 
   const parts: string[] = [PERSONA];
 
@@ -51,7 +43,7 @@ export async function composeSystemPrompt(
 
   // Recent conversation (sliding window of last 6 turns = 3 exchanges)
   if (recentTurns.length > 0) {
-    const window = recentTurns.slice(-6);
+    const window = recentTurns.slice(-4);
     const formatted = window
       .map((t) => `${t.role === "buddy" ? "Buddy" : "Learner"}: ${t.text}`)
       .join("\n");
@@ -72,7 +64,7 @@ export async function composeSystemPrompt(
 async function getRecentBuddyPhrases(): Promise<string[]> {
   const db = getDb();
   const result = await db.execute(
-    "SELECT phrase_normalized FROM buddy_phrases ORDER BY ts DESC LIMIT 20",
+    "SELECT phrase_normalized FROM buddy_phrases ORDER BY ts DESC LIMIT 8",
   );
   return result.rows.map((r) => r.phrase_normalized as string);
 }
