@@ -5,7 +5,7 @@ export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   // Public paths: auth callbacks, health check, login page, static assets
-  const publicPaths = ["/api/auth", "/api/health", "/login", "/_next", "/favicon.ico"];
+  const publicPaths = ["/api/auth", "/api/health", "/api/debug", "/login", "/_next", "/favicon.ico"];
   const isPublic = publicPaths.some((p) => pathname.startsWith(p));
 
   if (isPublic) {
