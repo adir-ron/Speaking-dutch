@@ -1,0 +1,282 @@
+[
+  {
+    "id": "topic_greetings",
+    "cefr_level": "A1",
+    "kind": "topic",
+    "label": "Greetings & introductions",
+    "description": "Practice hoi/hallo, introducing yourself (ik heet..., ik kom uit..., ik woon in...), asking someone's name (hoe heet je?), where they're from. Keep to present tense. Common responses: leuk je te ontmoeten, aangenaam.",
+    "prereq_ids": "[]",
+    "seed_order": 1,
+    "opening_lines": [
+      "Hoi! Ik ben je buurman. Hoe heet je?",
+      "Hallo! Ben je nieuw hier in de buurt?",
+      "Goedemorgen! Waar kom je vandaan?"
+    ]
+  },
+  {
+    "id": "topic_numbers_dates",
+    "cefr_level": "A1",
+    "kind": "topic",
+    "label": "Numbers, dates, and time",
+    "description": "Numbers 1-100, days of the week (maandag-zondag), months, telling time (hoe laat is het?, het is drie uur, half vier, kwart over vijf). Practice making appointments with times.",
+    "prereq_ids": "[]",
+    "seed_order": 2,
+    "opening_lines": [
+      "Hoe laat is het nu?",
+      "Welke dag is het vandaag?",
+      "Wanneer is je verjaardag?"
+    ]
+  },
+  {
+    "id": "topic_cafe",
+    "cefr_level": "A1",
+    "kind": "topic",
+    "label": "Ordering at a cafe",
+    "description": "Ordering drinks and snacks: een koffie alstublieft, mag ik een thee, de rekening alstublieft. Polite forms: alstublieft/alsjeblieft, dank u wel/dank je wel. Numbers for prices.",
+    "prereq_ids": "[]",
+    "seed_order": 3,
+    "opening_lines": [
+      "Welkom! Wat mag het zijn?",
+      "Goedemiddag! Wilt u iets drinken?",
+      "Hallo! Ga zitten. Wat wil je bestellen?"
+    ]
+  },
+  {
+    "id": "topic_grocery",
+    "cefr_level": "A1",
+    "kind": "topic",
+    "label": "Grocery shopping",
+    "description": "Albert Heijn basics: groente, fruit, brood, kaas, melk. Quantities: een kilo, een half pond, een pakje. Prices: hoeveel kost het?, dat is twee euro vijftig. Location: waar is de...?",
+    "prereq_ids": "[]",
+    "seed_order": 4,
+    "opening_lines": [
+      "Ik ga naar de Albert Heijn. Ga je mee?",
+      "Wat heb je nodig van de supermarkt?",
+      "Weet je waar de kaas is in de winkel?"
+    ]
+  },
+  {
+    "id": "topic_weather",
+    "cefr_level": "A1",
+    "kind": "topic",
+    "label": "Weather chat",
+    "description": "Het regent, het is koud/warm/lekker weer, het sneeuwt, de zon schijnt, het waait. Common Dutch weather small talk: lekker weertje!, wat een weer! Seasons: lente, zomer, herfst, winter.",
+    "prereq_ids": "[]",
+    "seed_order": 5,
+    "opening_lines": [
+      "Wat een weer vandaag, he?",
+      "Het regent alweer! Heb je een paraplu?",
+      "Lekker weertje vandaag! Ga je naar buiten?"
+    ]
+  },
+  {
+    "id": "grammar_present_tense",
+    "cefr_level": "A1",
+    "kind": "grammar_concept",
+    "label": "Present tense (regular + key irregulars)",
+    "description": "Regular verb conjugation: ik werk, jij werkt, hij/zij werkt, wij/jullie/zij werken. Key irregulars: zijn (ben/bent/is/zijn), hebben (heb/hebt/heeft/hebben), gaan (ga/gaat/gaan), komen (kom/komt/komen). Practice in conversation context, not drills.",
+    "prereq_ids": "[]",
+    "seed_order": 6,
+    "opening_lines": [
+      "Wat doe je vandaag?",
+      "Waar werk je?",
+      "Hoe ga je naar je werk?"
+    ]
+  },
+  {
+    "id": "grammar_possessives",
+    "cefr_level": "A1",
+    "kind": "grammar_concept",
+    "label": "Possessive pronouns",
+    "description": "mijn, jouw, zijn, haar, ons/onze, jullie, hun. Difference between ons (het-words) and onze (de-words). Practice: mijn huis, jouw fiets, zijn werk, haar kinderen, onze buurt.",
+    "prereq_ids": "[]",
+    "seed_order": 7,
+    "opening_lines": [
+      "Is dat jouw fiets buiten?",
+      "Vertel eens over je familie.",
+      "Waar is jouw huis? Dichtbij?"
+    ]
+  },
+  {
+    "id": "topic_describing_day",
+    "cefr_level": "A1",
+    "kind": "topic",
+    "label": "Describing your day",
+    "description": "Daily routine: 's morgens, 's middags, 's avonds. Activities: ontbijten, werken, koken, eten, slapen. Time markers: eerst, dan/daarna, later, 's avonds. Use present tense throughout.",
+    "prereq_ids": "[\"grammar_present_tense\"]",
+    "seed_order": 8,
+    "opening_lines": [
+      "Wat doe je 's morgens?",
+      "Hoe ziet jouw dag eruit?",
+      "Wat eet je voor ontbijt?"
+    ]
+  },
+  {
+    "id": "topic_home",
+    "cefr_level": "A1",
+    "kind": "topic",
+    "label": "Describing your home",
+    "description": "Rooms: keuken, woonkamer, slaapkamer, badkamer, tuin, balkon. Furniture basics: bank, tafel, stoel, bed, kast. Location: boven, beneden, links, rechts. Size: groot, klein, gezellig.",
+    "prereq_ids": "[\"grammar_possessives\"]",
+    "seed_order": 9,
+    "opening_lines": [
+      "Hoe ziet jouw huis eruit?",
+      "Heb je een tuin of een balkon?",
+      "Is je woonkamer groot?"
+    ]
+  },
+  {
+    "id": "grammar_word_order",
+    "cefr_level": "A1",
+    "kind": "grammar_concept",
+    "label": "Word order in main clauses",
+    "description": "V2 rule: verb is always second in main clauses. Time-manner-place order for the rest. Examples: Morgen ga ik naar de markt (not: Morgen ik ga...). Vandaag werk ik thuis. Practice inversions when time/place comes first.",
+    "prereq_ids": "[\"grammar_present_tense\"]",
+    "seed_order": 10,
+    "opening_lines": [
+      "Wat doe je morgen?",
+      "Gisteren was het mooi weer. En vandaag?",
+      "Wanneer ga je naar de winkel?"
+    ]
+  },
+  {
+    "id": "grammar_modals",
+    "cefr_level": "A1",
+    "kind": "grammar_concept",
+    "label": "Modal verbs",
+    "description": "kunnen (can), willen (want to), moeten (must/have to), mogen (may/be allowed to). Key pattern: modal is V2, main verb goes to end. Ik kan goed fietsen. Wil je koffie drinken? Je moet rechts afslaan. Mag ik hier zitten?",
+    "prereq_ids": "[\"grammar_word_order\"]",
+    "seed_order": 11,
+    "opening_lines": [
+      "Kun je goed Nederlands spreken?",
+      "Wat wil je dit weekend doen?",
+      "Mag ik je iets vragen?"
+    ]
+  },
+  {
+    "id": "grammar_future_gaan",
+    "cefr_level": "A1",
+    "kind": "grammar_concept",
+    "label": "Future with 'gaan'",
+    "description": "Ik ga morgen werken. We gaan vanavond eten. Zij gaat naar de dokter. Pattern: gaan (conjugated) + infinitive at end. More natural than 'zullen' at A1 level. Practice with time markers: morgen, volgende week, vanavond, straks.",
+    "prereq_ids": "[\"grammar_word_order\"]",
+    "seed_order": 12,
+    "opening_lines": [
+      "Wat ga je dit weekend doen?",
+      "Ga je morgen werken?",
+      "We gaan vanavond naar een restaurant. Ga je mee?"
+    ]
+  },
+  {
+    "id": "topic_neighbors",
+    "cefr_level": "A1",
+    "kind": "topic",
+    "label": "Small talk with neighbors",
+    "description": "Casual greetings: hoe gaat het?, lekker weekend gehad?, alles goed? Short answers: ja goed, druk geweest, rustig weekend. Neighborhood: de buurt, de buren, gezellig, leuk hier. Keep it light and casual (jij-form, not u).",
+    "prereq_ids": "[\"topic_greetings\"]",
+    "seed_order": 13,
+    "opening_lines": [
+      "Hoi buurman! Hoe gaat het?",
+      "Lekker weekend gehad?",
+      "Alles goed? Lang niet gezien!"
+    ]
+  },
+  {
+    "id": "topic_transport",
+    "cefr_level": "A1",
+    "kind": "topic",
+    "label": "Public transport",
+    "description": "trein, tram, bus, metro, fiets. OV-chipkaart: in- en uitchecken. Stations: Centraal Station, perron, spoor. Verbs: instappen, uitstappen, overstappen. Questions: welk spoor?, hoe laat vertrekt de trein naar...?, moet ik overstappen?",
+    "prereq_ids": "[\"topic_numbers_dates\"]",
+    "seed_order": 14,
+    "opening_lines": [
+      "Hoe ga jij naar je werk? Met de trein?",
+      "Ik moet naar Amsterdam Centraal. Welke trein moet ik nemen?",
+      "Heb je een OV-chipkaart?"
+    ]
+  },
+  {
+    "id": "grammar_perfectum",
+    "cefr_level": "A2",
+    "kind": "grammar_concept",
+    "label": "Perfectum (present perfect)",
+    "description": "hebben/zijn + voltooid deelwoord. Regular: ge- + stam + -t/-d (gewerkt, gemaakt, geleerd). Irregular: common ones (gegaan, gekomen, geweest, gedaan, gezien, gegeten). Zijn-verbs: movement/state change (gegaan, gekomen, geweest). T-kofschip rule for -t/-d endings.",
+    "prereq_ids": "[\"grammar_present_tense\", \"grammar_word_order\"]",
+    "seed_order": 15,
+    "opening_lines": [
+      "Wat heb je gisteren gedaan?",
+      "Ben je dit weekend ergens naartoe geweest?",
+      "Heb je al gegeten vandaag?"
+    ]
+  },
+  {
+    "id": "grammar_separable_verbs",
+    "cefr_level": "A2",
+    "kind": "grammar_concept",
+    "label": "Separable verbs",
+    "description": "Verbs that split: opstaan (ik sta op), meegaan (ga je mee?), uitgaan (we gaan uit), aankomen (de trein komt aan), opbellen (ik bel je op). In perfectum: opgestaan, meegegaan. Practice recognizing and using the split pattern in main clauses.",
+    "prereq_ids": "[\"grammar_word_order\"]",
+    "seed_order": 16,
+    "opening_lines": [
+      "Hoe laat sta je 's morgens op?",
+      "Ga je vanavond uit?",
+      "Bel je me later op?"
+    ]
+  },
+  {
+    "id": "grammar_er",
+    "cefr_level": "A2",
+    "kind": "grammar_concept",
+    "label": "'Er' as expletive",
+    "description": "er is (there is), er zijn (there are), er was, er waren. Used to introduce existence: Er is een supermarkt in de buurt. Er zijn veel fietsen in Amsterdam. Er was gisteren een feestje. Keep to this basic existential 'er' only, not locative or prepositional 'er'.",
+    "prereq_ids": "[\"grammar_present_tense\"]",
+    "seed_order": 17,
+    "opening_lines": [
+      "Is er een goed restaurant in de buurt?",
+      "Er zijn veel parken in Amsterdam. Ken je er een?",
+      "Was er gisteren iets leuks te doen?"
+    ]
+  },
+  {
+    "id": "topic_directions",
+    "cefr_level": "A2",
+    "kind": "topic",
+    "label": "Giving and asking for directions",
+    "description": "links, rechts, rechtdoor, de eerste/tweede straat links/rechts, aan het einde van de straat, op de hoek, tegenover, naast. Useful phrases: kunt u me helpen? (polite), weet je waar... is?, het is niet ver, vijf minuten lopen.",
+    "prereq_ids": "[\"topic_greetings\", \"grammar_modals\"]",
+    "seed_order": 18,
+    "opening_lines": [
+      "Sorry, weet je waar het station is?",
+      "Kun je me de weg wijzen naar de supermarkt?",
+      "Ik ben verdwaald. Kun je me helpen?"
+    ]
+  },
+  {
+    "id": "topic_appointments",
+    "cefr_level": "A2",
+    "kind": "topic",
+    "label": "Making an appointment",
+    "description": "Making appointments: een afspraak maken bij de dokter/kapper/tandarts. Useful phrases: ik wil graag een afspraak maken, heeft u nog plek?, wanneer kan ik komen?, om hoe laat? Confirming: dat is goed, tot dan, tot morgen.",
+    "prereq_ids": "[\"topic_numbers_dates\", \"grammar_modals\"]",
+    "seed_order": 19,
+    "opening_lines": [
+      "Ik moet naar de dokter. Hoe maak je een afspraak?",
+      "Wanneer ga je naar de kapper?",
+      "Kun je me helpen om een afspraak te maken?"
+    ]
+  },
+  {
+    "id": "topic_weekend_perfectum",
+    "cefr_level": "A2",
+    "kind": "topic",
+    "label": "Narrating your weekend (perfectum)",
+    "description": "Combining perfectum with weekend activities. Ik heb gefietst, ik ben naar de markt gegaan, we hebben gekookt, ik heb een film gezien. Time markers: zaterdag, zondag, 's ochtends, 's middags. Connectors: en, maar, ook, daarna, eerst.",
+    "prereq_ids": "[\"grammar_perfectum\"]",
+    "seed_order": 20,
+    "opening_lines": [
+      "Wat heb je dit weekend gedaan?",
+      "Heb je een leuk weekend gehad?",
+      "Ik ben zaterdag naar de markt geweest. En jij?"
+    ]
+  }
+]
