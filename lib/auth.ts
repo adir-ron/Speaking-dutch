@@ -17,12 +17,28 @@ export const authConfig: NextAuthConfig = {
     }),
   ],
   callbacks: {
-    async signIn({ user }) {
-      const email = user.email?.toLowerCase();
-      if (!email || !allowedEmails.includes(email)) {
-        return false;
+    async signIn({ user, account }) {
+      // For email/resend provider, check allowlist
+      if (account?.provider === "resend") {
+        const email = user.email?.toLowerCase();
+        if (!email || !allowedEmails.includes(email)) {
+          console.log(`[auth] Rejected sign-in for: ${email}, allowed: ${allowedEmails.join(", ")}`);
+          return false;
+        }
       }
       return true;
+    },
+    async jwt({ token, user }) {
+      if (user) {
+        token.email = user.email;
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      if (token.email) {
+        session.user.email = token.email as string;
+      }
+      return session;
     },
   },
   pages: {
@@ -32,6 +48,8 @@ export const authConfig: NextAuthConfig = {
   session: {
     strategy: "jwt",
   },
+  debug: process.env.NODE_ENV === "development",
+  trustHost: true,
 };
 
 export const { handlers, auth, signIn, signOut } = NextAuth(authConfig);
