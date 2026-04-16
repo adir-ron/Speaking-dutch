@@ -12,7 +12,7 @@ export async function GET() {
   try {
     const client = new Anthropic();
     const response = await client.messages.create({
-      model: "claude-3-5-sonnet-latest",
+      model: "claude-3-5-sonnet-20241022",
       max_tokens: 50,
       messages: [{ role: "user", content: "Zeg hallo in het Nederlands." }],
     });
