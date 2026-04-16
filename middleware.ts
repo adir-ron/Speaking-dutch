@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getToken } from "next-auth/jwt";
+import { jwtVerify } from "jose";
+
+const SECRET = new TextEncoder().encode(process.env.AUTH_SECRET || "dev-secret");
 
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  // Public paths: auth callbacks, health check, login page, static assets
   const publicPaths = ["/api/auth", "/api/health", "/api/debug", "/login", "/_next", "/favicon.ico"];
   const isPublic = publicPaths.some((p) => pathname.startsWith(p));
 
@@ -12,9 +13,8 @@ export async function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
-  // Check JWT token (lightweight, no DB access needed)
-  const token = await getToken({ req, secret: process.env.AUTH_SECRET });
-
+  // Check JWT cookie
+  const token = req.cookies.get("sd-session")?.value;
   if (!token) {
     if (pathname.startsWith("/api/")) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -22,7 +22,15 @@ export async function middleware(req: NextRequest) {
     return NextResponse.redirect(new URL("/login", req.url));
   }
 
-  return NextResponse.next();
+  try {
+    await jwtVerify(token, SECRET);
+    return NextResponse.next();
+  } catch {
+    if (pathname.startsWith("/api/")) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+    return NextResponse.redirect(new URL("/login", req.url));
+  }
 }
 
 export const config = {
