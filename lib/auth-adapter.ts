@@ -1,6 +1,28 @@
 import type { Adapter, AdapterUser, VerificationToken } from "@auth/core/adapters";
 import { getDb } from "./db";
 
+let tablesEnsured = false;
+
+async function ensureAuthTables() {
+  if (tablesEnsured) return;
+  const db = getDb();
+  await db.execute(`CREATE TABLE IF NOT EXISTS auth_users (
+    id TEXT PRIMARY KEY, name TEXT, email TEXT UNIQUE, emailVerified TEXT, image TEXT
+  )`);
+  await db.execute(`CREATE TABLE IF NOT EXISTS verification_tokens (
+    identifier TEXT NOT NULL, token TEXT NOT NULL, expires TEXT NOT NULL,
+    PRIMARY KEY (identifier, token)
+  )`);
+  await db.execute(`CREATE TABLE IF NOT EXISTS auth_accounts (
+    id TEXT PRIMARY KEY, userId TEXT NOT NULL, type TEXT NOT NULL,
+    provider TEXT NOT NULL, providerAccountId TEXT NOT NULL
+  )`);
+  await db.execute(`CREATE TABLE IF NOT EXISTS auth_sessions (
+    sessionToken TEXT PRIMARY KEY, userId TEXT NOT NULL, expires TEXT NOT NULL
+  )`);
+  tablesEnsured = true;
+}
+
 /**
  * Minimal Auth.js adapter backed by Turso/libSQL.
  * Only implements what the email provider needs: users + verification tokens.
@@ -8,6 +30,7 @@ import { getDb } from "./db";
 export function TursoAdapter(): Adapter {
   return {
     async createUser(user) {
+      await ensureAuthTables();
       const db = getDb();
 
       const id = crypto.randomUUID();
@@ -26,6 +49,7 @@ export function TursoAdapter(): Adapter {
     },
 
     async getUserByEmail(email) {
+      await ensureAuthTables();
       const db = getDb();
 
       const result = await db.execute({ sql: "SELECT * FROM auth_users WHERE email = ?", args: [email] });
@@ -63,6 +87,7 @@ export function TursoAdapter(): Adapter {
     },
 
     async createVerificationToken(token) {
+      await ensureAuthTables();
       const db = getDb();
 
       await db.execute({
