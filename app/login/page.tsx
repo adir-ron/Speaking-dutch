@@ -14,7 +14,7 @@ function LoginForm() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    await signIn("email", { email, callbackUrl: "/" });
+    await signIn("resend", { email, callbackUrl: "/" });
   }
 
   if (sent) {
