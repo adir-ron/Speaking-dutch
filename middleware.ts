@@ -1,7 +1,7 @@
-import { auth } from "@/lib/auth";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+import { getToken } from "next-auth/jwt";
 
-export default auth((req) => {
+export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   // Public paths: auth callbacks, health check, login page, static assets
@@ -12,18 +12,18 @@ export default auth((req) => {
     return NextResponse.next();
   }
 
-  // Protect everything else
-  if (!req.auth) {
-    // API routes get 401
+  // Check JWT token (lightweight, no DB access needed)
+  const token = await getToken({ req, secret: process.env.AUTH_SECRET });
+
+  if (!token) {
     if (pathname.startsWith("/api/")) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
-    // Pages redirect to login
     return NextResponse.redirect(new URL("/login", req.url));
   }
 
   return NextResponse.next();
-});
+}
 
 export const config = {
   matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],

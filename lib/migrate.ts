@@ -1,13 +1,83 @@
 import { getDb } from "./db";
-import { readFileSync, readdirSync } from "fs";
-import { join } from "path";
 
-const MIGRATIONS_DIR = join(process.cwd(), "migrations");
+/**
+ * Inline migrations for Vercel serverless (no filesystem access).
+ * Each migration is a named entry with SQL statements.
+ */
+const MIGRATIONS: Array<{ name: string; statements: string[] }> = [
+  {
+    name: "001_init.sql",
+    statements: [
+      `CREATE TABLE IF NOT EXISTS curriculum_items (
+        id TEXT PRIMARY KEY,
+        cefr_level TEXT NOT NULL,
+        kind TEXT NOT NULL,
+        label TEXT NOT NULL,
+        description TEXT,
+        prereq_ids TEXT,
+        seed_order INTEGER NOT NULL
+      )`,
+      `CREATE TABLE IF NOT EXISTS learner_items (
+        item_id TEXT PRIMARY KEY REFERENCES curriculum_items(id),
+        attempts INTEGER DEFAULT 0,
+        successes INTEGER DEFAULT 0,
+        last_seen_at TEXT,
+        confidence REAL DEFAULT 0,
+        error_notes TEXT
+      )`,
+      `CREATE TABLE IF NOT EXISTS sessions (
+        id TEXT PRIMARY KEY,
+        started_at TEXT,
+        ended_at TEXT,
+        target_item_id TEXT,
+        transcript_json TEXT,
+        analysis_json TEXT,
+        prompt_log_json TEXT
+      )`,
+      `CREATE TABLE IF NOT EXISTS buddy_phrases (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        session_id TEXT NOT NULL REFERENCES sessions(id),
+        phrase_normalized TEXT NOT NULL,
+        ts TEXT NOT NULL
+      )`,
+      `CREATE INDEX IF NOT EXISTS idx_buddy_phrases_ts ON buddy_phrases(ts DESC)`,
+    ],
+  },
+  {
+    name: "002_auth_tables.sql",
+    statements: [
+      `CREATE TABLE IF NOT EXISTS verification_tokens (
+        identifier TEXT NOT NULL,
+        token TEXT NOT NULL,
+        expires TEXT NOT NULL,
+        PRIMARY KEY (identifier, token)
+      )`,
+      `CREATE TABLE IF NOT EXISTS auth_users (
+        id TEXT PRIMARY KEY,
+        name TEXT,
+        email TEXT UNIQUE,
+        emailVerified TEXT,
+        image TEXT
+      )`,
+      `CREATE TABLE IF NOT EXISTS auth_accounts (
+        id TEXT PRIMARY KEY,
+        userId TEXT NOT NULL REFERENCES auth_users(id) ON DELETE CASCADE,
+        type TEXT NOT NULL,
+        provider TEXT NOT NULL,
+        providerAccountId TEXT NOT NULL
+      )`,
+      `CREATE TABLE IF NOT EXISTS auth_sessions (
+        sessionToken TEXT PRIMARY KEY,
+        userId TEXT NOT NULL REFERENCES auth_users(id) ON DELETE CASCADE,
+        expires TEXT NOT NULL
+      )`,
+    ],
+  },
+];
 
 export async function runMigrations(): Promise<void> {
   const db = getDb();
 
-  // Create migrations tracking table
   await db.execute(`
     CREATE TABLE IF NOT EXISTS _migrations (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -16,46 +86,19 @@ export async function runMigrations(): Promise<void> {
     )
   `);
 
-  // Get already-applied migrations
   const applied = await db.execute("SELECT name FROM _migrations");
   const appliedSet = new Set(applied.rows.map((r) => r.name as string));
 
-  // Read and sort migration files
-  const files = readdirSync(MIGRATIONS_DIR)
-    .filter((f) => f.endsWith(".sql"))
-    .sort();
+  for (const migration of MIGRATIONS) {
+    if (appliedSet.has(migration.name)) continue;
 
-  for (const file of files) {
-    if (appliedSet.has(file)) continue;
-
-    const sql = readFileSync(join(MIGRATIONS_DIR, file), "utf-8");
-    const statements = sql
-      .split(";")
-      .map((s) => s.trim())
-      .filter((s) => s.length > 0);
-
-    for (const statement of statements) {
+    for (const statement of migration.statements) {
       await db.execute(statement);
     }
 
     await db.execute({
       sql: "INSERT INTO _migrations (name) VALUES (?)",
-      args: [file],
+      args: [migration.name],
     });
-
-    console.log(`Applied migration: ${file}`);
   }
-}
-
-// Run directly via `npx tsx lib/migrate.ts`
-if (require.main === module) {
-  runMigrations()
-    .then(() => {
-      console.log("Migrations complete.");
-      process.exit(0);
-    })
-    .catch((err) => {
-      console.error("Migration failed:", err);
-      process.exit(1);
-    });
 }

@@ -1,6 +1,5 @@
 import type { Adapter, AdapterUser, VerificationToken } from "@auth/core/adapters";
 import { getDb } from "./db";
-import { runMigrations } from "./migrate";
 
 /**
  * Minimal Auth.js adapter backed by Turso/libSQL.
@@ -10,7 +9,7 @@ export function TursoAdapter(): Adapter {
   return {
     async createUser(user) {
       const db = getDb();
-      await runMigrations();
+
       const id = crypto.randomUUID();
       await db.execute({
         sql: "INSERT INTO auth_users (id, name, email, emailVerified, image) VALUES (?, ?, ?, ?, ?)",
@@ -28,7 +27,7 @@ export function TursoAdapter(): Adapter {
 
     async getUserByEmail(email) {
       const db = getDb();
-      await runMigrations();
+
       const result = await db.execute({ sql: "SELECT * FROM auth_users WHERE email = ?", args: [email] });
       if (result.rows.length === 0) return null;
       return rowToUser(result.rows[0]);
@@ -65,7 +64,7 @@ export function TursoAdapter(): Adapter {
 
     async createVerificationToken(token) {
       const db = getDb();
-      await runMigrations();
+
       await db.execute({
         sql: "INSERT INTO verification_tokens (identifier, token, expires) VALUES (?, ?, ?)",
         args: [token.identifier, token.token, token.expires.toISOString()],
