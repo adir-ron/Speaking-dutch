@@ -9,6 +9,10 @@ listD.json
 words_compact.json
 words_inline.json
 
+# Next.js
+.next/
+out/
+
 # Claude Code user-machine-specific settings
 .claude/settings.local.json
 
