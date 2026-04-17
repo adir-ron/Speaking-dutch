@@ -12,14 +12,14 @@ function getClient(): Anthropic {
 }
 
 /**
- * Stream a conversation turn. Returns full text as fast as possible.
+ * Stream a conversation turn, yielding text chunks as they arrive from Claude.
+ * The caller can progressively pipe these chunks to TTS for lower latency.
  */
-export async function conversationTurn(
+export async function* streamConversationTurn(
   systemPrompt: string,
   userMessage: string,
-): Promise<string> {
+): AsyncGenerator<string, void, unknown> {
   const anthropic = getClient();
-  let fullText = "";
 
   const stream = anthropic.messages.stream({
     model: MODEL,
@@ -30,10 +30,22 @@ export async function conversationTurn(
 
   for await (const event of stream) {
     if (event.type === "content_block_delta" && event.delta.type === "text_delta") {
-      fullText += event.delta.text;
+      yield event.delta.text;
     }
   }
+}
 
+/**
+ * Non-streaming convenience wrapper. Buffers the full response into a string.
+ */
+export async function conversationTurn(
+  systemPrompt: string,
+  userMessage: string,
+): Promise<string> {
+  let fullText = "";
+  for await (const chunk of streamConversationTurn(systemPrompt, userMessage)) {
+    fullText += chunk;
+  }
   return fullText;
 }
 

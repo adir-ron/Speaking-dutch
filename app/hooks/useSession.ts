@@ -28,6 +28,7 @@ export function useSession() {
   const [feedbackVisible, setFeedbackVisible] = useState(false);
   const [analyzing, setAnalyzing] = useState(false);
   const [sessionActive, setSessionActive] = useState(false);
+  const [buddyText, setBuddyText] = useState("");
 
   const sessionRef = useRef<SessionData | null>(null);
   const turnCountRef = useRef(0);
@@ -75,7 +76,36 @@ export function useSession() {
     }
   }, []);
 
-  // Called when Deepgram delivers a transcript
+  // TTS hook (declared before handleTranscript so the ref is set up)
+  const { speak, speakChunk, flush, interrupt } = useTTS({
+    getAudioContext: getContext,
+    onStart: () => {
+      setMicState("speaking");
+      setStatusText("Buddy is speaking");
+      setHintText("tap to interrupt");
+    },
+    onEnd: () => {
+      setMicState("idle");
+      setStatusText("Tap to speak");
+      setHintText(undefined);
+    },
+    onError: () => {
+      setMicState("idle");
+      setStatusText("Tap to speak");
+      setHintText(undefined);
+    },
+  });
+
+  // Keep refs to TTS functions for use inside other callbacks (stable identity)
+  const speakRef = useRef(speak);
+  speakRef.current = speak;
+  const speakChunkRef = useRef(speakChunk);
+  speakChunkRef.current = speakChunk;
+  const flushRef = useRef(flush);
+  flushRef.current = flush;
+
+  // Called when Deepgram delivers a transcript.
+  // Streams Claude response and pipes chunks to TTS in real time.
   const handleTranscript = useCallback(async (text: string) => {
     if (!sessionRef.current) return;
 
@@ -83,6 +113,7 @@ export function useSession() {
     setStatusText("Buddy is thinking");
     setHintText(undefined);
     setErrorText(undefined);
+    setBuddyText("");
 
     transcriptRef.current.push({ role: "user", text, ts: new Date().toISOString() });
     turnCountRef.current += 1;
@@ -98,31 +129,41 @@ export function useSession() {
         }),
       });
 
-      if (!res.ok) {
+      if (!res.ok || !res.body) {
         retryCountRef.current += 1;
-        if (retryCountRef.current >= 2) {
-          setMicState("error");
-          setErrorText("Buddy needs a minute. Try again in a bit.");
-          setHintText("your progress is saved");
-          return;
-        }
         setMicState("error");
         setErrorText("Buddy is thinking too hard");
         setHintText("tap to try again");
         return;
       }
 
-      const { buddy_text } = await res.json();
-      transcriptRef.current.push({ role: "buddy", text: buddy_text, ts: new Date().toISOString() });
-      retryCountRef.current = 0;
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let fullText = "";
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        const chunk = decoder.decode(value, { stream: true });
+        fullText += chunk;
+        setBuddyText((prev) => prev + chunk);
+        speakChunkRef.current(chunk);
+      }
+      flushRef.current();
+
+      if (fullText.trim()) {
+        transcriptRef.current.push({
+          role: "buddy",
+          text: fullText.trim(),
+          ts: new Date().toISOString(),
+        });
+        retryCountRef.current = 0;
+      }
 
       if (turnCountRef.current >= MAX_TURNS) {
         await endSession();
         return;
       }
-
-      // Play TTS
-      speakRef.current(buddy_text);
     } catch {
       setMicState("error");
       setErrorText("Buddy is thinking too hard");
@@ -154,29 +195,6 @@ export function useSession() {
     onError: handleSttError,
   });
 
-  const { speak, interrupt } = useTTS({
-    getAudioContext: getContext,
-    onStart: () => {
-      setMicState("speaking");
-      setStatusText("Buddy is speaking");
-      setHintText("tap to interrupt");
-    },
-    onEnd: () => {
-      setMicState("idle");
-      setStatusText("Tap to speak");
-      setHintText(undefined);
-    },
-    onError: () => {
-      setMicState("idle");
-      setStatusText("Tap to speak");
-      setHintText(undefined);
-    },
-  });
-
-  // Use a ref so handleTranscript always sees the latest speak function
-  const speakRef = useRef(speak);
-  speakRef.current = speak;
-
   const handleTap = useCallback(async () => {
     await unlock();
 
@@ -198,9 +216,14 @@ export function useSession() {
         const openingLine = data.target_item.opening_lines[
           Math.floor(Math.random() * data.target_item.opening_lines.length)
         ];
-        transcriptRef.current.push({ role: "buddy", text: openingLine, ts: new Date().toISOString() });
+        transcriptRef.current.push({
+          role: "buddy",
+          text: openingLine,
+          ts: new Date().toISOString(),
+        });
+        setBuddyText(openingLine);
 
-        await speak(openingLine);
+        speakRef.current(openingLine);
       } catch {
         setMicState("error");
         setErrorText("Trouble starting. Try again.");
@@ -222,7 +245,7 @@ export function useSession() {
         setMicState("transcribing");
         setStatusText("Got it");
         setHintText(undefined);
-        stopRecording(); // triggers Deepgram flush -> onclose -> onTranscript
+        stopRecording();
         break;
 
       case "speaking":
@@ -241,7 +264,7 @@ export function useSession() {
         setHintText(undefined);
         break;
     }
-  }, [sessionActive, micState, unlock, startRecording, stopRecording, interrupt, speak, endSession]);
+  }, [sessionActive, micState, unlock, startRecording, stopRecording, interrupt, endSession]);
 
   async function pollAnalysis(sessionId: string) {
     for (let i = 0; i < 10; i++) {
@@ -253,20 +276,31 @@ export function useSession() {
         if (data.analysis) {
           const items: FeedbackItem[] = [];
           if (data.analysis.successes > 0) {
-            items.push({ glyph: "correct", text: `${data.analysis.successes}/${data.analysis.attempts} correct on ${sessionRef.current?.target_item.label}` });
+            items.push({
+              glyph: "correct",
+              text: `${data.analysis.successes}/${data.analysis.attempts} correct on ${sessionRef.current?.target_item.label}`,
+            });
           }
           if (data.analysis.vocab_used_correctly?.length > 0) {
-            items.push({ glyph: "correct", text: `Used correctly: ${data.analysis.vocab_used_correctly.slice(0, 3).join(", ")}` });
+            items.push({
+              glyph: "correct",
+              text: `Used correctly: ${data.analysis.vocab_used_correctly.slice(0, 3).join(", ")}`,
+            });
           }
           if (data.analysis.vocab_struggled?.length > 0) {
-            items.push({ glyph: "review", text: `Buddy will bring back: ${data.analysis.vocab_struggled.slice(0, 3).join(", ")}` });
+            items.push({
+              glyph: "review",
+              text: `Buddy will bring back: ${data.analysis.vocab_struggled.slice(0, 3).join(", ")}`,
+            });
           }
           if (data.analysis.errors?.length > 0) {
             for (const err of data.analysis.errors.slice(0, 2)) {
               items.push({ glyph: "partial", text: err.note });
             }
           }
-          setFeedbackItems(items.length > 0 ? items : [{ glyph: "correct", text: "Session complete. Keep it up." }]);
+          setFeedbackItems(
+            items.length > 0 ? items : [{ glyph: "correct", text: "Session complete. Keep it up." }],
+          );
           setAnalyzing(false);
           return;
         }
@@ -275,5 +309,15 @@ export function useSession() {
     setAnalyzing(false);
   }
 
-  return { micState, statusText, hintText, errorText, feedbackItems, feedbackVisible, analyzing, handleTap };
+  return {
+    micState,
+    statusText,
+    hintText,
+    errorText,
+    buddyText,
+    feedbackItems,
+    feedbackVisible,
+    analyzing,
+    handleTap,
+  };
 }

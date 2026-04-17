@@ -22,11 +22,16 @@ export default function HomeClient({ greeting, targetItem }: Props) {
     statusText,
     hintText,
     errorText,
+    buddyText,
     feedbackItems,
     feedbackVisible,
     analyzing,
     handleTap,
   } = useSession();
+
+  // Hide the Dutch text strip while actively recording (distraction)
+  // and before the first utterance (nothing to show).
+  const showBuddyText = !!buddyText && micState !== "recording" && micState !== "transcribing";
 
   return (
     <div
@@ -52,8 +57,10 @@ export default function HomeClient({ greeting, targetItem }: Props) {
         style={{
           flex: 1,
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
+          gap: 24,
         }}
       >
         <MicButton
@@ -63,6 +70,25 @@ export default function HomeClient({ greeting, targetItem }: Props) {
           hintText={hintText}
           errorText={errorText}
         />
+
+        {/* Buddy's last Dutch utterance (subtitle-style, for reading along) */}
+        {showBuddyText && (
+          <p
+            lang="nl"
+            className="font-serif"
+            style={{
+              fontSize: 18,
+              lineHeight: 1.4,
+              fontStyle: "italic",
+              color: "var(--ink-soft)",
+              textAlign: "center",
+              maxWidth: 360,
+              padding: "0 8px",
+            }}
+          >
+            {buddyText}
+          </p>
+        )}
       </div>
 
       {/* Feedback panel */}
