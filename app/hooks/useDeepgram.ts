@@ -136,8 +136,9 @@ export function useDeepgram({ onTranscript, onError }: UseDeepgramOptions) {
       wsRef.current.send(JSON.stringify({ type: "CloseStream" }));
     }
 
-    // Safety timeout: if Deepgram doesn't close within 800ms, deliver what we have
-    setTimeout(() => deliver(), 800);
+    // Safety timeout: if Deepgram doesn't close within 1500ms, deliver what we have.
+    // (800ms was too aggressive on mobile networks; Deepgram's flush can take ~1s.)
+    setTimeout(() => deliver(), 1500);
   }, []);
 
   return { startRecording, stopRecording, isRecording };
