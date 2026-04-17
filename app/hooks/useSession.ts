@@ -85,14 +85,15 @@ export function useSession() {
       setHintText("tap to interrupt");
     },
     onEnd: () => {
-      setMicState("idle");
+      setMicState((s) => (s === "speaking" ? "idle" : s));
       setStatusText("Tap to speak");
       setHintText(undefined);
     },
-    onError: () => {
-      setMicState("idle");
-      setStatusText("Tap to speak");
-      setHintText(undefined);
+    onError: (detail) => {
+      console.error("[session] TTS error:", detail);
+      setMicState("error");
+      setErrorText("Trouble speaking");
+      setHintText("tap to try again");
     },
   });
 
@@ -145,20 +146,28 @@ export function useSession() {
         const { done, value } = await reader.read();
         if (done) break;
         const chunk = decoder.decode(value, { stream: true });
-        fullText += chunk;
-        setBuddyText((prev) => prev + chunk);
-        speakChunkRef.current(chunk);
+        if (chunk) {
+          fullText += chunk;
+          setBuddyText((prev) => prev + chunk);
+          speakChunkRef.current(chunk);
+        }
       }
       flushRef.current();
 
-      if (fullText.trim()) {
-        transcriptRef.current.push({
-          role: "buddy",
-          text: fullText.trim(),
-          ts: new Date().toISOString(),
-        });
-        retryCountRef.current = 0;
+      if (!fullText.trim()) {
+        console.error("[session] turn stream returned empty");
+        setMicState("error");
+        setErrorText("Buddy stayed quiet");
+        setHintText("tap to try again");
+        return;
       }
+
+      transcriptRef.current.push({
+        role: "buddy",
+        text: fullText.trim(),
+        ts: new Date().toISOString(),
+      });
+      retryCountRef.current = 0;
 
       if (turnCountRef.current >= MAX_TURNS) {
         await endSession();
