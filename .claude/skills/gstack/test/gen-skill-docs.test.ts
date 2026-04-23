@@ -244,8 +244,9 @@ describe('gen-skill-docs', () => {
   test('tier 2+ skills contain ELI16 simplification rules (AskUserQuestion format)', () => {
     // Root SKILL.md is tier 1 (no AskUserQuestion format). Check a tier 2+ skill instead.
     const content = fs.readFileSync(path.join(ROOT, 'cso', 'SKILL.md'), 'utf-8');
-    expect(content).toContain('No raw function names');
+    expect(content).toContain('Simplify (ELI10');
     expect(content).toContain('plain English');
+    expect(content).toContain('not function names');
   });
 
   test('tier 1 skills do NOT contain AskUserQuestion format', () => {
@@ -358,10 +359,17 @@ describe('gen-skill-docs', () => {
     const qaOnlyContent = fs.readFileSync(path.join(ROOT, 'qa-only', 'SKILL.md'), 'utf-8');
     expect(qaOnlyContent).toContain('Never fix bugs');
     expect(qaOnlyContent).toContain('NEVER fix anything');
-    // Should not have Edit, Glob, or Grep in allowed-tools
-    expect(qaOnlyContent).not.toMatch(/allowed-tools:[\s\S]*?Edit/);
-    expect(qaOnlyContent).not.toMatch(/allowed-tools:[\s\S]*?Glob/);
-    expect(qaOnlyContent).not.toMatch(/allowed-tools:[\s\S]*?Grep/);
+    // Should not have Edit, Glob, or Grep in allowed-tools.
+    // Scope to frontmatter (between the first two --- lines) — the body can
+    // legitimately mention these tool names in prose (e.g., Claude model
+    // overlay says "prefer Read, Edit, Write, Glob, Grep over Bash").
+    const fmMatch = qaOnlyContent.match(/^---\n([\s\S]*?)\n---/);
+    expect(fmMatch).not.toBeNull();
+    const frontmatter = fmMatch![1];
+    expect(frontmatter).toMatch(/allowed-tools:/);
+    expect(frontmatter).not.toMatch(/allowed-tools:[\s\S]*?- Edit/);
+    expect(frontmatter).not.toMatch(/allowed-tools:[\s\S]*?- Glob/);
+    expect(frontmatter).not.toMatch(/allowed-tools:[\s\S]*?- Grep/);
   });
 
   test('qa has fix-loop tools and phases', () => {
@@ -752,13 +760,13 @@ describe('TEST_COVERAGE_AUDIT placeholders', () => {
 
   test('ship SKILL.md contains review army specialist dispatch', () => {
     expect(shipSkill).toContain('Specialist Dispatch');
-    expect(shipSkill).toContain('Step 3.55');
-    expect(shipSkill).toContain('Step 3.56');
+    expect(shipSkill).toContain('Step 9.1');
+    expect(shipSkill).toContain('Step 9.2');
   });
 
   test('ship SKILL.md contains cross-review finding dedup', () => {
     expect(shipSkill).toContain('Cross-review finding dedup');
-    expect(shipSkill).toContain('Step 3.57');
+    expect(shipSkill).toContain('Step 9.3');
   });
 
   test('ship SKILL.md contains re-run idempotency behavior', () => {
@@ -839,7 +847,7 @@ describe('PLAN_COMPLETION_AUDIT placeholders', () => {
 
   test('ship SKILL.md contains plan completion audit step', () => {
     expect(shipSkill).toContain('Plan Completion Audit');
-    expect(shipSkill).toContain('Step 3.45');
+    expect(shipSkill).toContain('Step 8');
   });
 
   test('review SKILL.md contains plan completion in scope drift', () => {
@@ -888,7 +896,7 @@ describe('PLAN_VERIFICATION_EXEC placeholder', () => {
   const shipSkill = fs.readFileSync(path.join(ROOT, 'ship', 'SKILL.md'), 'utf-8');
 
   test('ship SKILL.md contains plan verification step', () => {
-    expect(shipSkill).toContain('Step 3.47');
+    expect(shipSkill).toContain('Step 8.1');
     expect(shipSkill).toContain('Plan Verification');
   });
 
@@ -946,7 +954,7 @@ describe('Ship metrics logging', () => {
   const shipSkill = fs.readFileSync(path.join(ROOT, 'ship', 'SKILL.md'), 'utf-8');
 
   test('ship SKILL.md contains metrics persistence step', () => {
-    expect(shipSkill).toContain('Step 8.75');
+    expect(shipSkill).toContain('Step 20');
     expect(shipSkill).toContain('coverage_pct');
     expect(shipSkill).toContain('plan_items_total');
     expect(shipSkill).toContain('plan_items_done');
@@ -1354,10 +1362,21 @@ describe('preamble routing injection', () => {
   });
 
   test('routing section content includes key routing rules', () => {
-    expect(shipContent).toContain('invoke office-hours');
-    expect(shipContent).toContain('invoke investigate');
-    expect(shipContent).toContain('invoke ship');
-    expect(shipContent).toContain('invoke qa');
+    expect(shipContent).toContain('invoke /office-hours');
+    expect(shipContent).toContain('invoke /investigate');
+    expect(shipContent).toContain('invoke /ship');
+    expect(shipContent).toContain('invoke /qa');
+  });
+
+  test('routing section uses renamed checkpoint skills (not stale /checkpoint)', () => {
+    expect(shipContent).toContain('invoke /context-save');
+    expect(shipContent).toContain('invoke /context-restore');
+    expect(shipContent).not.toContain('invoke checkpoint');
+  });
+
+  test('routing section uses soft "when in doubt" policy, not hard "ALWAYS invoke"', () => {
+    expect(shipContent).toContain('When in doubt, invoke the skill');
+    expect(shipContent).not.toContain('Do NOT answer directly');
   });
 });
 
@@ -1755,8 +1774,11 @@ describe('Codex generation (--host codex)', () => {
   test('Claude output unchanged: all Claude skills have zero Codex paths', () => {
     for (const skill of ALL_SKILLS) {
       const content = fs.readFileSync(path.join(ROOT, skill.dir, 'SKILL.md'), 'utf-8');
-      // pair-agent legitimately documents how Codex agents store credentials
-      if (skill.dir !== 'pair-agent') {
+      // pair-agent legitimately documents how Codex agents store credentials.
+      // codex + autoplan document the Codex CLI auth file (~/.codex/auth.json)
+      // and log path (~/.codex/logs/) — those are user-facing Codex CLI paths,
+      // not the gstack Codex host install path.
+      if (skill.dir !== 'pair-agent' && skill.dir !== 'codex' && skill.dir !== 'autoplan') {
         expect(content).not.toContain('~/.codex/');
       }
       // gstack-upgrade legitimately references .agents/skills for cross-platform detection
@@ -2115,15 +2137,16 @@ describe('setup script validation', () => {
     expect(fnBody).toContain('rm -f "$target"');
   });
 
-  test('setup supports --host auto|claude|codex|kiro', () => {
+  test('setup supports --host auto|claude|codex|kiro|opencode', () => {
     expect(setupContent).toContain('--host');
-    expect(setupContent).toContain('claude|codex|kiro|factory|auto');
+    expect(setupContent).toContain('claude|codex|kiro|factory|opencode|auto');
   });
 
-  test('auto mode detects claude, codex, and kiro binaries', () => {
+  test('auto mode detects claude, codex, kiro, and opencode binaries', () => {
     expect(setupContent).toContain('command -v claude');
     expect(setupContent).toContain('command -v codex');
     expect(setupContent).toContain('command -v kiro-cli');
+    expect(setupContent).toContain('command -v opencode');
   });
 
   // T1: Sidecar skip guard — prevents .agents/skills/gstack from being linked as a skill
@@ -2143,12 +2166,26 @@ describe('setup script validation', () => {
     expect(content).toContain('$GSTACK_BIN/');
   });
 
-  // T3: Kiro host support in setup script
   test('setup supports --host kiro with install section and sed rewrites', () => {
     expect(setupContent).toContain('INSTALL_KIRO=');
     expect(setupContent).toContain('kiro-cli');
     expect(setupContent).toContain('KIRO_SKILLS=');
     expect(setupContent).toContain('~/.kiro/skills/gstack');
+  });
+
+  test('setup supports --host opencode with install section and OpenCode skill path vars', () => {
+    expect(setupContent).toContain('INSTALL_OPENCODE=');
+    expect(setupContent).toContain('OPENCODE_SKILLS="$HOME/.config/opencode/skills"');
+    expect(setupContent).toContain('OPENCODE_GSTACK="$OPENCODE_SKILLS/gstack"');
+  });
+
+  test('setup installs OpenCode skills into a nested gstack runtime root', () => {
+    expect(setupContent).toContain('create_opencode_runtime_root');
+    expect(setupContent).toContain('.opencode/skills');
+    expect(setupContent).toContain('review/specialists');
+    expect(setupContent).toContain('qa/templates');
+    expect(setupContent).toContain('qa/references');
+    expect(setupContent).toContain('dx-hall-of-fame.md');
   });
 
   test('create_agents_sidecar links runtime assets', () => {
