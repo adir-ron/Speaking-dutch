@@ -108,13 +108,11 @@ Never build these without re-opening /office-hours:
 
 ## gstack
 
-gstack is **vendored directly into this repo** at `.claude/skills/gstack/` and tracked in git. That means every environment (local Mac, Claude Code on the web, mobile, Conductor workspaces) picks it up automatically on checkout. No host-level install is needed.
+gstack is **vendored directly into this repo** and tracked in git. Each skill lives at `.claude/skills/<command>/` (flattened layout so the Claude Code harness discovers it without any host-level install) and shared helpers live at `.claude/skills/gstack/` (`bin/`, `lib/`, `scripts/`, `agents/`, `hosts/`, `model-overlays/`, `openclaw/`, `supabase/`, `test/`, `extension/`, `contrib/`, `setup/`, `docs/`). Every environment (local Mac, Claude Code on the web, mobile, Conductor workspaces) picks gstack up automatically on checkout.
 
 Use `/browse` from gstack for all web browsing. Never use `mcp__claude-in-chrome__*` tools.
 
-Available commands: `/office-hours`, `/plan-ceo-review`, `/plan-eng-review`, `/plan-design-review`, `/design-consultation`, `/design-shotgun`, `/design-html`, `/review`, `/ship`, `/land-and-deploy`, `/canary`, `/benchmark`, `/browse`, `/qa`, `/qa-only`, `/design-review`, `/retro`, `/investigate`, `/document-release`, `/codex`, `/cso`, `/autoplan`, `/learn`, `/careful`, `/freeze`, `/guard`, `/unfreeze`.
-
-All skill definitions are at `.claude/skills/` and tracked in git.
+Available commands: `/autoplan`, `/benchmark`, `/benchmark-models`, `/browse`, `/canary`, `/careful`, `/codex`, `/context-restore`, `/context-save`, `/cso`, `/design-consultation`, `/design-html`, `/design-review`, `/design-shotgun`, `/devex-review`, `/document-release`, `/freeze`, `/gstack-upgrade`, `/guard`, `/health`, `/investigate`, `/land-and-deploy`, `/learn`, `/make-pdf`, `/office-hours`, `/open-gstack-browser`, `/pair-agent`, `/plan-ceo-review`, `/plan-design-review`, `/plan-devex-review`, `/plan-eng-review`, `/plan-tune`, `/qa`, `/qa-only`, `/retro`, `/review`, `/setup-browser-cookies`, `/setup-deploy`, `/ship`, `/unfreeze`.
 
 ### Skill routing
 
@@ -130,7 +128,7 @@ When a request matches an available skill, ALWAYS invoke it via the Skill tool a
 - Design system / brand → `/design-consultation`
 - Visual audit / design polish → `/design-review`
 - Architecture review → `/plan-eng-review`
-- Checkpoint / save progress / resume → `/checkpoint` (if available) or write to `docs/design/`
+- Save progress → `/context-save`; resume / "where was I" → `/context-restore`
 
 ## Current review status
 
